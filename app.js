@@ -1,0 +1,112 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Inject Universal Pricing Cards ---
+  const template = document.getElementById('pricing-cards-template');
+  const injectors = document.querySelectorAll('.pricing-cards-injector');
+  if (template) {
+    injectors.forEach(injector => {
+      injector.appendChild(template.content.cloneNode(true));
+    });
+  }
+
+  // --- SPA Routing Logic ---
+  function handleRoute() {
+    const hash = window.location.hash;
+    const home = document.getElementById('page-home');
+    const services = document.getElementById('page-services');
+    const pricing = document.getElementById('page-pricing');
+    const faq = document.getElementById('faq');
+    
+    if (home && services && pricing) {
+      if (hash === '#services') {
+        home.style.display = 'none';
+        pricing.style.display = 'none';
+        services.style.display = 'block';
+        if (faq) faq.style.display = 'none';
+        window.scrollTo(0,0);
+      } else if (hash === '#pricing') {
+        home.style.display = 'none';
+        services.style.display = 'none';
+        pricing.style.display = 'block';
+        if (faq) faq.style.display = 'block';
+        window.scrollTo(0,0);
+      } else {
+        services.style.display = 'none';
+        pricing.style.display = 'none';
+        home.style.display = 'block';
+        if (faq) faq.style.display = 'block';
+        if (hash && hash !== '#pricing' && hash !== '#services' && hash !== '#home') {
+          // If hash is something else like #faq, let browser scroll after brief timeout
+          setTimeout(() => {
+             const el = document.querySelector(hash);
+             if(el) el.scrollIntoView();
+          }, 100);
+        } else if (!hash || hash === '#home') {
+          window.scrollTo(0,0);
+        }
+      }
+    }
+  }
+  
+  window.addEventListener('hashchange', handleRoute);
+  // Run on initial load
+  handleRoute();
+
+  // --- FAQ Accordion Logic ---
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      // Close all
+      faqItems.forEach(i => i.classList.remove('active'));
+      // Open if it was not active
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // --- Marketing Capabilities Accordion Logic ---
+  const marketingItems = document.querySelectorAll('.marketing-acc-item');
+  const marketingImage = document.getElementById('marketing-display-image');
+
+  marketingItems.forEach(item => {
+    const btn = item.querySelector('.marketing-acc-btn');
+    const content = item.querySelector('.marketing-acc-content');
+    
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all
+      marketingItems.forEach(i => {
+        i.classList.remove('active');
+        const c = i.querySelector('.marketing-acc-content');
+        if (c) c.style.maxHeight = null;
+      });
+      
+      // Open clicked if it wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+        if (content) { let sh = content.scrollHeight; if (sh <= 10) sh = 400; content.style.maxHeight = sh + "px"; }
+        
+        // Update image
+        if (marketingImage) {
+          const tabId = item.getAttribute('data-tab'); // e.g., "tab-enterprise"
+          if (tabId) {
+            const imageName = tabId.replace('tab-', '') + '.png';
+            // Start fade out
+            marketingImage.style.opacity = 0;
+            
+            setTimeout(() => {
+              marketingImage.src = `assets/marketing-scales/${imageName}`;
+              marketingImage.onload = () => {
+                // Fade back in
+                marketingImage.style.opacity = 1;
+              };
+            }, 300);
+          }
+        }
+      }
+    });
+  });
+});
