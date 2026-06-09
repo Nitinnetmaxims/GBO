@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Services - GBO</title>
+  <meta name="description" content="Outrank competitors, scale organic search traffic, and capture high-intent leads automatically with GBO's advanced SEO services.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+      <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+                                    <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <a href="services-local-seo.html">Local SEO Services</a>
+            <a href="services-social-media.html">Social Media Marketing</a>
+            <a href="services-seo.html">SEO</a>
+            <a href="services-video-seo.html">Video SEO</a>
+            <a href="services-digital-advertising.html">Digital Advertising</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+                    <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <a href="services-local-seo.html">Local SEO Services</a>
+          <a href="services-social-media.html">Social Media Marketing</a>
+          <a href="services-seo.html">SEO</a>
+          <a href="services-video-seo.html">Video SEO</a>
+          <a href="services-digital-advertising.html">Digital Advertising</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+  <section class="premium-hero">
+    <div class="container">
+      <div class="breadcrumb">Home > Services > <span>Digital Marketing</span></div>
+      <h1>Content Marketing <span style="color: var(--color-fire-engine-red);">Services</span></h1>
+      <p>Attract, Engage, and Convert with High-Quality Content. Our strategic content marketing services build authority, drive organic traffic, and nurture leads through every stage of the funnel.</p>
+      <div class="hero-btns">
+        <a href="free-consultation.html" class="btn btn-primary">Get a Free Content Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" style="padding: 2rem 0; background: #111; border-bottom: 1px solid #222;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">10B+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Organic Traffic</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">30x</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Average ROI</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">10 Years</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industry Experience</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">500+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Happy Clients</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 3.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Content Marketing
+      </span>
+      <h2 style="font-size: 2.5rem; color: #333; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">What is <span style="color: var(--color-fire-engine-red);">Content Marketing?</span></h2>
+      <p style="color: #666; font-size: 1rem; line-height: 1.7; max-width: 650px; margin: 0 auto;">Content marketing is the process of creating and sharing valuable, relevant, and engaging content that helps businesses attract, inform, and convert their target audience.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
+      <!-- Left Column -->
+      <div style="background: white; border-radius: 16px; padding: 3rem 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03); display: flex; flex-direction: column;">
+        <h3 style="color: #222; font-size: 1.35rem; margin-bottom: 1.5rem; font-weight: 600;">It helps businesses:</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Increase Website Traffic
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Improve Search Engine Rankings
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Build Brand Authority
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Generate Quality Leads
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Improve Customer Engagement
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #666; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i> Increase Conversions & Sales
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Right Column -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        
+        <!-- Top Red Card -->
+        <div style="background: #b90e0a; border-radius: 16px; padding: 2.5rem 3rem; color: white;">
+          <h3 style="color: white; font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 600;">Why Content Marketing Wins</h3>
+          <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; max-width: 95%;">Businesses that publish consistent, high-quality content generate 3x more leads than those that don't — at a fraction of the cost of paid advertising.</p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+            <div style="background: rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem;">
+              <div style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1;">3x</div>
+              <div style="font-size: 0.8rem; opacity: 0.85;">More Leads</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem;">
+              <div style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1;">62%</div>
+              <div style="font-size: 0.8rem; opacity: 0.85;">Lower Cost per Lead</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem;">
+              <div style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1;">6x</div>
+              <div style="font-size: 0.8rem; opacity: 0.85;">Higher Conversion Rates</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem;">
+              <div style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.3rem; line-height: 1;">97%</div>
+              <div style="font-size: 0.8rem; opacity: 0.85;">More Backlinks</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bottom White Card -->
+        <div style="background: white; border-radius: 16px; padding: 2.5rem 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+          <h4 style="color: #222; font-size: 1.15rem; margin-bottom: 0.8rem; font-weight: 600;">Content marketing is not just blogging.</h4>
+          <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">It encompasses blogs, video, social media, email, case studies, whitepapers, podcasts, and more — all working together to build trust and drive sustainable growth.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section style="background-color: #282828; padding: 6rem 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+      
+      <!-- Left Column (Card) -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 16px; padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+        <div style="background: var(--color-fire-engine-red); width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+          <i class="fa-solid fa-chart-line" style="color: white; font-size: 1.8rem;"></i>
+        </div>
+        <h3 style="color: white; font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem;">Strategic Content Growth</h3>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-bottom: 2.5rem; max-width: 90%;">
+          <span style="background: rgba(187, 8, 11, 0.15); color: var(--color-fire-engine-red); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">SEO Content</span>
+          <span style="background: rgba(187, 8, 11, 0.15); color: var(--color-fire-engine-red); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">Blogging</span>
+          <span style="background: rgba(187, 8, 11, 0.15); color: var(--color-fire-engine-red); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">Social Media</span>
+          <span style="background: rgba(187, 8, 11, 0.15); color: var(--color-fire-engine-red); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">Email</span>
+          <span style="background: rgba(187, 8, 11, 0.15); color: var(--color-fire-engine-red); padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500;">Video Scripts</span>
+        </div>
+        
+        <p style="color: var(--color-cool-gray); font-size: 0.95rem; line-height: 1.6; margin: 0; max-width: 85%;">We help businesses turn content into long-term growth opportunities.</p>
+      </div>
+      
+      <!-- Right Column -->
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.1); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+          <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> How We Help
+        </span>
+        
+        <h2 style="font-size: 2.5rem; color: white; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px; line-height: 1.2;">How DIGI GROW Helps Your Business <span style="color: var(--color-fire-engine-red);">Grow</span></h2>
+        
+        <p style="color: var(--color-cool-gray); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">DIGI GROW creates strategic content tailored to your audience, industry, and business goals to improve online visibility and customer engagement.</p>
+        
+        <h4 style="color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 1.5rem;">Our approach includes:</h4>
+        
+        <ul style="list-style: none; padding: 0; margin: 0 0 2.5rem 0; display: flex; flex-direction: column; gap: 1rem;">
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #ddd; font-size: 1rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.2rem;"></i> Audience Research
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #ddd; font-size: 1rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.2rem;"></i> SEO Content Planning
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #ddd; font-size: 1rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.2rem;"></i> Content Creation & Optimization
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #ddd; font-size: 1rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.2rem;"></i> Content Distribution
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.8rem; color: #ddd; font-size: 1rem;">
+            <i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.2rem;"></i> Performance Tracking & Improvements
+          </li>
+        </ul>
+        
+        <a href="#" style="display: inline-flex; align-items: center; gap: 0.8rem; background: var(--color-fire-engine-red); color: white; padding: 1rem 2.5rem; border-radius: 6px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.3s ease;">
+          Start Growing With Content <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+  <div class="container" style="text-align: center;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+      <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Why It Matters
+    </span>
+    <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Benefits of <span style="color: var(--color-fire-engine-red);">Content Marketing</span></h2>
+    
+    <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">01</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Increase Online Visibility</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">SEO-focused content helps your website rank higher and attract more organic traffic from search engines.</p>
+      </div>
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">02</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Build Brand Trust & Authority</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">High-quality content positions your business as an industry expert and builds lasting credibility with your audience.</p>
+      </div>
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">03</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Generate Quality Leads</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">Strategic content attracts users actively searching for your products or services — delivering warm, high-intent leads.</p>
+      </div>
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">04</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Improve Customer Engagement</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">Engaging content helps businesses connect better with their audience and build meaningful long-term relationships.</p>
+      </div>
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">05</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Support Long-Term SEO Growth</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">Consistent content creation improves search visibility over time, compounding your organic reach month after month.</p>
+      </div>
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="color: var(--color-fire-engine-red); font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">06</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111;">Increase Conversions & Sales</h4>
+        <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">Well-optimised content guides visitors through the funnel and encourages them to take action at exactly the right moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section-black" style="padding: 6rem 0;">
+  <div class="container" style="text-align: center;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+      <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Our Solutions
+    </span>
+    <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Our Content Marketing <span style="color: var(--color-fire-engine-red);">Solutions</span></h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+      <!-- Card 01 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Blog Writing Services</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Engaging, research-backed blog posts that improve your search rankings, educate your audience, and drive consistent organic traffic to your website.</p>
+      </div>
+      <!-- Card 02 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Website Content Writing</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Compelling website copy for home pages, service pages, about pages, and landing pages — written to convert visitors into customers.</p>
+      </div>
+      <!-- Card 03 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">SEO Content Optimization</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We audit and optimise existing content for target keywords, readability, structure, and on-page SEO to improve rankings and user experience.</p>
+      </div>
+      <!-- Card 04 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Social Media Content Creation</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Platform-specific content for Facebook, Instagram, LinkedIn, X, and more — designed to increase engagement and grow your following.</p>
+      </div>
+      <!-- Card 05 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Video Script Writing</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Professionally written scripts for explainer videos, YouTube content, ads, and brand storytelling that captivate and convert viewers.</p>
+      </div>
+      <!-- Card 06 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Email Marketing Content</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">High-converting email sequences, newsletters, and automated campaigns that nurture leads and keep your audience engaged.</p>
+      </div>
+      <!-- Card 07 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">07</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Product Description Writing</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Persuasive, SEO-friendly product descriptions that highlight benefits, reduce buyer hesitation, and drive ecommerce conversions.</p>
+      </div>
+      <!-- Card 08 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">08</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Press Release Writing</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Newsworthy press releases that increase your brand's exposure across media outlets, improving authority and generating backlinks.</p>
+      </div>
+      <!-- Card 09 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">09</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">eBooks & Whitepapers</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">In-depth long-form content that positions your brand as a thought leader, supports lead generation, and nurtures prospects.</p>
+      </div>
+      <!-- Card 10 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; grid-column: 2;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">10</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Content Strategy Development</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">A comprehensive content roadmap — including keyword research, topic clusters, publishing cadence, and distribution planning.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 4rem;">
+      <a href="free-consultation.html" style="display: inline-flex; align-items: center; gap: 0.8rem; background: #BB080B; color: white; padding: 1.2rem 2.5rem; border-radius: 6px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.3s ease;">
+        Explore All Content Services <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+  <div class="container" style="text-align: center;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+      <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Our Approach
+    </span>
+    <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">Our Content Marketing <span style="color: var(--color-fire-engine-red);">Process</span></h2>
+    <p style="color: #666; font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 3.5rem auto;">A proven 8-step process that turns content ideas into measurable business results — from first brief to long-term scaling.</p>
+    
+    <div class="numbered-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; text-align: left;">
+      <!-- Card 01 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Research & Audience Analysis</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Industry landscape research</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Audience persona development</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Competitor content gap analysis</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Search behaviour mapping</li>
+        </ul>
+      </div>
+      <!-- Card 02 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Content Strategy Planning</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Topic cluster architecture</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Editorial calendar creation</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Channel selection & prioritisation</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Content format recommendations</li>
+        </ul>
+      </div>
+      <!-- Card 03 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">SEO Keyword Research</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Primary & secondary keyword targeting</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Long-tail opportunity identification</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Search intent mapping</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> SERP feature targeting</li>
+        </ul>
+      </div>
+      <!-- Card 04 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Content Writing & Optimization</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Expert-led content creation</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> On-page SEO integration</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Internal linking strategy</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Readability & UX optimisation</li>
+        </ul>
+      </div>
+      <!-- Card 05 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Editing & Quality Review</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Multi-stage editorial review</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Brand voice consistency check</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Fact-checking & accuracy review</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Final SEO audit before publishing</li>
+        </ul>
+      </div>
+      <!-- Card 06 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Content Publishing</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> CMS upload & formatting</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Meta titles & descriptions</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Schema markup implementation</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Image optimisation & alt text</li>
+        </ul>
+      </div>
+      <!-- Card 07 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">07</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Performance Tracking</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Organic traffic monitoring</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Keyword ranking tracking</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Engagement & bounce rate analysis</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Lead generation attribution</li>
+        </ul>
+      </div>
+      <!-- Card 08 -->
+      <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+        <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">08</div>
+        <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Strategy Optimization & Scaling</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Monthly performance reporting</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Content refresh & updates</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Top-performing content scaling</li>
+          <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-light-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Long-term strategy refinement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section-black" style="padding: 6rem 0;">
+  <div class="container" style="text-align: center;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+      <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Why DIGI GROW
+    </span>
+    <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Why Choose DIGI GROW As Your <span style="color: var(--color-fire-engine-red);">Content Marketing Agency?</span></h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+      <!-- Card 01 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">SEO-Focused Content Strategy</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We create content optimized for both search engines and users — ensuring your content ranks AND converts.</p>
+      </div>
+      <!-- Card 02 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Industry-Specific Content</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Our team develops content tailored to your business niche and audience, reflecting your brand's expertise and voice.</p>
+      </div>
+      <!-- Card 03 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Result-Driven Approach</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We focus on what matters: increasing traffic, engagement, leads, and conversions — not just word counts.</p>
+      </div>
+      <!-- Card 04 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Creative & Research-Based Content</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Our content combines creativity, strategy, and SEO expertise to produce assets that genuinely stand out in your niche.</p>
+      </div>
+      <!-- Card 05 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Consistent Brand Messaging</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We maintain a consistent tone, voice, and style across all platforms — so your brand is always recognisable and trusted.</p>
+      </div>
+      <!-- Card 06 -->
+      <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+        <div style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+        <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Performance Monitoring & Optimization</h4>
+        <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We continuously track and improve content performance — updating, refreshing, and scaling what works best for your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+  <div class="container" style="text-align: center;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+      <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Industries
+    </span>
+    <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">Industries We <span style="color: var(--color-fire-engine-red);">Work With</span></h2>
+    <p style="color: #666; font-size: 1rem; line-height: 1.7; max-width: 650px; margin: 0 auto 3.5rem auto;">We create tailored content strategies for businesses across a wide range of industries.</p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto;">
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Real Estate</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Healthcare</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Education</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Law Firms</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">E-commerce</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Hospitality</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Home Services</span>
+      
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">HVAC</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Dental Clinics</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Roofing Companies</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Startups & Enterprises</span>
+      <span style="padding: 0.8rem 1.5rem; background: #fff; border: 1px solid #eaeaea; border-radius: 8px; color: #333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">Technology Businesses</span>
+    </div>
+  </div>
+</section>
+
+  <section class="section-dark">
+    <div class="container">
+      <span class="section-label">FAQS</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-container" style="display: flex; flex-direction: column; gap: 1rem; max-width: 850px; margin: 0 auto;">
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>How much content do I need?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">It depends on your competitive landscape, but we generally recommend publishing at least 2-4 high-quality pieces per month.</div></div>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>What is the ROI of content marketing?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Content marketing generates 3x more leads than outbound marketing and costs 62% less, resulting in exceptional long-term ROI.</div></div>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>Can you write for technical industries?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, we have a network of subject matter experts and conduct in-depth interviews with your team to ensure accuracy.</div></div>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>How long does it take to see results?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">SEO and content marketing are long-term strategies. You can expect to see initial traction in 3-6 months.</div></div>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>Do you handle content distribution?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We can manage email newsletters, social media promotion, and digital PR to amplify your content.</div></div>
+        </div>
+        <div class="faq-item" style="margin-bottom: 0;">
+          <button class="faq-question-btn"><span>Who owns the content you create?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">You do. Once the content is approved and published, your business retains full ownership and copyright.</div></div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+  <section class="cta-banner" id="cta-banner">
+    <div class="container">
+      <div class="cta-left">
+        <h2>Ready to Supercharge Your Business With<br>\'Smart\' Content?</h2>
+      </div>
+      <div class="cta-right">
+        <form id="cta-audit-form" action="free-consultation.html">
+          <div class="cta-form-grid">
+            <input type="text" placeholder="Full Name" required id="cta-name">
+            <input type="email" placeholder="Email Address" required id="cta-email">
+            <input type="url" placeholder="Website URL" required id="cta-website">
+            <select required id="cta-budget">
+              <option value="" disabled selected>Monthly Budget</option>
+              <option value="under-1k">Under $1,000</option>
+              <option value="1k-5k">$1,000 - $5,000</option>
+              <option value="5k-10k">$5,000 - $10,000</option>
+              <option value="above-10k">Above $10,000</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Organic Search</a></li>
+            <li><a href="#">Technical Schema</a></li>
+            <li><a href="#">GEO Optimization</a></li>
+            <li><a href="#">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Marketing Insights</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+    
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const content = i.querySelector('.faq-answer');
+        if(content) content.style.maxHeight = null;
+      });
+
+      // If it wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        const content = item.querySelector('.faq-answer');
+        if(content) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

@@ -10,6 +10,7 @@
   
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -21,7 +22,17 @@
         <div class="nav-item">
           <a href="#">Services</a>
           <div class="dropdown-menu">
-            <a href="services-digital-marketing.html">digital-marketing</a>
+                                    <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
             <a href="services-local-seo.html">Local SEO Services</a>
             <a href="services-social-media.html">Social Media Marketing</a>
             <a href="services-seo.html">SEO</a>
@@ -57,8 +68,61 @@
         </svg>
         <span>Free Consultation</span>
       </a>
+          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+                    <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <a href="services-local-seo.html">Local SEO Services</a>
+          <a href="services-social-media.html">Social Media Marketing</a>
+          <a href="services-seo.html">SEO</a>
+          <a href="services-video-seo.html">Video SEO</a>
+          <a href="services-digital-advertising.html">Digital Advertising</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
 
   <section class="hero" id="hero-section" style="padding-bottom: 4rem;">
     <div class="container" style="display: flex; justify-content: center; text-align: center;">
@@ -189,17 +253,17 @@
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea; font-weight: 500;">Sponsored Products</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea; font-weight: 500;">Sponsored Brands</td>
               <td style="color: #ccc;">X</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea; font-weight: 500;">Sponsored Display</td>
@@ -220,31 +284,31 @@
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea;">Competitor Analysis</td>
-              <td style="color: #ccc;">✗</td>
-              <td style="color: #ccc;">✗</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: #ccc;"><i class="fa-solid fa-xmark"></i></td>
+              <td style="color: #ccc;"><i class="fa-solid fa-xmark"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea;">CTR Optimization & ACoS Reduction</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea;">Filter Negative Search Terms</td>
-              <td style="color: #ccc;">✗</td>
-              <td style="color: #ccc;">✗</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: #ccc;"><i class="fa-solid fa-xmark"></i></td>
+              <td style="color: #ccc;"><i class="fa-solid fa-xmark"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
             <tr style="border-bottom: 1px solid #eaeaea;">
               <td style="text-align: left; padding: 1rem 2rem; border-right: 1px solid #eaeaea;">Weekly Bid & Budget Check</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
-              <td style="color: green; font-weight: bold;">✓</td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
+              <td style="color: green; font-weight: bold;"><i class="fa-solid fa-check"></i></td>
             </tr>
           </tbody>
         </table>

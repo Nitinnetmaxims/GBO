@@ -125,40 +125,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // --- Mobile Sidebar Logic ---
-  const hamburger = document.getElementById('hamburger-menu');
-  const sidebar = document.getElementById('mobile-sidebar');
-  const sidebarClose = document.getElementById('sidebar-close');
-  const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-
-  function openSidebar() {
-    if (sidebar) sidebar.classList.add('open');
-    if (hamburger) hamburger.classList.add('active');
-  }
-
-  function closeSidebar() {
-    if (sidebar) sidebar.classList.remove('open');
-    if (hamburger) hamburger.classList.remove('active');
-  }
-
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      if (sidebar && sidebar.classList.contains('open')) {
-        closeSidebar();
-      } else {
-        openSidebar();
-      }
-    });
-  }
-
-  if (sidebarClose) {
-    sidebarClose.addEventListener('click', closeSidebar);
-  }
-
-  if (sidebarLinks) {
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', closeSidebar);
-    });
-  }
 });

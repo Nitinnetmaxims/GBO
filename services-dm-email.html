@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Services - GBO</title>
+  <meta name="description" content="Outrank competitors, scale organic search traffic, and capture high-intent leads automatically with GBO's advanced SEO services.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+      <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+                                    <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <a href="services-local-seo.html">Local SEO Services</a>
+            <a href="services-social-media.html">Social Media Marketing</a>
+            <a href="services-seo.html">SEO</a>
+            <a href="services-video-seo.html">Video SEO</a>
+            <a href="services-digital-advertising.html">Digital Advertising</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+                    <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <a href="services-local-seo.html">Local SEO Services</a>
+          <a href="services-social-media.html">Social Media Marketing</a>
+          <a href="services-seo.html">SEO</a>
+          <a href="services-video-seo.html">Video SEO</a>
+          <a href="services-digital-advertising.html">Digital Advertising</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+  <section class="premium-hero" style="background: #282828; padding: 7rem 0 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); color: var(--color-cool-gray); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem;">
+        Email Marketing
+      </span>
+      <h1 style="color: white; font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -1px;">Email Marketing Services That Drive <span style="color: var(--color-fire-engine-red);">Engagement & Sales</span></h1>
+      <p style="color: var(--color-cool-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Connect directly with your most valuable audience. We design, write, and manage high-converting email campaigns that turn subscribers into loyal customers.</p>
+      <div class="hero-btns" style="display: flex; justify-content: center;">
+        <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); border: none; padding: 1rem 2.5rem; font-weight: 600; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; transition: background 0.3s ease;">
+          Get a Free Proposal <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" style="background: #1a1a1a; padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">5,000+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Campaigns Sent</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">40+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industries Served</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">10+ Years</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Experience</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">20%</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Average CTR</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Overview
+      </span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">What is <span style="color: var(--color-fire-engine-red);">Email Marketing?</span></h2>
+      <p style="color: #666; font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 4rem auto;">Email marketing is the highly effective digital marketing strategy of sending targeted, automated emails to prospects and customers.</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; text-align: left; align-items: stretch;">
+        
+        <div style="background: white; border-radius: 12px; padding: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: flex-start;">
+          <h3 style="font-size: 1.5rem; color: #111; margin-bottom: 2rem; font-weight: 600;">Email Channels</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+            <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Newsletter Campaigns</li>
+            <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Promotional Offers</li>
+            <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Automated Drip Sequences</li>
+            <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Re-engagement Campaigns</li>
+          </ul>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="background: #282828; border-radius: 12px; padding: 2.5rem;">
+            <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 600;">Unlock Your Business's Hidden Revenue</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">4,400%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Average ROI</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">99%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Daily Checkers</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">59%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">B2B Marketers Top ROI Channel</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">80%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Retail Professionals Retention</p>
+                </div>
+            </div>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #111; font-weight: 600;">Why email list building matters</h4>
+                <p style="color: var(--color-light-gray); font-size: 0.95rem; line-height: 1.6; margin: 0;">You own your email list. Unlike social media algorithms where your reach is controlled by a third party, your email list is an asset you control.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Benefits
+      </span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Benefits of <span style="color: var(--color-fire-engine-red);">Email Marketing</span></h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Direct Audience Access</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">You own your email list. Unlike social media algorithms, your message reaches their inbox directly.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Personalized Messaging</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Segment your audience to send highly relevant offers based on their past behavior and preferences.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Automated Sales</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Set up drip campaigns that nurture leads and close sales while you sleep.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Incredible ROI</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Email consistently delivers the highest return on investment of any digital marketing channel.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Increased Retention</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Keep your brand top-of-mind and encourage repeat purchases from your existing customer base.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Instant Results</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Launch a campaign and see opens, clicks, and sales within minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Solutions
+      </span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Our Email Marketing <span style="color: var(--color-fire-engine-red);">Solutions</span></h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Full-Service Management</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We handle everything from strategy and copywriting to design, testing, and sending.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Automation & Drip Campaigns</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Build complex automated flows like welcome series, abandoned cart reminders, and re-engagement campaigns.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">List Building & Segmentation</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Grow your subscriber base with lead magnets and segment them for hyper-targeted messaging.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Custom Template Design</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Beautiful, mobile-responsive HTML email templates that perfectly match your brand identity.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">A/B Split Testing</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Continuous testing of subject lines, send times, and CTAs to maximize open and click rates.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Deliverability Optimization</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Technical setup (SPF, DKIM, DMARC) to ensure your emails land in the inbox, not the spam folder.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">07</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Newsletter Management</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Regular, engaging newsletters that keep your audience informed and connected to your brand.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">08</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">CRM Integration</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Seamless syncing between your email platform and CRM for unified customer data.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">09</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">eCommerce Email Flows</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Specific flows for post-purchase, cross-sell, and VIP customer retention.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; grid-column: 2;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">10</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Email Copywriting</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Persuasive, conversion-focused copywriting that drives action and revenue.</p>
+        </div>
+      </div>
+      <div style="margin-top: 4rem;">
+        <a href="free-consultation.html" style="display: inline-flex; align-items: center; gap: 0.8rem; background: #BB080B; color: white; padding: 1.2rem 2.5rem; border-radius: 6px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.3s ease;">
+          Explore All Marketing Services <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Process
+      </span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">Our Email Marketing <span style="color: var(--color-fire-engine-red);">Process</span></h2>
+      <p style="color: var(--color-cool-gray); font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 3.5rem auto;">A proven process that turns email ideas into measurable business results.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; text-align: left;">
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Strategy Setup</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Audience segmentation</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Core messaging pillars</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Campaign calendar</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Platform setup</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">List Auditing</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Inactive subscriber removal</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Deliverability analysis</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> List hygiene best practices</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Spam trap identification</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Copy & Design</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Persuasive copywriting</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Visual layout design</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Brand style matching</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Mobile responsiveness</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Automation Setup</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Workflow mapping</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Trigger definitions</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Dynamic content rules</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Timing optimization</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Review & Approval</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Client review cycles</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Test sends</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Rendering checks</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Final revisions</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Execution</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Scheduling campaigns</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Triggering automations</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Send-time optimization</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Monitor initial sends</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">07</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Testing & QA</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> A/B testing subject lines</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Link verification</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Audience exclusions</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Inbox placement checks</li>
+          </ul>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">08</div>
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: white; font-weight: 600;">Optimization & Scaling</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Performance tracking</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Open/Click analysis</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Strategy refinement</li>
+            <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.9rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> List growth initiatives</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Why Us
+      </span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Why Choose DIGI GROW For <span style="color: var(--color-fire-engine-red);">Email Marketing Services?</span></h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Platform Agnostic</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We work with Mailchimp, Klaviyo, HubSpot, ActiveCampaign, and more.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Conversion-Focused</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We don't just optimize for opens; we optimize for sales and revenue.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Compliance Experts</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Strict adherence to GDPR, CAN-SPAM, and CCPA regulations to protect your brand.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Technical Proficiency</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Deep understanding of deliverability, authentication, and platform integrations.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Creative Excellence</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Beautifully designed templates combined with persuasive, action-driven copy.</p>
+        </div>
+        <div class="num-card-white hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="num" style="background: #BB080B; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin-bottom: 1.5rem;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Transparent Reporting</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Clear, honest reporting on what's working and how we're improving your metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Industries
+      </span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Industries We <span style="color: var(--color-fire-engine-red);">Work With</span></h2>
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto;">
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">eCommerce</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">SaaS & Tech</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Healthcare</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Law Firms</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Education</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Hospitality</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Home Services</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Dental Clinics</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Real Estate</span>
+        <span style="padding: 0.8rem 1.5rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-weight: 600; font-size: 0.95rem;">Startups & Enterprises</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #111; padding: 6rem 0;">
+    <div class="container" style="text-align: center; background: radial-gradient(circle at center, #3a1012 0%, #1a1a1a 100%); padding: 5rem 2rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+      <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px;">Ready To Grow With Powerful <span style="color: var(--color-fire-engine-red);">Email Marketing?</span></h2>
+      <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.7;">Let our experts transform your email list into your most profitable marketing channel.</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); border: none; font-weight: 600; padding: 1.1rem 2.5rem; border-radius: 6px; color: white; display: inline-flex; align-items: center; gap: 0.8rem;">Get Your Free Marketing Audit <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline" style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); font-weight: 600; padding: 1.1rem 2.5rem; border-radius: 6px; display: inline-flex; align-items: center;">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(187, 8, 11, 0.08); color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid rgba(187, 8, 11, 0.2);">
+        <span style="width: 6px; height: 6px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> FAQS
+      </span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Frequently Asked <span style="color: var(--color-fire-engine-red);">Questions</span></h2>
+      <div class="faq-container" style="display: flex; flex-direction: column; gap: 1rem; max-width: 850px; margin: 0 auto; text-align: left;">
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How often should I email my list?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">It depends on your industry and list engagement, but generally, 1-4 times per month for newsletters, while automated flows trigger based on user behavior.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Can you help if our emails are going to spam?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes! We specialize in deliverability audits, list cleaning, and technical DNS setup to restore your inbox placement.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What email platforms do you work with?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We are experienced with all major platforms including Klaviyo, Mailchimp, HubSpot, ActiveCampaign, Omnisend, and more.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Do you design the emails as well?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, we provide full-service email marketing which includes strategic planning, copywriting, custom design, and technical implementation.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How do you grow our email list?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We implement strategic lead magnets, exit-intent popups, and integrated opt-in forms across your site to consistently capture high-intent subscribers.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What is a good open rate?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">While it varies by industry, we typically aim for open rates above 25-30% for our clients' regular newsletter broadcasts.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Do you set up automated email flows?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Welcome series, abandoned cart, browse abandonment, and post-purchase flows are foundational to our strategy.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How do you track email revenue?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We utilize UTM parameters and platform-specific tracking codes to accurately attribute website traffic, conversions, and revenue to specific email campaigns.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="cta-banner">
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Organic Search</a></li>
+            <li><a href="#">Technical Schema</a></li>
+            <li><a href="#">GEO Optimization</a></li>
+            <li><a href="#">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Marketing Insights</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+    
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const content = i.querySelector('.faq-answer');
+        if(content) content.style.maxHeight = null;
+      });
+
+      // If it wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        const content = item.querySelector('.faq-answer');
+        if(content) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

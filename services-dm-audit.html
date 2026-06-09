@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Services - GBO</title>
+  <meta name="description" content="Outrank competitors, scale organic search traffic, and capture high-intent leads automatically with GBO's advanced SEO services.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+      <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+                                    <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <a href="services-local-seo.html">Local SEO Services</a>
+            <a href="services-social-media.html">Social Media Marketing</a>
+            <a href="services-seo.html">SEO</a>
+            <a href="services-video-seo.html">Video SEO</a>
+            <a href="services-digital-advertising.html">Digital Advertising</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+                    <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <a href="services-local-seo.html">Local SEO Services</a>
+          <a href="services-social-media.html">Social Media Marketing</a>
+          <a href="services-seo.html">SEO</a>
+          <a href="services-video-seo.html">Video SEO</a>
+          <a href="services-digital-advertising.html">Digital Advertising</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+  <section class="premium-hero">
+    <div class="container">
+      <div class="breadcrumb">Home > Services > <span>Digital Marketing</span></div>
+      <h1>Digital Marketing Audit Services</h1>
+      <p>Find Hidden Gaps. Improve Performance. Grow Faster. Our comprehensive digital marketing audit uncovers the strategy bottlenecks preventing your business from scaling.</p>
+      <div class="hero-btns">
+        <a href="free-consultation.html" class="btn btn-primary">Get a Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" style="padding: 2rem 0; background: #111; border-bottom: 1px solid #222;">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">5000+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Satisfied Clients</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">40+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industries Served</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">10+ Years</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industry Experience</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">95%</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Client Retention</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <span class="section-label">INTRODUCTION</span>
+      <h2 class="section-title">What is a Digital Marketing Audit?</h2>
+      <p style="text-align:center; max-width: 800px; margin: 0 auto 4rem; color: var(--color-light-gray);">A digital marketing audit is a comprehensive evaluation of your current online presence, technical infrastructure, and campaign performance to identify exactly where you are losing revenue.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <div class="num-card-dark" style="text-align: center; padding: 1.5rem;">
+          <h4 style="color: var(--color-fire-engine-red); margin-bottom: 0;">Analyze</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.8rem; margin: 0;">Current Data</p>
+        </div>
+        <div class="num-card-dark" style="text-align: center; padding: 1.5rem;">
+          <h4 style="color: var(--color-fire-engine-red); margin-bottom: 0;">Identify</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.8rem; margin: 0;">Performance Gaps</p>
+        </div>
+        <div class="num-card-dark" style="text-align: center; padding: 1.5rem;">
+          <h4 style="color: var(--color-fire-engine-red); margin-bottom: 0;">Review</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.8rem; margin: 0;">Competitors</p>
+        </div>
+        <div class="num-card-dark" style="text-align: center; padding: 1.5rem;">
+          <h4 style="color: var(--color-fire-engine-red); margin-bottom: 0;">Develop</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.8rem; margin: 0;">Actionable Plan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black">
+    <div class="container">
+      <span class="section-label">BENEFITS</span>
+      <h2 class="section-title" style="color: white;">How Digital Marketing Audit Services Help Your Business</h2>
+      
+      <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="num-card-red">
+          <div class="num">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: white;">Identify Wasted Ad Spend</h4>
+          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">We pinpoint exactly which campaigns are burning budget without driving qualified leads.</p>
+        </div>
+        <div class="num-card-dark">
+          <div class="num">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Improve Conversion Rates</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Discover UX bottlenecks and friction points that are causing potential customers to abandon your site.</p>
+        </div>
+        <div class="num-card-dark">
+          <div class="num">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Optimize Content Strategy</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Evaluate your existing content against competitor performance to find high-traffic keyword gaps.</p>
+        </div>
+        <div class="num-card-dark">
+          <div class="num">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Enhance User Experience</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Ensure your website is fast, mobile-friendly, and intuitively structured for optimal navigation.</p>
+        </div>
+        <div class="num-card-dark">
+          <div class="num">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Technical SEO Health Check</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Uncover crawl errors, broken links, and site speed issues preventing Google from ranking you higher.</p>
+        </div>
+        <div class="num-card-dark">
+          <div class="num">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Data-Driven Roadmap</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Leave the audit with a clear, prioritized checklist of action items guaranteed to increase revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <span class="section-label">SOLUTIONS</span>
+      <h2 class="section-title">Our Digital Marketing Audit Solutions</h2>
+      
+      <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="num-card-red">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: white;">Comprehensive Audit</h4>
+          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">A full 360-degree review covering SEO, PPC, Social Media, Content, and technical website performance.</p>
+        </div>
+        <div class="num-card-white">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">SEO Audit</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem;">In-depth technical analysis, backlink profiling, and keyword gap identification to dominate search.</p>
+        </div>
+        <div class="num-card-white">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">PPC / Paid Ads Audit</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Restructure campaigns, optimize ad copy, and refine targeting to drastically lower your CPA.</p>
+        </div>
+        <div class="num-card-white">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Social Media Audit</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Evaluate engagement metrics, audience demographics, and content effectiveness across all platforms.</p>
+        </div>
+        <div class="num-card-white">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Content Strategy Audit</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Assess content quality, readability, and conversion potential to maximize inbound lead generation.</p>
+        </div>
+        <div class="num-card-white">
+          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">UX & Conversion Audit</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Analyze user behavior, heatmaps, and funnel drop-offs to streamline the path to purchase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #282828; padding: 5rem 0;">
+  <div class="container">
+    <div style="margin-bottom: 4rem; max-width: 800px;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.05); color: var(--color-cool-gray); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.85rem; margin-bottom: 1.5rem;">
+        <span style="width: 8px; height: 8px; background: #4CAF50; border-radius: 50%; display: inline-block;"></span> Our Process
+      </span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1.5rem;">Our Digital Marketing Audit<br>Process</h2>
+      <p style="color: var(--color-cool-gray); font-size: 1.05rem; line-height: 1.6;">A structured 8-step approach that leaves no channel unexamined and no opportunity missed.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+      <div class="audit-hover-card">
+        <div class="audit-num">01</div>
+        <div>
+          <h4>Initial Consultation</h4>
+          <p>We understand your business goals, challenges, and current marketing performance.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">02</div>
+        <div>
+          <h4>Business & Competitor Analysis</h4>
+          <p>Our team analyzes competitors, market trends, and growth opportunities for better strategy development.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">03</div>
+        <div>
+          <h4>Website & Technical SEO Audit</h4>
+          <p>We review website structure, SEO performance, technical issues, and optimization opportunities.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">04</div>
+        <div>
+          <h4>Content & SEO Analysis</h4>
+          <p>We evaluate website content, keyword targeting, content quality, and SEO effectiveness.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">05</div>
+        <div>
+          <h4>Social Media & Engagement Review</h4>
+          <p>Our experts analyze social media performance, audience interaction, and content consistency.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">06</div>
+        <div>
+          <h4>Paid Advertising Analysis</h4>
+          <p>We assess PPC campaigns, ad performance, targeting accuracy, and ROI optimization.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">07</div>
+        <div>
+          <h4>Conversion Rate Optimization Review</h4>
+          <p>We identify opportunities to improve user journeys, conversions, and customer engagement.</p>
+        </div>
+      </div>
+      <div class="audit-hover-card">
+        <div class="audit-num">08</div>
+        <div>
+          <h4>Final Report & Action Plan</h4>
+          <p>Receive a detailed audit report with actionable insights and strategic recommendations for growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section-light" style="background: var(--color-fire-engine-red); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.5rem;">Ready To Improve Your Digital Performance?</h2>
+      <p style="max-width: 700px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.9); font-size: 1.1rem;">Stop guessing what's wrong with your marketing. Let our experts uncover the exact strategies you need to scale your ROI.</p>
+      <a href="free-consultation.html" class="btn btn-outline" style="background: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 1rem 2.5rem; border-radius: 50px;">Claim Your Free Audit</a>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <span class="section-label">RESULTS</span>
+      <h2 class="section-title">Proven Growth Results</h2>
+      
+      <div class="numbered-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div class="num-card-red" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <h2 style="font-size: 4rem; color: white; margin-bottom: 0;">500%</h2>
+          <h4 style="color: white; margin-bottom: 1rem;">Increase in Qualified Leads</h4>
+          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">By identifying the correct keywords and restructuring their PPC campaigns, we helped a B2B SaaS client achieve massive growth.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <div class="num-card-white" style="display: flex; gap: 1.5rem; align-items: center;">
+            <h2 style="font-size: 3rem; color: var(--color-fire-engine-red); margin: 0;">Top 3</h2>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: #111;">Rankings Achieved</h4>
+              <p style="color: var(--color-light-gray); font-size: 0.9rem; margin: 0;">For high-volume industry keywords following our technical SEO audit.</p>
+            </div>
+          </div>
+          <div class="num-card-white" style="display: flex; gap: 1.5rem; align-items: center;">
+            <h2 style="font-size: 3rem; color: var(--color-fire-engine-red); margin: 0;">2x</h2>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: #111;">Conversion Rate Increase</h4>
+              <p style="color: var(--color-light-gray); font-size: 0.9rem; margin: 0;">Through UX improvements and landing page optimization recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <span class="section-label">FAQS</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What do you need from me to start the audit?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We require read-only access to your Google Analytics, Search Console, Google Ads, and any social media ad accounts you currently run.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How long does a digital marketing audit take?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">A comprehensive audit typically takes 2-3 weeks, depending on the complexity and scale of your digital infrastructure.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Do I have to hire you to implement the recommendations?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. The audit belongs to you. You can have your internal team execute the roadmap, or hire us to guarantee the results.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What platforms do you audit?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We audit all major platforms: Google Ads, Meta Ads, LinkedIn Ads, SEO, content assets, and your core website functionality.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-banner" id="cta-banner">
+<section class="cta-banner" id="cta-banner">
+    <div class="container">
+      <div class="cta-left">
+        <h2>Claim Your Technical<br>SEO Audit Report.</h2>
+      </div>
+      <div class="cta-right">
+        <form id="cta-audit-form" action="free-consultation.html">
+          <div class="cta-form-grid">
+            <input type="text" placeholder="Full Name" required id="cta-name">
+            <input type="email" placeholder="Email Address" required id="cta-email">
+            <input type="url" placeholder="Website URL" required id="cta-website">
+            <select required id="cta-budget">
+              <option value="" disabled selected>Monthly Budget</option>
+              <option value="under-1k">Under $1,000</option>
+              <option value="1k-5k">$1,000 - $5,000</option>
+              <option value="5k-10k">$5,000 - $10,000</option>
+              <option value="above-10k">Above $10,000</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Organic Search</a></li>
+            <li><a href="#">Technical Schema</a></li>
+            <li><a href="#">GEO Optimization</a></li>
+            <li><a href="#">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Marketing Insights</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+    
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const content = i.querySelector('.faq-answer');
+        if(content) content.style.maxHeight = null;
+      });
+
+      // If it wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        const content = item.querySelector('.faq-answer');
+        if(content) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>
