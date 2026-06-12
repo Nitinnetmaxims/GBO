@@ -11,6 +11,13 @@
   
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .hover-red-card:hover .orm-num {
+      background: white !important;
+      color: var(--color-fire-engine-red) !important;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -18,11 +25,11 @@
       <a href="index.html" class="logo-wrapper" id="header-logo">
         <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
       </a>
-      <nav id="main-navigation">
+            <nav id="main-navigation">
         <div class="nav-item">
           <a href="#">Services</a>
           <div class="dropdown-menu">
-                                    <div class="dropdown-item-nested">
+            <div class="dropdown-item-nested">
               <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
               <div class="nested-dropdown-menu">
                 <a href="index.html#digital-marketing">Digital Marketing Services</a>
@@ -33,9 +40,36 @@
                 <a href="services-dm-reputation.html">Online Reputation Management</a>
               </div>
             </div>
-            <a href="services-local-seo.html">Local SEO Services</a>
-            <a href="services-social-media.html">Social Media Marketing</a>
-            <a href="services-seo.html">SEO</a>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="services-social-management.html">Social Media Management</a>
+                <a href="services-social-advertising.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="services-app-store.html">AppStoreOptimization</a>
+                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
             <a href="services-video-seo.html">Video SEO</a>
             <a href="services-digital-advertising.html">Digital Advertising</a>
           </div>
@@ -86,7 +120,7 @@
       <div class="sidebar-dropdown">
         <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
         <div class="sidebar-dropdown-content">
-                    <div class="sidebar-dropdown">
+          <div class="sidebar-dropdown">
             <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
             <div class="sidebar-dropdown-content sidebar-nested-content">
               <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
@@ -97,9 +131,36 @@
               <a href="services-dm-reputation.html">Online Reputation Management</a>
             </div>
           </div>
-          <a href="services-local-seo.html">Local SEO Services</a>
-          <a href="services-social-media.html">Social Media Marketing</a>
-          <a href="services-seo.html">SEO</a>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="services-social-management.html">Social Media Management</a>
+              <a href="services-social-advertising.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="services-app-store.html">AppStoreOptimization</a>
+              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
           <a href="services-video-seo.html">Video SEO</a>
           <a href="services-digital-advertising.html">Digital Advertising</a>
         </div>
@@ -125,253 +186,374 @@
   </div>
 
   
-  <section class="premium-hero">
-    <div class="container">
-      <div class="breadcrumb">Home > Services > <span>Digital Marketing</span></div>
-      <h1>Online Reputation Management Services</h1>
-      <p>Protect Your Brand. Build Trust. Drive Sales. 90% of consumers read online reviews before visiting a business. Control the narrative and highlight your best assets with our ORM strategy.</p>
-      <div class="hero-btns">
-        <a href="free-consultation.html" class="btn btn-primary">Get a Free ORM Audit</a>
+  <section class="premium-hero" style="background: #282828; padding: 7rem 0 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); color: var(--color-cool-gray); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1.5rem;">
+        Online Reputation Management
+      </span>
+      <h1 style="color: white; font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -1px;">Online Reputation <span style="color: var(--color-fire-engine-red);">Management Services</span></h1>
+      <h3 style="color: white; font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 600;">Protect Your Brand. Build Trust. Drive Sales.</h3>
+      <p style="color: var(--color-cool-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">90% of consumers read online reviews before visiting a business. Control the narrative and highlight your best assets with our ORM strategy.</p>
+      <div class="hero-btns" style="display: flex; justify-content: center;">
+        <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); border: none; padding: 1rem 2.5rem; font-weight: 600; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; transition: background 0.3s ease;">
+          Get Your Free Audit
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="stats-bar" style="padding: 2rem 0; background: #111; border-bottom: 1px solid #222;">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+  <section class="stats-bar" style="background: #1a1a1a; padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
       <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">5000+</div>
-        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Satisfied Clients</div>
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">5,000+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Negative Reviews Removed</div>
       </div>
       <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">40+</div>
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">40+</div>
         <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industries Served</div>
       </div>
       <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">10+ Years</div>
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">10+ Years</div>
         <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industry Experience</div>
       </div>
       <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 2.5rem; font-weight: 700; color: var(--color-pure-white);">95%</div>
-        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Client Retention</div>
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">98%</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Client Success Rate</div>
       </div>
     </div>
   </section>
 
-  <section class="section-light">
-    <div class="container">
-      <span class="section-label">INTRODUCTION</span>
-      <h2 class="section-title">What is Online Reputation Management?</h2>
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 1px;">
+        Overview
+      </span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 4rem; font-weight: 600; letter-spacing: -0.5px;">What is <span style="color: var(--color-fire-engine-red);">Online Reputation Management?</span></h2>
       
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div class="num-card-white">
-          <p style="color: var(--color-light-gray); margin-bottom: 1.5rem;">ORM is the practice of monitoring, influencing, and growing your brand's digital reputation across search engines, review sites, and social media.</p>
-          <ul class="red-bullet-list">
-            <li>Review Generation</li>
-            <li>Negative Feedback Suppression</li>
-            <li>Brand Monitoring</li>
-            <li>Social Listening</li>
-            <li>Crisis Management</li>
-          </ul>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1100px; margin: 0 auto; text-align: left; align-items: stretch;">
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <p style="color: #666; font-size: 1.05rem; line-height: 1.7; margin: 0;">ORM is the practice of monitoring, influencing, and growing your brand's digital reputation across search engines, review sites, and social media.</p>
+          </div>
+          <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex-grow: 1;">
+            <h3 style="font-size: 1.3rem; color: #111; margin-bottom: 1.5rem; font-weight: 600;">Reputation Checklist</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Review Generation</li>
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Negative Feedback Suppression</li>
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Brand Monitoring</li>
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Social Listening</li>
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Crisis Management</li>
+              <li style="display: flex; align-items: center; gap: 1rem; color: #333; font-size: 1.05rem; font-weight: 500;"><span style="color: #BB080B; font-size: 1.2rem;"><i class="fa-solid fa-circle-check"></i></span> Brand Protection SEO</li>
+            </ul>
+          </div>
         </div>
-        <div class="num-card-dark" style="background: #111;">
-          <h4 style="color: white; margin-bottom: 1.5rem;">The Cost of a Bad Reputation</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center;">
-              <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0;">22%</h3>
-              <p style="font-size: 0.8rem; margin: 0; color: var(--color-cool-gray);">Lost business from 1 negative article</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 0;">
+          <div style="background: #282828; border-radius: 12px 12px 0 0; padding: 2.5rem;">
+            <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 600;">Why your brand's reputation matters</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">97%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Consumers read local reviews</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">85%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Trust online reviews as much as personal recommendations</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">49%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Need at least a 4-star rating to use a business</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+                <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0.5rem; font-size: 1.8rem; font-weight: 700;">22%</h3>
+                <p style="font-size: 0.85rem; margin: 0; color: var(--color-cool-gray);">Business lost from 1 negative article</p>
+                </div>
             </div>
-            <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center;">
-              <h3 style="color: var(--color-fire-engine-red); margin-bottom: 0;">70%</h3>
-              <p style="font-size: 0.8rem; margin: 0; color: var(--color-cool-gray);">Lost business from 3 negative articles</p>
-            </div>
+          </div>
+          <div style="background: #BB080B; border-radius: 0 0 12px 12px; padding: 2rem;">
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; color: white; font-weight: 600;">24/7 reputation management</h4>
+            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.6; margin: 0;">Our team monitors the web around the clock to detect negative content the moment it goes live so we can mitigate the issue immediately.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-black">
-    <div class="container">
-      <span class="section-label">BENEFITS</span>
-      <h2 class="section-title" style="color: white;">How ORM Services Help Your Business Grow</h2>
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">BENEFITS</span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">How ORM Services Help Your <span style="color: var(--color-fire-engine-red);">Business Grow</span></h2>
       
-      <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="num-card-red">
-          <div class="num">01</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: white;">Improve Local Rankings</h4>
-          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">A high volume of positive reviews is a major ranking factor for Google Local Pack visibility.</p>
-        </div>
-        <div class="num-card-dark">
-          <div class="num">02</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Build Consumer Trust</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Customers trust online reviews as much as personal recommendations. We help you showcase your 5-star service.</p>
-        </div>
-        <div class="num-card-dark">
-          <div class="num">03</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Mitigate Negative Feedback</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">We intercept unhappy customers privately before they leave public complaints.</p>
-        </div>
-        <div class="num-card-dark">
-          <div class="num">04</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Control the Search Narrative</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Push negative press down the search results by creating high-authority positive content.</p>
-        </div>
-        <div class="num-card-dark">
-          <div class="num">05</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Increase Conversion Rates</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">A flawless reputation dramatically increases the likelihood that a website visitor turns into a paying client.</p>
-        </div>
-        <div class="num-card-dark">
-          <div class="num">06</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Attract Top Talent</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">A strong company culture reflected online makes recruiting top-tier employees easier and cheaper.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-light">
-    <div class="container">
-      <span class="section-label">SOLUTIONS</span>
-      <h2 class="section-title">Our Online Reputation Management Services</h2>
-      
-      <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="num-card-red">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: white;">Review Generation</h4>
-          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">Automated SMS and email campaigns to easily request reviews from satisfied customers.</p>
-        </div>
-        <div class="num-card-white">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Review Monitoring</h4>
-          <p style="color: var(--color-light-gray); font-size: 0.9rem;">24/7 tracking across Google, Yelp, Facebook, and industry-specific review platforms.</p>
-        </div>
-        <div class="num-card-white">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Negative Search Suppression</h4>
-          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Aggressive SEO tactics to outrank and push down damaging news articles or forum posts.</p>
-        </div>
-        <div class="num-card-white">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Social Media Listening</h4>
-          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Track brand mentions across Twitter, Instagram, and Reddit to engage with customers instantly.</p>
-        </div>
-        <div class="num-card-white">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Crisis Management</h4>
-          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Rapid response strategies to mitigate viral PR disasters and control the narrative.</p>
-        </div>
-        <div class="num-card-white">
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: #111;">Brand Protection SEO</h4>
-          <p style="color: var(--color-light-gray); font-size: 0.9rem;">Securing your brand name across all web properties and social profiles to prevent hijacking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark">
-    <div class="container">
-      <span class="section-label">THE PROCESS</span>
-      <h2 class="section-title">Our ORM Process</h2>
-      
-      <div style="display: flex; justify-content: space-between; position: relative; margin-top: 4rem;">
-        <div style="position: absolute; top: 20px; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.1); z-index: 1;"></div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
         
-        <div style="position: relative; z-index: 2; text-align: center; width: 20%;">
-          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-fire-engine-red); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: bold;">1</div>
-          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Audit</h4>
-          <p style="font-size: 0.8rem; color: var(--color-cool-gray);">Comprehensive scan of your current digital reputation.</p>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Improve Local Rankings</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">A high volume of positive reviews is a major ranking factor for Google Local Pack visibility.</p>
         </div>
-        <div style="position: relative; z-index: 2; text-align: center; width: 20%;">
-          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-charcoal); border: 2px solid var(--color-fire-engine-red); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: bold;">2</div>
-          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Strategy</h4>
-          <p style="font-size: 0.8rem; color: var(--color-cool-gray);">Custom plan to suppress negatives and promote positives.</p>
+        
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Build Consumer Trust</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Customers trust online reviews as much as personal recommendations. We help you showcase your 5-star service.</p>
         </div>
-        <div style="position: relative; z-index: 2; text-align: center; width: 20%;">
-          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-charcoal); border: 2px solid var(--color-fire-engine-red); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: bold;">3</div>
-          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Implementation</h4>
-          <p style="font-size: 0.8rem; color: var(--color-cool-gray);">Executing review funnels and content creation.</p>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Mitigate Negative Feedback</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We intercept unhappy customers privately before they leave public complaints.</p>
         </div>
-        <div style="position: relative; z-index: 2; text-align: center; width: 20%;">
-          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-charcoal); border: 2px solid var(--color-fire-engine-red); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: bold;">4</div>
-          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Monitoring</h4>
-          <p style="font-size: 0.8rem; color: var(--color-cool-gray);">24/7 ongoing tracking of new brand mentions.</p>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Control the Search Narrative</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Push negative press down the search results by creating high-authority positive content.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Increase Conversion Rates</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">A flawless reputation dramatically increases the likelihood that a website visitor turns into a paying client.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: var(--color-low-engine-red); font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;">Attract Top Talent</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">A strong company culture reflected online makes recruiting top-tier employees easier and cheaper.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-black">
-    <div class="container">
-      <span class="section-label">WHY US</span>
-      <h2 class="section-title">Why Choose DIGI GROW for ORM Services?</h2>
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">SOLUTIONS</span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Our Online Reputation Management <span style="color: var(--color-fire-engine-red);">Services</span></h2>
       
-      <div class="numbered-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <div class="num-card-red">
-          <div class="num"><i class="fa-solid fa-star"></i></div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem; color: white;">Discreet & Confidential</h4>
-          <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem;">We handle sensitive reputation issues with the utmost privacy and professionalism.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Review Generation</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Automated SMS and email campaigns to easily request reviews from satisfied customers.</p>
         </div>
-        <div class="num-card-dark">
-          <div class="num">01</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">SEO Expertise</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">Effective ORM requires elite SEO skills to manipulate search results. We are SEO masters.</p>
+        
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Brand Monitoring</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">24/7 tracking across Google, Yelp, Facebook, and industry-specific review platforms.</p>
         </div>
-        <div class="num-card-dark">
-          <div class="num">02</div>
-          <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Proactive Approach</h4>
-          <p style="color: var(--color-cool-gray); font-size: 0.9rem;">We don't just put out fires; we build a firewall of positive content to protect you from future attacks.</p>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Negative Content Suppression</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Aggressive SEO tactics to outrank and push down damaging news articles or forum posts.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Social Media Brand Management</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Track brand mentions across Twitter, Instagram, and Reddit to engage with customers instantly.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">PR & Outreach Campaigns</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Rapid response strategies to mitigate viral PR disasters and control the narrative.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Search Engine Domination</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Securing your brand name across all web properties and social profiles to prevent hijacking.</p>
+        </div>
+      </div>
+      <div style="margin-top: 4rem;">
+        <a href="free-consultation.html" style="display: inline-flex; align-items: center; gap: 0.8rem; background: #BB080B; color: white; padding: 1.2rem 2.5rem; border-radius: 6px; font-weight: 600; font-size: 1.1rem; text-decoration: none; transition: background 0.3s ease;">
+          Get a Free ORM Audit <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">PROCESS</span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.5px;">Our <span style="color: var(--color-fire-engine-red);">ORM Process</span></h2>
+      <p style="color: var(--color-cool-gray); font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 3.5rem auto;">A proven process that turns reputation ideas into measurable business results.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 1.5rem; max-width: 1200px; margin: 0 auto; text-align: left;">
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #333; border: 2px solid #BB080B; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem;">1</div>
+          <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2rem 1.5rem; width: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.05rem; color: white; font-weight: 600; text-align: center;">Audit & Analysis</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Comprehensive scan</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Sentiment analysis</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Threat identification</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Asset evaluation</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Competitor review</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #333; border: 2px solid #BB080B; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem;">2</div>
+          <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2rem 1.5rem; width: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.05rem; color: white; font-weight: 600; text-align: center;">Strategy Planning</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Custom action plan</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Suppression strategy</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Promotion plan</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> KPI establishment</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #333; border: 2px solid #BB080B; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem;">3</div>
+          <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2rem 1.5rem; width: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.05rem; color: white; font-weight: 600; text-align: center;">Profile Optimization</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Claim all listings</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Optimize GMB profiles</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Build social assets</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Ensure consistency</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #333; border: 2px solid #BB080B; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem;">4</div>
+          <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2rem 1.5rem; width: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.05rem; color: white; font-weight: 600; text-align: center;">Review Generation</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Setup email funnels</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Setup SMS requests</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Intercept negative feedback</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Reply to all reviews</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background: #333; border: 2px solid #BB080B; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.5rem;">5</div>
+          <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2rem 1.5rem; width: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <h4 style="margin-bottom: 1.5rem; font-size: 1.05rem; color: white; font-weight: 600; text-align: center;">Search Engine Suppression</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Create high-quality content</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Build authoritative links</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Push down negatives</li>
+              <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--color-cool-gray); font-size: 0.85rem;"><span style="color: #BB080B; margin-top: 0.3rem; font-size: 0.5rem;"><i class="fa-solid fa-circle"></i></span> Secure page 1 of Google</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">WHY US</span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 3.5rem; font-weight: 600; letter-spacing: -0.5px;">Why Choose DIGI GROW for <span style="color: var(--color-fire-engine-red);">ORM Services?</span></h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">01</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Proactive ORM Strategies</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We don't just put out fires; we build a firewall of positive content to protect you from future attacks.</p>
+        </div>
+        
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">02</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Rapid Response System</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Our team monitors the web around the clock to detect negative content the moment it goes live.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">03</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Data-Driven Approach</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We rely on hard data and advanced sentiment analysis to craft our reputation strategies.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">04</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">100% White-Hat Practices</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We never use black-hat SEO tactics or fake reviews. We build legitimate, long-lasting authority.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">05</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Affordable Packages</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">We offer transparent, flat-rate pricing with no hidden fees or surprise upcharges.</p>
+        </div>
+        <div class="hover-red-card num-card-white" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="orm-num" style="color: #BB080B; font-weight: 700; font-size: 1.5rem; margin-bottom: 1.5rem; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px;">06</div>
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;">Long-Term Brand Growth</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;">Our goal isn't just a temporary fix; it's to build a resilient brand that drives long-term sales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-light" style="background: var(--color-fire-engine-red); color: white; text-align: center;">
-    <div class="container">
-      <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.5rem;">Ready to Strengthen Your Online Reputation?</h2>
-      <p style="max-width: 700px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.9); font-size: 1.1rem;">Don't let a few disgruntled voices ruin your business. Take control of your digital narrative today.</p>
-      <a href="free-consultation.html" class="btn btn-outline" style="background: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 1rem 2.5rem; border-radius: 50px;">Get a Free ORM Strategy</a>
+  <section style="background-color: var(--color-fire-engine-red); padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px;">Ready to Strengthen Your Online Reputation?</h2>
+      <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.7;">Don't let a few disgruntled voices ruin your business. Take control of your digital narrative today.</p>
+      <div style="display: flex; justify-content: center;">
+        <a href="free-consultation.html" class="btn btn-outline" style="background: white; color: var(--color-fire-engine-red); border: none; font-weight: 700; padding: 1.1rem 2.5rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem;">Contact Us for a Free Audit</a>
+      </div>
     </div>
   </section>
 
-  <section class="section-dark">
+  <section class="section-dark" style="padding: 6rem 0; background: #1a1a1a;">
     <div class="container">
-      <span class="section-label">FAQS</span>
-      <h2 class="section-title">Online Reputation Management FAQs</h2>
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">FAQS</span>
+        <h2 style="font-size: 2.8rem; color: white; font-weight: 600; letter-spacing: -0.5px;">Online Reputation Management FAQs</h2>
+      </div>
       <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+        
         <div class="faq-item">
-          <button class="faq-question-btn"><span>Can you delete negative Google reviews?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">We cannot simply 'delete' them, but we can flag violations for removal, and more importantly, bury them under an avalanche of new, legitimate 5-star reviews.</div></div>
+          <button class="faq-question-btn"><span>What is ORM?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Online Reputation Management (ORM) involves monitoring, addressing, and mitigating negative search results and reviews, while actively promoting positive content about your brand.</div></div>
         </div>
+
         <div class="faq-item">
           <button class="faq-question-btn"><span>How long does it take to clean up a search results page?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
           <div class="faq-answer"><div class="faq-answer-inner">Suppressing negative articles typically takes 3 to 6 months of aggressive SEO and content creation to shift the rankings permanently.</div></div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="cta-banner" id="cta-banner">
-<section class="cta-banner" id="cta-banner">
-    <div class="container">
-      <div class="cta-left">
-        <h2>Claim Your Technical<br>SEO Audit Report.</h2>
-      </div>
-      <div class="cta-right">
-        <form id="cta-audit-form" action="free-consultation.html">
-          <div class="cta-form-grid">
-            <input type="text" placeholder="Full Name" required id="cta-name">
-            <input type="email" placeholder="Email Address" required id="cta-email">
-            <input type="url" placeholder="Website URL" required id="cta-website">
-            <select required id="cta-budget">
-              <option value="" disabled selected>Monthly Budget</option>
-              <option value="under-1k">Under $1,000</option>
-              <option value="1k-5k">$1,000 - $5,000</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="above-10k">Above $10,000</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
-        </form>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Can you delete negative Google reviews?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We cannot simply 'delete' them, but we can flag violations for removal, and more importantly, bury them under an avalanche of new, legitimate 5-star reviews.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How do you get more 5-star reviews?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We set up automated email and SMS funnels that kindly request reviews from your satisfied customers shortly after a successful transaction.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Do you manage social media comments?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, our social listening team monitors your brand mentions across all major platforms and engages with customers to resolve issues publicly and privately.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Is ORM just about fixing negative reviews?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No, proactive ORM focuses on building an impenetrable wall of highly authoritative positive content so that future negative attacks are much harder to rank.</div></div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <section class="cta-banner" id="cta-banner">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; align-items: center;">
+      <div class="cta-left">
+        <h2 style="font-size: 3.5rem; font-weight: 700; line-height: 1.1; color: white; margin: 0;">Claim Your<br>Free<br>Website<br>Audit.</h2>
+      </div>
+      <div class="cta-right" style="display: flex; justify-content: flex-end;">
+        <form class="audit-form" style="display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 600px;">
+          <input type="url" placeholder="Website Domain" required style="width: 100%; padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white; font-size: 1.1rem;">
+          <button type="submit" class="btn btn-outline" style="width: 100%; padding: 1.5rem; background: white; color: var(--color-fire-engine-red); border: none; font-weight: 700; font-size: 1.2rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease;">Analyze Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
 <footer>
     <div class="container">
       <div class="footer-top">
