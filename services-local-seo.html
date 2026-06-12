@@ -3,14 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Local SEO Services - GBO</title>
-  <meta name="description" content="Dominate local searches, rank in the Google Maps Local 3-Pack, and attract nearby customers with GBO's Local SEO services.">
+  <title>SEO Services - GBO</title>
+  <meta name="description" content="Outrank competitors, scale organic search traffic, and capture high-intent leads automatically with GBO's advanced SEO services.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .hover-red-card:hover .orm-num {
+      background: white !important;
+      color: var(--color-fire-engine-red) !important;
+    }
+
+    .hover-red-card:hover .step-num {
+      color: rgba(255, 255, 255, 0.3) !important;
+    }
+    .hover-red-card:hover .check-icon {
+      color: white !important;
+    }
+    .hover-red-card:hover li {
+      color: white !important;
+    }
+
+    
+    /* Responsive Grid Classes */
+    .responsive-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .responsive-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    @media (max-width: 991px) {
+      .stats-bar .container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-6) !important;
+      }
+      .responsive-grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .cta-banner .container {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: var(--space-6) !important;
+      }
+      .cta-banner .cta-right {
+        justify-content: center !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .stats-bar .container {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4) !important;
+      }
+      .responsive-grid-3, .responsive-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .responsive-grid-3 > div, .responsive-grid-2 > div {
+        width: 100% !important;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -18,11 +84,11 @@
       <a href="index.html" class="logo-wrapper" id="header-logo">
         <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
       </a>
-      <nav id="main-navigation">
+            <nav id="main-navigation">
         <div class="nav-item">
           <a href="#">Services</a>
           <div class="dropdown-menu">
-                                    <div class="dropdown-item-nested">
+            <div class="dropdown-item-nested">
               <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
               <div class="nested-dropdown-menu">
                 <a href="index.html#digital-marketing">Digital Marketing Services</a>
@@ -33,9 +99,36 @@
                 <a href="services-dm-reputation.html">Online Reputation Management</a>
               </div>
             </div>
-            <a href="services-local-seo.html">Local SEO Services</a>
-            <a href="services-social-media.html">Social Media Marketing</a>
-            <a href="services-seo.html">SEO</a>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="services-social-management.html">Social Media Management</a>
+                <a href="services-social-advertising.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="services-app-store.html">AppStoreOptimization</a>
+                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
             <a href="services-video-seo.html">Video SEO</a>
             <a href="services-digital-advertising.html">Digital Advertising</a>
           </div>
@@ -86,7 +179,7 @@
       <div class="sidebar-dropdown">
         <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
         <div class="sidebar-dropdown-content">
-                    <div class="sidebar-dropdown">
+          <div class="sidebar-dropdown">
             <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
             <div class="sidebar-dropdown-content sidebar-nested-content">
               <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
@@ -97,9 +190,36 @@
               <a href="services-dm-reputation.html">Online Reputation Management</a>
             </div>
           </div>
-          <a href="services-local-seo.html">Local SEO Services</a>
-          <a href="services-social-media.html">Social Media Marketing</a>
-          <a href="services-seo.html">SEO</a>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="services-social-management.html">Social Media Management</a>
+              <a href="services-social-advertising.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="services-app-store.html">AppStoreOptimization</a>
+              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
           <a href="services-video-seo.html">Video SEO</a>
           <a href="services-digital-advertising.html">Digital Advertising</a>
         </div>
@@ -124,236 +244,347 @@
     </nav>
   </div>
 
-  <section class="hero" id="hero-section" style="padding-bottom: 4rem;">
-    <div class="container" style="display: flex; justify-content: center; text-align: center;">
-      <div class="hero-left" style="max-width: 800px; padding-right: 0;">
-        <span class="hero-badge">Dominate Your Region</span>
-        <h1 style="margin-bottom: 1.5rem;">Best Local SEO Services</h1>
-        <p class="hero-desc">Capture high-intent local traffic, dominate Google Maps, and turn nearby searchers into loyal customers with our customized local search optimization.</p>
-        <div class="hero-form-wrapper" style="justify-content: center; display: flex;">
-          <a href="free-consultation.html" class="btn btn-primary">Get Started Now &rarr;</a>
+  
+  <section class="premium-hero" style="background: #282828; padding: 7rem 0 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <span style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: var(--color-cool-gray); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">Local SEO</span>
+        <span style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: var(--color-cool-gray); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">Google Business Profile</span>
+        <span style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); color: var(--color-cool-gray); padding: 0.35rem 1.2rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600;">Citation Building</span>
+      </div>
+      <h1 style="color: white; font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -1px;">Best Local SEO Services</h1>
+      <h3 style="color: var(--color-fire-engine-red); font-size: 1.3rem; margin-bottom: 1.5rem; font-weight: 600;">Get Found. Drive Foot Traffic. Grow Revenue.</h3>
+      <p style="color: var(--color-cool-gray); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">Attract local customers when they are actively searching for your services online. Our Local SEO strategies optimize your presence on Google Maps and search results, bringing more foot traffic and phone calls to your business.</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin: 0 auto 3rem auto; text-align: left;">
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Dominate local search results</div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Target high-intent local keywords</div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Rank higher on Google Maps</div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Build local citations</div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Optimize your Google Business Profile</div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; color: white; font-size: 0.95rem;"><span style="color: var(--color-fire-engine-red);"><i class="fa-solid fa-check"></i></span> Drive qualified local traffic</div>
+      </div>
+
+      <div class="hero-btns" style="display: flex; justify-content: center;">
+        <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); border: none; padding: 1rem 3.5rem; font-weight: 600; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; transition: background 0.3s ease;">
+          Get Free Proposal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" style="background: #1a1a1a; padding: 2.5rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">5,000+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Local Campaigns Managed</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">40+</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Industries Served</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">10+ Years</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Experience In Local SEO</div>
+      </div>
+      <div class="stat-item" style="text-align: center;">
+        <div class="stat-val" style="font-size: 2.2rem; font-weight: 700; color: white;">98%</div>
+        <div class="stat-label" style="font-size: 0.85rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase;">Client Success Rate</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--color-fire-engine-red); padding: 0.35rem 1.2rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 1px;">
+        WHAT IS LOCAL SEO?
+      </span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px;">What is Local SEO?</h2>
+      <p style="color: #666; font-size: 1.05rem; line-height: 1.7; margin: 0 auto 4rem auto; max-width: 900px;">Local SEO (Search Engine Optimization) is the process of improving search engine visibility for local businesses, primarily those with physical locations. By following local SEO best practices, businesses can improve organic traffic from searches performed by customers in nearby areas.</p>
+      
+      <div class="responsive-grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; max-width: 1100px; margin: 0 auto; text-align: left; align-items: stretch;">
+        
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; transition: all 0.3s ease;">
+            <h3 style="font-size: 1.3rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Benefits of Local SEO</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> Higher local visibility</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> More foot traffic</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> Increased phone calls</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> Better local reputation</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> Competitive advantage</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem; transition: color 0.3s ease;"><span class="check-icon" style="color: #BB080B; transition: color 0.3s ease;"><i class="fa-solid fa-check"></i></span> Higher conversion rates</li>
+            </ul>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem;">
+            <h3 style="font-size: 1.3rem; color: #111; font-weight: 600;">Local SEO Checklist</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> Google Business Profile optimization</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> Local keyword research & targeting</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> On-page local SEO optimization</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> NAP consistency monitoring</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> Local link building</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; color: #333; font-size: 0.95rem;"><span style="color: #BB080B;"><i class="fa-solid fa-circle-check"></i></span> Review generation and management</li>
+            </ul>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h3 style="font-size: 1.3rem; color: #111; font-weight: 600; line-height: 1.5; margin-bottom: 2rem;">Did you know? 46% of all Google searches have local intent.</h3>
+            <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); color: white; border: none; padding: 1rem 2rem; font-weight: 600; border-radius: 6px; font-size: 1rem; transition: background 0.3s ease;">Get Started</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">GROW REVENUE</span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px;">How Local SEO Services Help You Grow Revenue</h2>
+      <p style="color: var(--color-cool-gray); font-size: 1.05rem; line-height: 1.7; margin: 0 auto 3.5rem auto; max-width: 800px;">Local SEO ensures your business is visible to potential customers in your area precisely when they are searching for the products or services you offer.</p>
+      
+      <div class="responsive-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Target Local Traffic</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Attract customers who are actively looking for your services in your specific geographic area, leading to higher conversion rates.</p>
+        </div>
+        
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Increase Foot Traffic</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">By optimizing for "near me" searches, you'll drive more physical visits to your brick-and-mortar locations.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Boost Phone Calls</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Optimize your Google Business Profile to make it easy for local customers to call you directly from search results.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Outrank Competitors</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Dominate the local search results and push your competitors down, ensuring you get the lion's share of local clicks.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Build Local Authority</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Establish your business as the go-to expert in your local community, building trust and loyalty among local customers.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Maximize ROI</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Local SEO offers one of the highest returns on investment by targeting users with high purchase intent in your area.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">WHY CHOOSE DIGI GROW</span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px;">Why Should You Hire a Local SEO Company?</h2>
+      <p style="color: #666; font-size: 1.05rem; line-height: 1.7; margin: 0 auto 3.5rem auto; max-width: 800px;">Partnering with a specialized local SEO agency gives you the expertise and resources needed to dominate your local market.</p>
+      
+      <div class="responsive-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;" class="hover-title">Proven Local Strategies</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We use data-driven, battle-tested strategies to improve your local rankings and drive meaningful business results.</p>
+        </div>
+        
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;" class="hover-title">Dedicated Local Experts</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Our team of local SEO specialists stays up-to-date with the latest Google algorithm changes to keep you ahead.</p>
+        </div>
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;" class="hover-title">Comprehensive Reporting</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Get transparent, easy-to-understand reports that show exactly how your local SEO campaigns are performing.</p>
+        </div>
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;" class="hover-title">Customized Campaigns</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We tailor our local SEO strategies to fit the unique needs and goals of your specific business and industry.</p>
+        </div>
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: #111; font-weight: 600;" class="hover-title">Focus on ROI & Growth</h4>
+          <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We don't just focus on rankings; we focus on driving qualified leads and revenue growth for your local business.</p>
+        </div>
+        <div style="background: #282828; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+          <h4 style="margin-bottom: 1.5rem; font-size: 1.3rem; color: white; font-weight: 600;">Get a Free Local SEO Audit</h4>
+          <a href="free-consultation.html" class="btn btn-primary" style="background: var(--color-fire-engine-red); color: white; border: none; padding: 1rem 2rem; font-weight: 600; border-radius: 6px; font-size: 1rem; transition: background 0.3s ease;">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="marketing-revenue" style="padding: 6rem 0; background: #111; color: white;">
+  <section class="section-black" style="padding: 6rem 0; background: #282828;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">WHY CHOOSE DIGI GROW</span>
+      <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px;">8 Reasons to Choose DIGI GROW As Your Local SEO Company</h2>
+      <p style="color: var(--color-cool-gray); font-size: 1.05rem; line-height: 1.7; margin: 0 auto 3.5rem auto; max-width: 800px;">Partner with an award-winning local SEO agency that delivers real business growth.</p>
+      
+      <div class="responsive-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Data-Driven Strategies</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We rely on hard data and advanced analytics to inform every decision we make in your local SEO campaign.</p>
+        </div>
+        
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">100% Transparent Reporting</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">You'll always know exactly what we are doing and the results we are achieving for your business.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Dedicated Account Managers</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">You'll have a dedicated point of contact who understands your business and is always available to answer your questions.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">Custom Local Content</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">Our expert copywriters create high-quality, localized content that resonates with your target audience and ranks well.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">White-Hat Link Building</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We build high-quality, authoritative local backlinks that improve your rankings safely and sustainably.</p>
+        </div>
+        <div class="hover-red-card" style="background: #333333; border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; transition: all 0.3s ease;">
+          <h4 style="margin-bottom: 1rem; font-size: 1.15rem; color: white; font-weight: 600;" class="hover-title">No Long-Term Contracts</h4>
+          <p style="color: var(--color-cool-gray); font-size: 0.9rem; line-height: 1.6; margin: 0;" class="hover-text">We believe in earning your business every month, which is why we don't lock you into long-term contracts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #F0EDE8; padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">PROCESS</span>
+      <h2 style="font-size: 2.8rem; color: #111; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.5px;">Our Local SEO Strategic Process</h2>
+      <p style="color: #666; font-size: 1.05rem; line-height: 1.7; margin: 0 auto 3.5rem auto; max-width: 800px;">A proven, step-by-step approach to dominating your local market and driving sustainable growth.</p>
+      
+      <div class="responsive-grid-2" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; text-align: left;">
+        
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">01</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Discovery & Local SEO Audit</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We start with a comprehensive audit of your local presence, technical SEO, and competitor landscape.</p>
+          </div>
+        </div>
+        
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">02</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Local Keyword Research</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We identify the high-intent, location-specific keywords your ideal customers are using to find services like yours.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">03</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">On-Page SEO Optimization</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We optimize your website's content, meta tags, headers, and internal linking structure for your target local keywords.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">04</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Google Business Profile Optimization</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We fully optimize your GBP listing to maximize visibility in the local pack and Google Maps.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">05</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">NAP Citation Building</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We ensure your Name, Address, and Phone Number are perfectly consistent across all local directories.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">06</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Local Content Creation</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We develop localized content, such as city-specific landing pages and locally relevant blog posts.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">07</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Review Management</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We help you generate positive reviews and manage your online reputation effectively.</p>
+          </div>
+        </div>
+
+        <div class="hover-red-card" style="background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 1.5rem; transition: all 0.3s ease;">
+          <div class="step-num" style="font-size: 2rem; font-weight: 700; color: rgba(187,8,11,0.2); line-height: 1; transition: color 0.3s ease;">08</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: #111; font-weight: 600; transition: color 0.3s ease;">Monitoring & Reporting</h4>
+            <p style="color: var(--color-light-gray); font-size: 0.9rem; line-height: 1.6; margin: 0; transition: color 0.3s ease;">We continuously track your local rankings, traffic, and conversions, providing detailed monthly reports.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: var(--color-fire-engine-red); padding: 6rem 0;">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px;">Get Your Free Local SEO Consultation Today!</h2>
+      <p style="max-width: 700px; margin: 0 auto 3rem; color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.7;">Find out exactly what it will take to dominate your local market and attract more nearby customers.</p>
+      <div style="display: flex; justify-content: center;">
+        <a href="free-consultation.html" class="btn btn-outline" style="background: white; color: var(--color-fire-engine-red); border: none; font-weight: 700; padding: 1.1rem 2.5rem; border-radius: 6px; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem;">Schedule My Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="section-light" style="padding: 6rem 0; background: white;">
     <div class="container">
-      <div class="marketing-content-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div class="marketing-acc-content" style="display: block; opacity: 1; height: auto;">
-          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">What is Local SEO?</h2>
-          <p style="line-height: 1.8; color: var(--color-cool-gray);">Local SEO is the practice of optimizing your online presence to attract more business from relevant local searches on Google and other search engines. It ensures your business appears in local map packs and search queries at the exact moment local customers search for your services nearby.</p>
-          <p style='margin-top: 1rem; color: var(--color-cool-gray);'>Over 80% of local mobile searches result in a purchase or store visit. By optimizing your Google Business Profile (GBP), building NAP citations, and targeting location keywords, we capture this high-intent traffic.</p>
-          <ul style='margin-top: 1.5rem; padding-left: 1.5rem; color: var(--color-cool-gray);'><li style='margin-bottom: 0.5rem;'>Rank for location-based and 'near me' searches</li><li style='margin-bottom: 0.5rem;'>Appear in the Google Maps Local 3-Pack</li><li style='margin-bottom: 0.5rem;'>Drive local foot traffic and phone calls</li><li style='margin-bottom: 0.5rem;'>Optimize Google Business Profile visibility</li></ul>
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span style="display: inline-block; color: var(--color-fire-engine-red); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">FAQS</span>
+        <h2 style="font-size: 2.8rem; color: #111; font-weight: 600; letter-spacing: -0.5px;">Local SEO Services FAQs</h2>
+      </div>
+      <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+        
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What is Local SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Local SEO is the process of optimizing your website and online presence to attract more business from relevant local searches on Google and other search engines.</div></div>
         </div>
-        <div class="marketing-image-panel">
-          <img src="images/video_player.png" alt="Video Player Mockup" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How is Local SEO different from traditional SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Traditional SEO focuses on improving your site's visibility on a national or global scale, while local SEO aims to capture search territory in a specific region, city, or neighborhood.</div></div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What is a Google Business Profile (GBP)?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">GBP is a free tool from Google that allows business owners to manage how they appear online across Google Search and Maps.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How long does it take to see results from Local SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Typically, it takes 3 to 6 months to start seeing significant improvements in local search rankings and traffic, depending on competition and current website authority.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Do I need a physical address for Local SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">While a physical storefront is ideal, service-area businesses (like plumbers or electricians) can still benefit greatly from local SEO by hiding their address and setting a service area.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>Are citations important for Local SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, having consistent Name, Address, and Phone number (NAP) data across online directories is crucial for building trust with Google and improving local rankings.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>How do reviews impact Local SEO?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Reviews are a major ranking factor for local search. A steady stream of positive reviews signals to Google that your business is trustworthy and authoritative.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn"><span>What is a Local SEO audit?</span><span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">It is a comprehensive analysis of your current local search visibility, identifying areas for improvement, technical issues, and opportunities to outrank competitors.</div></div>
+        </div>
+
       </div>
     </div>
   </section>
-
-  <section class="growth-engine" id="growth-engine" style="padding: 6rem 0; background: var(--color-warm-white);">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 3.5rem;">Why Choose GBO for Local SEO</h2>
-      <div class="growth-grid" id="growth-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>Google Maps Domination</h3>
-            <p>We position your business in the Local 3-Pack where 70% of local clicks happen.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>NAP Citation Consistency</h3>
-            <p>We align your business Name, Address, and Phone data across directories to build search trust.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>Review Loop Automation</h3>
-            <p>We optimize customer review collection to boost organic trust signals and local map rankings.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>Local Keyword Research</h3>
-            <p>We discover high-value keywords combined with location-specific search modifiers.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>Local Competitor Analysis</h3>
-            <p>We analyze local competitor citation density and outrank them systematically.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-        <div class="growth-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3>Transparent Reporting</h3>
-            <p>Track your location visibility, call counts, and lead conversions with clear monthly reports.</p>
-          </div>
-          <div class="growth-card-graphic" style="margin-top: 1.5rem;">
-            <img src="assets/growth-engine/search-intent.png" alt="Growth engine icon" style="height: 48px; width: auto; opacity: 0.85;">
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="process-section" style="background: #111; color: white; padding: 6rem 0;">
-    <div class="container">
-      <div class="process-heading-wrapper" style="text-align: center; margin-bottom: 4rem;">
-        <span class="process-label" style="color: var(--color-fire-engine-red);">OUR METHODOLOGY</span>
-        <h2 style="margin-top: 1rem;">Our Local SEO Strategic Process</h2>
-      </div>
-      <div class="process-timeline" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-        
-        <div class="process-step">
-          <div class="step-icon"><img src="assets/Proven Process/step-1.svg" alt="Step Icon"></div>
-          <div class="step-number">01</div>
-          <h4 class="step-title">Google Business Profile Audit</h4>
-          <p class="step-desc">Review GBP settings, classification tags, description text, and geo-coordinates.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-icon"><img src="assets/Proven Process/step-2.svg" alt="Step Icon"></div>
-          <div class="step-number">02</div>
-          <h4 class="step-title">Directory NAP Cleanup</h4>
-          <p class="step-desc">Audit and build clean business directory citations, resolving duplicate or incorrect listings.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-icon"><img src="assets/Proven Process/step-3.svg" alt="Step Icon"></div>
-          <div class="step-number">03</div>
-          <h4 class="step-title">On-Page Geo Optimization</h4>
-          <p class="step-desc">Integrate local city, county, and neighborhood keywords into website metadata and copy.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-icon"><img src="assets/Proven Process/step-4.svg" alt="Step Icon"></div>
-          <div class="step-number">04</div>
-          <h4 class="step-title">Review Collection Setup</h4>
-          <p class="step-desc">Implement automated SMS/Email workflows to gather positive customer feedback on Google.</p>
-        </div>
-        
-        <div class="process-step">
-          <div class="step-icon"><img src="assets/Proven Process/step-5.svg" alt="Step Icon"></div>
-          <div class="step-number">05</div>
-          <h4 class="step-title">Local Link Building</h4>
-          <p class="step-desc">Secure links from local business organizations, chambers of commerce, and local blogs.</p>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="faq" id="faq" style="padding: 6rem 0; background: #fff;">
-    <div class="container" style="max-width: 800px;">
-      <div class="faq-header" style="text-align: center; margin-bottom: 3.5rem;">
-        <h2>Local SEO FAQs</h2>
-      </div>
-      <div class="faq-list" id="faq-accordions">
-        
-        <div class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.2rem; font-weight: 600; text-align: left; cursor: pointer; color: #1a1a1a; padding: 0;">
-            What is local SEO?
-            <span class="faq-icon" style="transition: transform var(--duration-base) var(--ease-standard); display: flex; align-items: center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);">
-            <p style="color: var(--color-cool-gray); line-height: 1.8; margin-top: 1rem; font-size: 1rem; font-style: normal;">Local SEO is search engine optimization focused on improving your rankings in local search results and Google Maps listings.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.2rem; font-weight: 600; text-align: left; cursor: pointer; color: #1a1a1a; padding: 0;">
-            Why is local SEO important?
-            <span class="faq-icon" style="transition: transform var(--duration-base) var(--ease-standard); display: flex; align-items: center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);">
-            <p style="color: var(--color-cool-gray); line-height: 1.8; margin-top: 1rem; font-size: 1rem; font-style: normal;">Local SEO is crucial for businesses with physical storefronts or service regions, helping nearby customers find your business when looking for local solutions.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.2rem; font-weight: 600; text-align: left; cursor: pointer; color: #1a1a1a; padding: 0;">
-            How long does local SEO take to show results?
-            <span class="faq-icon" style="transition: transform var(--duration-base) var(--ease-standard); display: flex; align-items: center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);">
-            <p style="color: var(--color-cool-gray); line-height: 1.8; margin-top: 1rem; font-size: 1rem; font-style: normal;">Most local campaigns start seeing map pack and local keyword improvements within 3 to 6 months depending on local competition.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.2rem; font-weight: 600; text-align: left; cursor: pointer; color: #1a1a1a; padding: 0;">
-            What is Google Business Profile optimization?
-            <span class="faq-icon" style="transition: transform var(--duration-base) var(--ease-standard); display: flex; align-items: center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);">
-            <p style="color: var(--color-cool-gray); line-height: 1.8; margin-top: 1rem; font-size: 1rem; font-style: normal;">It involves setting up and fully configuring your Google map listing with correct categories, descriptions, images, hours, and active review loops.</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner" id="cta-banner">
-    <div class="container">
-      <div class="cta-left">
-        <h2>Dominate Your Region.<br>Claim Your Maps Audit.</h2>
-      </div>
-      <div class="cta-right">
-        <form id="cta-audit-form" action="free-consultation.html">
-          <div class="cta-form-grid">
-            <input type="text" placeholder="Full Name" required id="cta-name">
-            <input type="email" placeholder="Email Address" required id="cta-email">
-            <input type="url" placeholder="Website URL" required id="cta-website">
-            <select required id="cta-budget">
-              <option value="" disabled selected>Monthly Budget</option>
-              <option value="under-1k">Under $1,000</option>
-              <option value="1k-5k">$1,000 - $5,000</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="above-10k">Above $10,000</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
 <footer>
     <div class="container">
       <div class="footer-top">

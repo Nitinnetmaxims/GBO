@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Management - GBO</title>
+  <meta name="description" content="Outrank competitors, scale organic search traffic, and capture high-intent leads automatically with GBO's advanced SEO services.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .hover-red-card:hover .orm-num {
+      background: white !important;
+      color: var(--color-fire-engine-red) !important;
+    }
+
+    .hover-red-card:hover .step-num {
+      color: rgba(255, 255, 255, 0.3) !important;
+    }
+    .hover-red-card:hover .check-icon {
+      color: white !important;
+    }
+    .hover-red-card:hover li {
+      color: white !important;
+    }
+
+    
+    /* Responsive Grid Classes */
+    .responsive-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .responsive-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    @media (max-width: 991px) {
+    #nav-phone-link {
+      display: none !important;
+    }
+      .stats-bar .container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-6) !important;
+      }
+      .responsive-grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .cta-banner .container {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: var(--space-6) !important;
+      }
+      .cta-banner .cta-right {
+        justify-content: center !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .stats-bar .container {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4) !important;
+      }
+      .responsive-grid-3, .responsive-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .responsive-grid-3 > div, .responsive-grid-2 > div {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+            <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="services-social-management.html">Social Media Management</a>
+                <a href="services-social-advertising.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="services-app-store.html">AppStoreOptimization</a>
+                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
+            <a href="services-video-seo.html">Video SEO</a>
+            <a href="services-digital-advertising.html">Digital Advertising</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="tel:+13072093608" class="nav-phone-link" id="nav-phone-link" style="color: white; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-right: 15px;">
+        <i class="fa-solid fa-phone" style="color: var(--color-fire-engine-red);"></i>
+        <span>+1-307-209-3608</span>
+      </a>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="services-social-management.html">Social Media Management</a>
+              <a href="services-social-advertising.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="services-app-store.html">AppStoreOptimization</a>
+              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
+              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
+          <a href="services-video-seo.html">Video SEO</a>
+          <a href="services-digital-advertising.html">Digital Advertising</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+  <style>
+  :root {
+    --color-off-white: #FAF8F5;
+    --color-beige-bg: #F5F2EB;
+    --color-badge-green-bg: #EAF5EA;
+    --color-badge-green-text: #2E7D32;
+    --color-badge-green-border: #C8E6C9;
+    --color-badge-red-bg: #FFEBEE;
+    --color-badge-red-text: #C62828;
+    --color-badge-red-border: #FFCDD2;
+  }
+
+  .premium-badge-green {
+    background: var(--color-badge-green-bg);
+    color: var(--color-badge-green-text);
+    border: 1px solid var(--color-badge-green-border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .premium-badge-red {
+    background: var(--color-badge-red-bg);
+    color: var(--color-badge-red-text);
+    border: 1px solid var(--color-badge-red-border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-1-1.5 {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .card-premium-red {
+    background: var(--color-fire-engine-red);
+    color: white !important;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+  }
+  .card-premium-red:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(192, 10, 10, 0.2);
+  }
+  .card-premium-red h3 {
+    color: white !important;
+  }
+  .card-premium-red p {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .card-premium-white {
+    background: white;
+    color: #222222 !important;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+  }
+  .card-premium-white:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-fire-engine-red);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .card-premium-white h3, .card-premium-white h4 {
+    color: #222222 !important;
+  }
+  .card-premium-white p {
+    color: #555555 !important;
+  }
+
+  .card-premium-dark {
+    background: #2D2D2D;
+    color: #A8A6A7 !important;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-premium-dark:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-fire-engine-red);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  .card-premium-dark h3, .card-premium-dark h4 {
+    color: white !important;
+  }
+  .card-premium-dark p {
+    color: #D3D3D3 !important;
+  }
+
+  .red-card-arrow-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .red-card-arrow-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1rem;
+    color: white !important;
+  }
+  .red-card-arrow-list li i {
+    color: white !important;
+    margin-top: 4px;
+    font-size: 0.9rem;
+  }
+
+  .process-card-premium-red {
+    background: var(--color-fire-engine-red);
+    color: white !important;
+    border-radius: 8px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .process-card-premium-red:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(192, 10, 10, 0.2);
+  }
+  .process-card-premium-red h3 {
+    color: white !important;
+  }
+  .process-card-premium-red p {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  .process-card-premium-red .num-bg {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .process-card-premium-dark {
+    background: #2D2D2D;
+    color: #A8A6A7 !important;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .process-card-premium-dark:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-fire-engine-red);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  .process-card-premium-dark h3 {
+    color: white !important;
+  }
+  .process-card-premium-dark p {
+    color: #D3D3D3 !important;
+  }
+  .process-card-premium-dark .num-bg {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .process-card-premium-white {
+    background: white;
+    color: #222222 !important;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+  }
+  .process-card-premium-white:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-fire-engine-red);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .process-card-premium-white h3 {
+    color: #222222 !important;
+  }
+  .process-card-premium-white p {
+    color: #555555 !important;
+  }
+  .process-card-premium-white .num-bg {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: rgba(0,0,0,0.04);
+    line-height: 1;
+    user-select: none;
+  }
+
+  @media (max-width: 991px) {
+    #nav-phone-link {
+      display: none !important;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-1-1.5 {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-3, .grid-2 {
+      grid-template-columns: 1fr;
+    }
+    .services-hero-container {
+      padding: 4rem 1rem !important;
+    }
+    .stats-container {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+  }
+</style>
+
+  <!-- Hero Section -->
+  <section class="services-hero" style="background: #444444; color: white; padding: 6rem 0;">
+    <div class="container services-hero-container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <span class="premium-badge-green">Content Creation</span>
+        <span class="premium-badge-green">Community Management</span>
+        <span class="premium-badge-green">Brand Loyalty</span>
+      </div>
+      <h1 style="margin-bottom: 1rem; font-size: 3rem; font-weight: 800; color: white; line-height: 1.2;">Social Media Management Services</h1>
+      <p style="color: var(--color-fire-engine-red); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">End-to-End Content Creation, Scheduling, and Moderation.</p>
+      <p style="color: #E0E0E0; margin-bottom: 2.5rem; max-width: 700px; line-height: 1.6; font-size: 1.1rem;">Free up your time and grow your online presence. We handle everything from design and copywriting to community engagement and reporting.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 30px; max-width: 600px; margin-bottom: 3rem;" class="grid-2">
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Daily Posting</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Copywriting</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Comment Moderation</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Monthly Reports</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Custom Graphics</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
+          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+          <span>Platform Setup</span>
+        </div>
+      </div>
+
+      <a href="#cta-banner" class="btn btn-primary" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); padding: 15px 35px; font-weight: bold; border-radius: 4px; text-transform: uppercase;">Get Started Now</a>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar" style="background-color: #1A1A1A; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0;">
+    <div class="container stats-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
+      <div class="stat-item">
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">2.5M+</div>
+        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Posts Published</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">40+</div>
+        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Dedicated Experts</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">3+ Years</div>
+        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">98%</div>
+        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Understanding SMM -->
+  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div class="grid-1-1.5">
+        <div>
+          <span class="premium-badge-red">Introduction</span>
+          <h2 style="color: #222222; margin-bottom: 1.5rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Understanding Social Media Management</h2>
+          <p style="color: #555555; margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.05rem;">Social Media Management is the process of creating, publishing, promoting, and managing content across social media channels like Facebook, Instagram, LinkedIn, and Twitter.</p>
+          <p style="color: #555555; line-height: 1.7; font-size: 1.05rem;">It goes beyond just uploading photos; it requires a strategic approach to build brand equity, engage followers, and turn them into loyal customers.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card-premium-red" style="grid-row: span 2;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white;">Core Pillars</h3>
+            <ul class="red-card-arrow-list">
+              <li><i class="fa-solid fa-arrow-right"></i> <span>Content Planning</span></li>
+              <li><i class="fa-solid fa-arrow-right"></i> <span>Design & Copy</span></li>
+              <li><i class="fa-solid fa-arrow-right"></i> <span>Daily Scheduling</span></li>
+              <li><i class="fa-solid fa-arrow-right"></i> <span>Community Care</span></li>
+              <li><i class="fa-solid fa-arrow-right"></i> <span>Performance Data</span></li>
+            </ul>
+          </div>
+          <div class="card-premium-white">
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem;">Audience Engagement</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Actively reply to comments and messages to build a community and improve trust.</p>
+          </div>
+          <div class="card-premium-white" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem;">Consistent Growth</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Maintain a regular posting schedule to build algorithmic momentum and audience retention.</p>
+            </div>
+            <a href="free-consultation.html" class="btn btn-primary" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); padding: 10px 20px; font-size: 0.9rem; font-weight: bold; width: 100%; text-align: center; display: inline-block; margin-top: 1.5rem; border-radius: 4px; color: white !important;">Get Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Your Business Needs SMM -->
+  <section class="section-dark" style="padding: 6rem 0; background-color: #222222; color: white;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <span class="premium-badge-green">Importance</span>
+      <h2 style="color: white; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Why Your Business Needs Social Media Management:</h2>
+      <div class="grid-3">
+        <div class="card-premium-red">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Active Online Presence</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">A regularly updated page shows customers your business is active, healthy, and open for business.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Increase Customer Engagement</h3>
+          <p>Interactive posts, polls, and Q&As drive meaningful conversations with your target audience.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Higher Audience Trust</h3>
+          <p>Quick responses to comments and direct messages build customer confidence and brand loyalty.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Professional Design</h3>
+          <p>Bespoke graphics and high-quality visuals present your brand in the best possible light.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Algorithmic Advantage</h3>
+          <p>Platforms prioritize active accounts, rewarding consistent managers with higher reach.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Save Internal Time</h3>
+          <p>Outsourcing social media lets your internal team focus on sales, operations, and growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <span class="premium-badge-green">Solutions</span>
+      <h2 style="color: #222222; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Our Social Media Management Services</h2>
+      <div class="grid-3">
+        <div class="card-premium-red">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Social Profile Setup</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">We establish and optimize your brand profiles on all relevant networks, ensuring a cohesive look.</p>
+        </div>
+        <div class="card-premium-white">
+          <h3>Content Planning</h3>
+          <p>We design a monthly content calendar matching your promotion schedule and brand themes.</p>
+        </div>
+        <div class="card-premium-white">
+          <h3>Custom Graphics & Copy</h3>
+          <p>Our designers and copywriters produce beautiful posts designed to capture attention.</p>
+        </div>
+        <div class="card-premium-white">
+          <h3>Community Engagement</h3>
+          <p>We actively monitor your comments and messages, engaging fans and answering basic questions.</p>
+        </div>
+        <div class="card-premium-white">
+          <h3>Social Media Advertising</h3>
+          <p>We manage paid boost campaigns to get your best content in front of larger targeted audiences.</p>
+        </div>
+        <div class="card-premium-white">
+          <h3>Analytics & Reporting</h3>
+          <p>You receive comprehensive monthly reports showing follower growth, engagement, and click-throughs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section-dark" style="padding: 6rem 0; background-color: #222222; color: white;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <span class="premium-badge-green">Method</span>
+      <h2 style="color: white; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Our Social Media Management Process</h2>
+      <div class="grid-3">
+        <div class="process-card-premium-red">
+          <div class="num-bg">01</div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 2;">Account Analysis</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; position: relative; z-index: 2;">We analyze your current social presence, competitors, and audience behavior to identify growth opportunities.</p>
+        </div>
+        <div class="process-card-premium-dark">
+          <div class="num-bg">02</div>
+          <h3>Strategy Session</h3>
+          <p>We define content buckets, platform priorities, posting schedules, and KPIs tailored to your goals.</p>
+        </div>
+        <div class="process-card-premium-dark">
+          <div class="num-bg">03</div>
+          <h3>Content Creation</h3>
+          <p>Our team designs custom templates, copywrites engaging captions, and plans stories and reels.</p>
+        </div>
+        <div class="process-card-premium-dark">
+          <div class="num-bg">04</div>
+          <h3>Review & Approval</h3>
+          <p>You approve all posts in advance through our collaborative content calendar workflow.</p>
+        </div>
+        <div class="process-card-premium-dark">
+          <div class="num-bg">05</div>
+          <h3>Active Publishing</h3>
+          <p>We schedule content at peak times and actively monitor engagement and brand mentions.</p>
+        </div>
+        <div class="process-card-premium-dark">
+          <div class="num-bg">06</div>
+          <h3>Performance Review</h3>
+          <p>We review metrics monthly to identify top posts, analyze follower growth, and refine strategy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms We Manage -->
+  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <span class="premium-badge-green">Platforms</span>
+      <h2 style="color: #222222; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Social Media Platforms We Manage</h2>
+      <div class="grid-3">
+        <div class="card-premium-red" style="text-align: center;">
+          <i class="fa-brands fa-facebook" style="color: white; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Facebook Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center; color: rgba(255,255,255,0.9) !important;">Engaging your community, running groups, and publishing interactive posts.</p>
+        </div>
+        <div class="card-premium-white" style="text-align: center;">
+          <i class="fa-brands fa-instagram" style="color: #E4405F; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Instagram Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center;">Publishing grid posts, carousel graphics, stories, and engaging reels.</p>
+        </div>
+        <div class="card-premium-white" style="text-align: center;">
+          <i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">LinkedIn Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center;">Establishing executive thought leadership, sharing industry news, and company updates.</p>
+        </div>
+        <div class="card-premium-white" style="text-align: center;">
+          <i class="fa-brands fa-twitter" style="color: #1DA1F2; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Twitter/X Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center;">Fast-paced engagement, sharing updates, and participating in industry trends.</p>
+        </div>
+        <div class="card-premium-white" style="text-align: center;">
+          <i class="fa-brands fa-pinterest" style="color: #BD081C; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Pinterest Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center;">Driving referral traffic to your site through optimized, eye-catching boards and pins.</p>
+        </div>
+        <div class="card-premium-white" style="text-align: center;">
+          <i class="fa-brands fa-youtube" style="color: #FF0000; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">YouTube Management</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; text-align: center;">Optimizing video titles, descriptions, tags, and custom thumbnails for social search.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-dark" style="padding: 6rem 0; background-color: #222222; color: white;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <span class="premium-badge-red">Why Choose Us</span>
+      <h2 style="color: white; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Why Choose Digital Guider?</h2>
+      <div class="grid-3">
+        <div class="card-premium-red">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Experienced Managers</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Our managers have years of experience growing accounts across all major industries.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Custom Asset Kits</h3>
+          <p>We build custom template kits for your brand, ensuring a high-end, cohesive aesthetic.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Responsive Care</h3>
+          <p>We reply to comments and messages quickly, keeping your community happy and engaged.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Full Platform Safety</h3>
+          <p>We use secure dashboard tools to manage your pages without ever asking for passwords.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Data-Driven ROI</h3>
+          <p>We focus on generating real-world business results, not just empty vanity metrics.</p>
+        </div>
+        <div class="card-premium-dark">
+          <h3>Transparent Reports</h3>
+          <p>Clear, easy-to-understand monthly reports outlining all key metrics and actions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" id="cta-banner" style="background-color: var(--color-fire-engine-red); padding: 5rem 0; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h2 style="color: white; margin-bottom: 1rem; font-size: 2.5rem; font-weight: 800;">Ready to Grow on Social Media?</h2>
+      <p style="color: #EAEAEA; margin-bottom: 2.5rem; font-size: 1.15rem; line-height: 1.6;">Let our dedicated team manage your social media presence while you focus on running your business.</p>
+      <a href="free-consultation.html" class="btn btn-outline" style="background-color: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 18px 40px; font-size: 1.1rem; border-radius: 4px; text-transform: uppercase;">Get Started Now</a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" style="background-color: #ffffff; padding: 6rem 0;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="premium-badge-red">FAQ</span>
+        <h2 style="color: #222222; font-size: 2.5rem; font-weight: 800; margin-top: 0;">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
+          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
+            Do I have to approve content before it goes live?
+            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">Yes. We provide a monthly content calendar for your review. You can approve, reject, or request edits on any post before it is scheduled to publish.</p></div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
+          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
+            Who answers customer messages and comments?
+            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">We do! We work with you during onboarding to create a FAQ document for your business. We use this to answer common questions and engage with followers. For complex customer service issues, we escalate the message to your team.</p></div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
+          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
+            Do you create the images and videos?
+            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">Yes. Our team includes graphic designers and video editors. We can use your raw assets (photos/videos of your business) and edit them into highly engaging social posts, or create custom graphics from scratch.</p></div>
+        </div>
+        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
+          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
+            Will I get a dedicated account manager?
+            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">Yes. You will be assigned a dedicated social media manager who acts as your single point of contact and becomes an expert in your brand's voice and industry.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Strip -->
+  <!-- Bottom CTA Strip -->
+  <section class="bottom-cta-strip" style="background-color: var(--color-fire-engine-red); padding: 2.5rem 0; color: white;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto;">
+      <div>
+        <h3 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.6rem; font-weight: 700;">Ready to Grow Your Business Online?</h3>
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1rem;">Connect with our social media experts today and start turning your followers into loyal customers.</p>
+      </div>
+      <a href="contact.html" class="btn btn-outline" style="background-color: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 12px 30px; border-radius: 4px; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Contact Us Now</a>
+    </div>
+  </section>
+
+
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Organic Search</a></li>
+            <li><a href="#">Technical Schema</a></li>
+            <li><a href="#">GEO Optimization</a></li>
+            <li><a href="#">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Marketing Insights</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (!btn) return;
+    
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all FAQs
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const content = i.querySelector('.faq-answer');
+        if(content) content.style.maxHeight = null;
+      });
+
+      // If it wasn't active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        const content = item.querySelector('.faq-answer');
+        if(content) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>
