@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Advertising Services | DigiGrow</title>
+  
+<style>
+  :root {
+    --dark-charcoal: #222222;
+    --dark-gray: #333333;
+    --bright-red: #D91C24;
+    --off-white: #F5F5F5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #fff; background-color: var(--dark-charcoal); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 4rem 0; }
+  .btn-primary { background-color: var(--bright-red); color: white; padding: 0.85rem 2rem; border-radius: 50px; font-weight: bold; display: inline-block; transition: background-color 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background-color: #b5151e; }
+  .btn-outline { background-color: transparent; color: white; padding: 0.85rem 2rem; border-radius: 50px; font-weight: bold; border: 2px solid white; display: inline-block; transition: background-color 0.2s; cursor: pointer; }
+  .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+  .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; text-align: left; }
+  .section-title.center { text-align: center; }
+
+  /* Utilities */
+  .card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  
+  .card-dark { background-color: var(--dark-gray); padding: 2rem; border-radius: 12px; border: 1px solid #444; color: white; }
+  .card-light { background-color: white; padding: 2rem; border-radius: 12px; border: 1px solid #e0e0e0; color: var(--dark-charcoal); }
+  .card-red { background-color: var(--bright-red); padding: 2rem; border-radius: 12px; color: white; }
+  
+  .card-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem; }
+  .card-red .card-num { background: white; color: var(--bright-red); }
+
+  .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .benefit-list { display: flex; flex-direction: column; gap: 1rem; }
+  .benefit-card { background-color: var(--bright-red); color: white; padding: 1.2rem; border-radius: 8px; font-weight: bold; display: flex; align-items: center; gap: 1rem; }
+  .benefit-card span { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; background: white; color: var(--bright-red); border-radius: 50%; font-size: 0.8rem; }
+  
+  .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .platform-card { background-color: var(--dark-gray); color: white; padding: 1.5rem; border-radius: 8px; border: 1px solid #444; font-weight: bold; display: flex; align-items: center; gap: 1rem; }
+
+  .faq-item { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 1rem; color: var(--dark-charcoal); overflow: hidden; }
+  .faq-q { padding: 1.5rem; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; }
+  .faq-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 0.9rem; font-weight: bold; flex-shrink: 0; }
+  .faq-a { padding: 0 1.5rem 1.5rem 4rem; color: #555; display: none; }
+  .faq-item.active .faq-a { display: block; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+            <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+<div class="stats-bar">
+  <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; background: var(--dark-gray); padding: 2rem 0; border-bottom: 1px solid #444;">
+    <div><div style="font-size: 2rem; font-weight: bold; color: white;">5,000+</div><div style="color: #aaa;">Social Media Campaigns Launched</div></div>
+    <div><div style="font-size: 2rem; font-weight: bold; color: white;">40+</div><div style="color: #aaa;">Social Media Experts on Team</div></div>
+    <div><div style="font-size: 2rem; font-weight: bold; color: white;">3+</div><div style="color: #aaa;">Client Satisfaction Score</div></div>
+    <div><div style="font-size: 2rem; font-weight: bold; color: white;">93%</div><div style="color: #aaa;">Client Retention Rate</div></div>
+  </div>
+</div>
+
+  
+<!-- Hero Section -->
+<section style="background-color: var(--dark-charcoal); padding: 6rem 0;">
+  <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+    <div>
+      <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+        <span style="border: 1px solid var(--bright-red); background-color: rgba(217, 28, 36, 0.1); color: var(--bright-red); padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 500;">Social Media Advertising</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #ccc;"><span style="width: 8px; height: 8px; background-color: #2ecc71; border-radius: 50%; display: inline-block;"></span> Expert Team Available</span>
+      </div>
+      <h1 style="font-size: 3.5rem; font-weight: bold; line-height: 1.1; margin-bottom: 1rem;">Social Media Advertising<br>Services</h1>
+      <p style="font-size: 1.25rem; color: #aaa; margin-bottom: 1.5rem;">Reach Your Best Customers and Drive More Sales</p>
+      <p style="font-size: 1.1rem; color: #ccc; margin-bottom: 2rem; max-width: 600px;">Our experts help you connect with your ideal audience, maximize visibility, and boost your bottom line through targeted social ads.</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; margin-bottom: 3rem; max-width: 500px;">
+        <ul style="list-style: none;">
+          <li style="position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem; color: #e0e0e0;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Targeted Audiences</li>
+          <li style="position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem; color: #e0e0e0;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Strategic Campaign Planning</li>
+          <li style="position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem; color: #e0e0e0;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Lead Generation</li>
+        </ul>
+        <ul style="list-style: none;">
+          <li style="position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem; color: #e0e0e0;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Detailed Reporting</li>
+          <li style="position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem; color: #e0e0e0;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Maximize ROI</li>
+        </ul>
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <a href="#" class="btn-primary">Get a Free Proposal</a>
+        <a href="#" class="btn-outline">Case Studies</a>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/600x400/222222/D91C24?text=Social+Media+Advertising+Illustration" alt="Social Media Expert" style="width: 100%; border-radius: 12px; opacity: 0.8;">
+    </div>
+  </div>
+</section>
+
+<!-- What Social Media Advertising Means -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold;">OVERVIEW</span>
+    <h2 class="section-title">What Social Media Advertising<br>Means to Your Business</h2>
+    <div class="card-grid-3">
+      <div class="card-red">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Precise Targeting</h3>
+        <p>Connect with specific demographics, interests, and behaviors to ensure your ads reach the people most likely to convert.</p>
+        <ul style="list-style: none; margin-top: 1.5rem; line-height: 2;">
+          <li>✓ Granular audience details</li>
+          <li>✓ Geotargeting</li>
+          <li>✓ Lookalike audiences</li>
+        </ul>
+      </div>
+      <div class="card-light">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(217, 28, 36, 0.1); color: var(--bright-red); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;"><i class="fa-solid fa-arrow-trend-up"></i></div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Optimizing Your ROI</h3>
+        <p style="color: #555;">Boost your Return on Investment by creating high-converting ads and continuously refining your campaigns for better performance.</p>
+      </div>
+      <div class="card-light">
+        <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(217, 28, 36, 0.1); color: var(--bright-red); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;"><i class="fa-solid fa-gear"></i></div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Optimizing Your Ad Spend</h3>
+        <p style="color: #555;">Leverage data and analytics to ensure every dollar you spend is working effectively to grow your business.</p>
+        <a href="#" class="btn-primary" style="margin-top: 2rem;">Get a Free Proposal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Benefits & Platforms -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container split-section">
+    <div>
+      <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold;">WHY SOCIAL ADS?</span>
+      <h2 class="section-title" style="color: white; margin-bottom: 1.5rem;">Key Benefits of Social Media Advertising</h2>
+      <div class="benefit-list">
+        <div class="benefit-card"><span>✓</span> Increase Brand Exposure</div>
+        <div class="benefit-card"><span>✓</span> Higher Lead Generation</div>
+        <div class="benefit-card"><span>✓</span> Better Engagement Rate</div>
+        <div class="benefit-card"><span>✓</span> Drive Website Traffic</div>
+        <div class="benefit-card"><span>✓</span> Boost Sales & Conversions</div>
+        <div class="benefit-card"><span>✓</span> More Inbound Leads</div>
+      </div>
+    </div>
+    <div>
+      <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold;">NETWORK EXPERTISE</span>
+      <h2 class="section-title" style="color: white; margin-bottom: 1.5rem;">Advertising Platforms We Manage</h2>
+      <div class="platform-grid">
+        <div class="platform-card"><i class="fa-brands fa-facebook" style="color: #1877F2; font-size: 1.5rem;"></i> Facebook Ads</div>
+        <div class="platform-card"><i class="fa-brands fa-instagram" style="color: #E4405F; font-size: 1.5rem;"></i> Instagram Ads</div>
+        <div class="platform-card"><i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 1.5rem;"></i> LinkedIn Ads</div>
+        <div class="platform-card"><i class="fa-brands fa-x-twitter" style="color: #fff; font-size: 1.5rem;"></i> Twitter Ads</div>
+        <div class="platform-card"><i class="fa-brands fa-pinterest" style="color: #E60023; font-size: 1.5rem;"></i> Pinterest Ads</div>
+        <div class="platform-card"><i class="fa-brands fa-youtube" style="color: #FF0000; font-size: 1.5rem;"></i> YouTube Ads</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold;">OUR OFFERINGS</span>
+    <h2 class="section-title">Our Social Media Advertising<br>Services to Grow Your Brand</h2>
+    <div class="card-grid-4">
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Custom Ad Strategy</h3>
+        <p>Tailored roadmaps aligning your business goals with the right social network and target demographics.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Lead Generation Ads</h3>
+        <p style="color: #555;">High-intent capture forms seamlessly embedded directly into social media feeds.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Remarketing Campaigns</h3>
+        <p style="color: #555;">Re-engage visitors who interacted with your brand but didn't convert initially.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">A/B Testing</h3>
+        <p style="color: #555;">Rigorous testing of creatives, copy, and audiences to find the winning combination.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Ad Creative & Copywriting</h3>
+        <p style="color: #555;">Striking visuals and persuasive ad copy designed specifically to stop the scroll.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Audience Targeting</h3>
+        <p style="color: #555;">Advanced pixel matching and lookalike audience scaling for precise reach.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Conversion Tracking</h3>
+        <p style="color: #555;">Meticulous pixel integration ensuring every click and purchase is recorded.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Performance Reporting</h3>
+        <p style="color: #555;">Transparent dashboards showing exactly how your ad spend translates to ROI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Strategy Process -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <span style="font-size: 0.85rem; color: #aaa; text-transform: uppercase; font-weight: bold;">OUR PROCESS</span>
+    <h2 class="section-title" style="color: white;">Our Ad Strategy Process to Launch & Optimize Your Campaigns</h2>
+    <div class="card-grid-4">
+      <div class="card-red">
+        <div class="card-num">1</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Discover</h3>
+        <p>We uncover your business objectives, target audience profiles, and analyze past campaign data.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">2</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Strategic Planning</h3>
+        <p style="color: #aaa;">Outlining the perfect mix of platforms, budget allocation, and core messaging.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">3</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Setup</h3>
+        <p style="color: #aaa;">Configuring ad accounts, integrating tracking pixels, and mapping conversion events.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">4</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">A/B Testing</h3>
+        <p style="color: #aaa;">Drafting multiple variations of ad copy and visual assets for multivariate testing.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">5</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Monitor</h3>
+        <p style="color: #aaa;">Daily checks on campaign health, cost-per-acquisition (CPA), and frequency rates.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">6</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Reporting</h3>
+        <p style="color: #aaa;">Delivering actionable data on ad spend efficiency and volume scaling.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">7</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Launch</h3>
+        <p style="color: #aaa;">Igniting the final optimized campaigns and pushing budget toward winning ads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold;">THE EXPERTS</span>
+    <h2 class="section-title">Why Choose Digital Guider for Your Social Media Advertising needs</h2>
+    <div class="card-grid-4">
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Strategic Approach</h3>
+        <p>Every dollar spent is guided by a data-backed blueprint designed for your specific vertical.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Certified Ad Specialists</h3>
+        <p style="color: #555;">Managed by certified experts on Meta, LinkedIn, and Google Ads platforms.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Data-Driven Insights</h3>
+        <p style="color: #555;">Gut feelings don't drive scale. We make optimization choices based purely on hard analytics.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Targeting the Right Audience</h3>
+        <p style="color: #555;">Minimizing ad waste by hyper-targeting only the users ready to buy your product.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Optimized Campaigns</h3>
+        <p style="color: #555;">Continuous split-testing ensures your cost-per-lead drops over time.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Proven ROI</h3>
+        <p style="color: #555;">We treat your budget like our own. Our ultimate metric is your revenue growth.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Transparent Reporting</h3>
+        <p style="color: #555;">Crystal clear dashboards without confusing jargon so you always know your numbers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal); border-top: 1px solid #ddd;">
+  <div class="container" style="max-width: 900px;">
+    <h2 class="section-title">Frequently Asked Questions About Social Media Advertising</h2>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">1</span> What is Social Media Advertising?</div><div class="faq-a">Social media advertising involves paying social networks like Facebook, LinkedIn, or Instagram to display your promoted content to a highly targeted audience based on demographics and interests.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">2</span> How long does it take to see results?</div><div class="faq-a">Unlike SEO, paid social media advertising can generate traffic and leads almost immediately after launching the campaign, though the most optimal ROI usually occurs after 2-4 weeks of algorithmic learning.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">3</span> Do you handle ad creatives and copywriting?</div><div class="faq-a">Yes! Our in-house team of designers and copywriters will create all the visual assets, videos, and compelling text required for your campaigns.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">4</span> Which platform is best for my business?</div><div class="faq-a">It depends heavily on your industry. B2B companies often thrive on LinkedIn, while D2C ecommerce brands see massive returns on Instagram and Facebook. We will determine the optimal platform mix during strategy planning.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">5</span> How do you track conversions?</div><div class="faq-a">We integrate advanced tracking pixels and server-side APIs on your website to ensure every lead, sale, or sign-up generated from an ad is perfectly attributed.</div></div>
+  </div>
+</section>
+
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

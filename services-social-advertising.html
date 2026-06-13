@@ -94,7 +94,7 @@
             <div class="dropdown-item-nested">
               <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
               <div class="nested-dropdown-menu">
-                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
                 <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
                 <a href="services-dm-audit.html">Digital Marketing Audit</a>
                 <a href="services-dm-content.html">Content Marketing Services</a>
@@ -115,8 +115,8 @@
               <div class="nested-dropdown-menu">
                 <a href="services-social-media.html">Social Media Marketing</a>
                 <a href="services-smo.html">Social Media Optimization</a>
-                <a href="services-social-management.html">Social Media Management</a>
-                <a href="services-social-advertising.html">Social Media Advertising</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
               </div>
             </div>
 <div class="dropdown-item-nested">
@@ -127,13 +127,33 @@
                 <a href="services-link-building.html">LinkBuilding</a>
                 <a href="services-technical-seo.html">TechnicalSEO</a>
                 <a href="services-voice-search.html">VoiceSearchOptimization</a>
-                <a href="services-app-store.html">AppStoreOptimization</a>
-                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
               </div>
             </div>
-            <a href="services-video-seo.html">Video SEO</a>
-            <a href="services-digital-advertising.html">Digital Advertising</a>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -151,15 +171,11 @@
             <a href="pricing-ppc.html">PPC Packages</a>
           </div>
         </div>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About Us</a>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact Us</a>
       </nav>
-      <a href="tel:+13072093608" class="nav-phone-link" id="nav-phone-link" style="color: white; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-right: 15px;">
-        <i class="fa-solid fa-phone" style="color: var(--color-fire-engine-red);"></i>
-        <span>+1-307-209-3608</span>
-      </a>
       <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -168,7 +184,7 @@
         </svg>
         <span>Free Consultation</span>
       </a>
-          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
         <span></span>
         <span></span>
         <span></span>
@@ -189,7 +205,7 @@
           <div class="sidebar-dropdown">
             <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
             <div class="sidebar-dropdown-content sidebar-nested-content">
-              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
               <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
               <a href="services-dm-audit.html">Digital Marketing Audit</a>
               <a href="services-dm-content.html">Content Marketing Services</a>
@@ -210,8 +226,8 @@
             <div class="sidebar-dropdown-content sidebar-nested-content">
               <a href="services-social-media.html">Social Media Marketing</a>
               <a href="services-smo.html">Social Media Optimization</a>
-              <a href="services-social-management.html">Social Media Management</a>
-              <a href="services-social-advertising.html">Social Media Advertising</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
             </div>
           </div>
 <div class="sidebar-dropdown">
@@ -222,13 +238,33 @@
               <a href="services-link-building.html">LinkBuilding</a>
               <a href="services-technical-seo.html">TechnicalSEO</a>
               <a href="services-voice-search.html">VoiceSearchOptimization</a>
-              <a href="services-app-store.html">AppStoreOptimization</a>
-              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
             </div>
           </div>
-          <a href="services-video-seo.html">Video SEO</a>
-          <a href="services-digital-advertising.html">Digital Advertising</a>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -243,8 +279,8 @@
         </div>
       </div>
 
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About Us</a>
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
       <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
@@ -567,346 +603,424 @@
 </style>
 
   <!-- Hero Section -->
-  <section class="services-hero" style="background: #444444; color: white; padding: 6rem 0;">
-    <div class="container services-hero-container" style="max-width: 1200px; margin: 0 auto;">
-      <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-        <span class="premium-badge-green">Lead Generation</span>
-        <span class="premium-badge-green">High ROI</span>
-        <span class="premium-badge-green">Targeted Ads</span>
+  <section class="services-hero" style="background-color: #1A1A1A; color: white; padding: 6rem 0;">
+    <div class="container services-hero-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+      <div style="display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap;">
+        <span style="background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div>Social Media Advertising</span>
       </div>
-      <h1 style="margin-bottom: 1rem; font-size: 3rem; font-weight: 800; color: white; line-height: 1.2;">Social Media Advertising Services</h1>
-      <p style="color: var(--color-fire-engine-red); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Turn Ad Spend into Predictable Revenue Growth.</p>
-      <p style="color: #E0E0E0; margin-bottom: 2.5rem; max-width: 700px; line-height: 1.6; font-size: 1.1rem;">Launch highly targeted paid social campaigns that reach your exact ideal customers and drive immediate, measurable sales and leads.</p>
+      <h1 style="margin-bottom: 1rem; font-size: 4rem; font-weight: bold; color: white; line-height: 1.15; max-width: 900px;">Social Media Advertising Services</h1>
+      <p style="color: #888888; margin-bottom: 2.5rem; line-height: 1.6; font-size: 1.1rem; max-width: 800px;">Accelerate your growth with data-driven paid social campaigns. We engineer high-converting ads that target your ideal customers and maximize your return on ad spend (ROAS).</p>
       
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px 30px; max-width: 600px; margin-bottom: 3rem;" class="grid-2">
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
-          <span>Granular Targeting</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 3.5rem; max-width: 800px;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
+          <span>Precision Audience Targeting</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
-          <span>A/B Split Testing</span>
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
+          <span>A/B Creative Testing</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
-          <span>Retargeting Funnels</span>
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
+          <span>Retargeting Campaigns</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Conversion Tracking</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
-          <span>Ad Creative Design</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: white; font-size: 1.05rem;">
-          <i class="fa-solid fa-check" style="color: var(--color-fire-engine-red); font-size: 1.1rem;"></i>
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Budget Optimization</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
+          <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
+          <span>Transparent ROAS Reporting</span>
         </div>
       </div>
 
-      <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-        <a href="#cta-banner" class="btn btn-primary" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); padding: 15px 35px; font-weight: bold; border-radius: 4px; text-transform: uppercase;">Get Your Custom Plan</a>
-        <a href="#" class="btn btn-secondary" onclick="event.preventDefault();" style="border: 1px solid white; background: transparent; color: white; padding: 15px 35px; font-weight: bold; border-radius: 4px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-play"></i> Watch Video</a>
+      <div style="display: flex; gap: 20px;">
+        <a href="#cta-banner" style="background-color: #B30E12; color: white; border: none; padding: 18px 40px; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 1rem; text-decoration: none; display: inline-block;">GET A FREE PROPOSAL</a>
+        <a href="free-consultation.html" style="background-color: transparent; color: white; border: 2px solid white; padding: 16px 40px; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 1rem; text-decoration: none; display: inline-block;">BOOK A CALL</a>
       </div>
     </div>
   </section>
 
   <!-- Stats Bar -->
-  <section class="stats-bar" style="background-color: #1A1A1A; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0;">
+  <section class="stats-bar" style="background-color: #1A1A1A; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 6rem 0;">
     <div class="container stats-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
       <div class="stat-item">
         <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">5,000+</div>
-        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Successful Campaigns</div>
+        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Global Brands Empowered</div>
       </div>
       <div class="stat-item">
         <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">40+</div>
-        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Dedicated Experts</div>
+        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Diverse Sectors Mastered</div>
       </div>
       <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">3+ Years</div>
-        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Years Experience</div>
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">9+ Years</div>
+        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Average Client Partnership</div>
       </div>
       <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">98%</div>
-        <div class="stat-label" style="color: #A8A6A7; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Client Satisfaction</div>
+        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">99%</div>
+        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Client Retention Rate</div>
       </div>
     </div>
   </section>
 
-  <!-- What is Section -->
-  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+  <!-- 3. Section: What Social Media Advertising Means (Soft Cream) -->
+  <section style="padding: 6rem 0; background-color: #F7F5F0;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <div class="grid-1-1.5">
-        <div>
-          <span class="premium-badge-red">Introduction</span>
-          <h2 style="color: #222222; margin-bottom: 1.5rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">What Social Media Advertising Means</h2>
-          <p style="color: #555555; margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.05rem;">Social Media Advertising is the process of paying social networks (like Facebook, LinkedIn, or TikTok) to deliver your content directly to highly specific user groups.</p>
-          <p style="color: #555555; line-height: 1.7; font-size: 1.05rem;">Unlike organic posting, paid social guarantees reach and allows you to target users based on their demographics, interests, job titles, and past behaviors.</p>
+      <div style="margin-bottom: 3.5rem; text-align: left;">
+        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; display: inline-block;">Overview</span>
+        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">What Social Media Advertising Means</h2>
+        <p style="color: #888888; max-width: 900px; line-height: 1.7; font-size: 1.05rem;">Paid social media advertising involves serving targeted, sponsored content directly into the feeds of your most profitable demographic segments to drive immediate action.</p>
+      </div>
+      <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; text-align: left;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Core Objectives</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Lead Generation</li>
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> E-Commerce Sales</li>
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Event Registrations</li>
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> App Installations</li>
+            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Retargeting Lost Traffic</li>
+          </ul>
         </div>
-        <div class="grid-2">
-          <div class="card-premium-red" style="grid-row: span 2;">
-            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white;">Why Paid Social Works</h3>
-            <ul class="red-card-arrow-list">
-              <li><i class="fa-solid fa-arrow-right"></i> <span>Instant Visibility</span></li>
-              <li><i class="fa-solid fa-arrow-right"></i> <span>Hyper-Targeting</span></li>
-              <li><i class="fa-solid fa-arrow-right"></i> <span>Advanced Retargeting</span></li>
-              <li><i class="fa-solid fa-arrow-right"></i> <span>Measurable ROI</span></li>
-              <li><i class="fa-solid fa-arrow-right"></i> <span>Scalable Lead Gen</span></li>
+        <div style="background: white; color: #1A1A1A; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Why It Works</h3>
+            <p style="color: #888888; line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem;">Unmatched targeting capabilities ensure you aren't wasting money on irrelevant audiences.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; color: #888888;">
+              <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Granular Demographics</li>
+              <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Interest-Based Targeting</li>
+              <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Lookalike Audiences</li>
             </ul>
           </div>
-          <div class="card-premium-white">
-            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem;">Speed to Market</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Turn on a campaign today and start generating qualified leads by tomorrow morning.</p>
+          <div style="background: rgba(179, 14, 18, 0.05); color: #B30E12; padding: 12px; border-left: 4px solid #B30E12; border-radius: 0 4px 4px 0; margin-top: 1.5rem; font-size: 0.85rem; font-weight: 600;">
+            Ad spend is not included in our management fees and is billed directly by the platform.
           </div>
-          <div class="card-premium-white" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.75rem;">Predictable Revenue</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Once an ad funnel is dialed in, you can predictably turn ad spend into profitable sales.</p>
-            </div>
-            <a href="free-consultation.html" class="btn btn-primary" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); padding: 10px 20px; font-size: 0.9rem; font-weight: bold; width: 100%; text-align: center; display: inline-block; margin-top: 1.5rem; border-radius: 4px; color: white !important;">Get Free Consultation</a>
+        </div>
+        <div style="background: white; color: #1A1A1A; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Ready to Scale Your Business Fast?</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Stop boosting posts blindly. Let our media buyers craft profitable campaigns that scale.</p>
           </div>
+          <a href="free-consultation.html" style="background-color: #B30E12; color: white; padding: 12px 20px; font-weight: bold; width: 100%; text-align: center; border-radius: 4px; display: inline-block; text-decoration: none;">Get a Free Audit</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Benefits and Platforms Section (Dark Background) -->
-  <section class="section-dark" style="padding: 6rem 0; background-color: #222222; color: white;">
+  <!-- 4. Split Layout - Key Benefits & Platforms (Dark Background) -->
+  <section style="padding: 6rem 0; background-color: #1A1A1A;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <span class="premium-badge-green">Benefits & Platforms</span>
-      
-      <div class="benefits-platforms-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; margin-top: 1rem;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+        
         <!-- Left Column: Key Benefits -->
         <div>
-          <h2 style="color: white; margin-top: 0; margin-bottom: 2.5rem; font-size: 2rem; font-weight: 800;">Key Benefits of Social Media Advertising</h2>
-          <div style="display: flex; flex-direction: column; gap: 15px;">
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Access to billions of active daily users.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Target by job title, income, interests.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Build custom lookalike audiences.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Bring back website visitors.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Granular tracking of every dollar.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Increase brand recall and awareness.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>Scalable lead generation.</span></div>
-            <div class="wide-benefit-btn"><i class="fa-solid fa-circle-check" style="color: var(--color-fire-engine-red); font-size: 1.25rem;"></i><span>High-impact visual ad formats.</span></div>
+          <h2 style="color: white; font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem;">Key Benefits of Social Media Advertising</h2>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="background-color: #B30E12; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle"></i> Instant Traffic Generation
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Highly Measurable ROI
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Advanced Audience Segmentation
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Retargeting Website Visitors
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Scalable Campaigns
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Building Brand Awareness
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Competitor Interception
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 6px; font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-check-circle" style="color: #B30E12;"></i> Rapid Testing Capabilities
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Advertising Platforms We Manage -->
+        <!-- Right Column: Platforms -->
         <div>
-          <h2 style="color: white; margin-top: 0; margin-bottom: 2.5rem; font-size: 2rem; font-weight: 800;">Advertising Platforms We Manage</h2>
-          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;" class="grid-2">
-            <div class="platform-manage-btn"><i class="fa-brands fa-facebook" style="color: #1877F2; font-size: 1.4rem;"></i><span>Meta Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 1.4rem;"></i><span>LinkedIn Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-tiktok" style="color: #fff; font-size: 1.4rem;"></i><span>TikTok Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-youtube" style="color: #FF0000; font-size: 1.4rem;"></i><span>YouTube Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-pinterest" style="color: #BD081C; font-size: 1.4rem;"></i><span>Pinterest Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-twitter" style="color: #1DA1F2; font-size: 1.4rem;"></i><span>Twitter/X Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-snapchat" style="color: #FFFC00; font-size: 1.4rem;"></i><span>Snapchat Ads</span></div>
-            <div class="platform-manage-btn"><i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.4rem;"></i><span>Google Display</span></div>
+          <h2 style="color: white; font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem;">Advertising Platforms We Manage</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div style="background-color: #B30E12; color: white; padding: 15px 20px; border-radius: 30px; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              Facebook Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              Instagram Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              LinkedIn Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              YouTube Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              Twitter Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              Pinterest Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              TikTok Ads
+            </div>
+            <div style="background: #2D2D2D; color: white; padding: 15px 20px; border-radius: 30px; border: 1px solid #3A3A3A; font-weight: 600; font-size: 1.05rem; text-align: center;">
+              Snapchat Ads
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Services (8 cards) -->
-  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+  <!-- 5. Section: Our Social Media Advertising Services (Soft Cream) -->
+  <section style="padding: 6rem 0; background-color: #F7F5F0;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <span class="premium-badge-green">Solutions</span>
-      <h2 style="color: #222222; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Our Social Media Advertising Services</h2>
-      
-      <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-        <div class="card-premium-red">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Ad Strategy & Planning</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Full-funnel campaign architecture designed to capture cold traffic and nurture them into paying customers.</p>
+      <div style="text-align: left; margin-bottom: 4rem;">
+        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Services</span>
+        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Our Social Media Advertising Services</h2>
+        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem; max-width: 800px;">Full-funnel campaign management to turn clicks into profitable customers.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Campaign Strategy</h3>
+          <p style="line-height: 1.6; font-size: 0.9rem;">Mapping out the entire funnel from top-of-funnel awareness to bottom-of-funnel conversion.</p>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Audience Targeting</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">We build hyper-segmented audiences using first-party data, lookalike modeling, and demographic layering.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Audience Research</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Identifying the exact demographic overlaps and interests that yield the lowest CPA.</p>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Creative Production</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Our studio produces scroll-stopping video ads, UGC-style content, and highly polished carousel graphics.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Ad Copywriting</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Writing persuasive, scroll-stopping copy tailored to each specific platform's native style.</p>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Direct Response Copywriting</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Ad copy engineered by experts to hit psychological triggers, overcome objections, and force clicks.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Creative Production</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Designing static images, carousels, and engaging video ads optimized for mobile viewing.</p>
         </div>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Pixel Installation</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Properly configuring tracking pixels and API integrations for flawless attribution.</p>
+        </div>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">A/B Split Testing</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Continuously testing headlines, creatives, and audiences to lower your acquisition costs.</p>
+        </div>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Daily Optimization</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Monitoring spend pacing and shifting budgets toward the best-performing ad sets.</p>
+        </div>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Retargeting Setup</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.9rem;">Building dynamic retargeting sequences to capture abandoned carts and lost leads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Section: Our Ad Strategy Process (Dark) - 7 Blocks Staggered -->
+  <section style="padding: 6rem 0; background-color: #1A1A1A;">
+    <div class="container" style="max-width: 1000px; margin: 0 auto;">
+      <div style="margin-bottom: 4rem; text-align: left;">
+        <span style="background: rgba(255, 255, 255, 0.1); color: #B30E12; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Process</span>
+        <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Our Ad Strategy Process</h2>
+        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">A meticulous, data-backed approach to scaling your advertising efforts.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
         
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">A/B Split Testing</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Continuous, aggressive testing of hooks, copy, audiences, and offers to constantly drive down CPA.</p>
+        <!-- Step 1 -->
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="background: rgba(255,255,255,0.2); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">01</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Discovery</h3>
+            <p style="line-height: 1.6; font-size: 0.95rem;">Defining your target CPA, ROAS goals, and identifying past campaign bottlenecks.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Pixel & Tracking Setup</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Flawless integration of tracking pixels and API integrations to ensure every conversion is attributed perfectly.</p>
+
+        <!-- Step 2 -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">02</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Tracking Verification</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Ensuring all pixels and server-side tracking APIs are firing perfectly.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Landing Page Design</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">We design and optimize custom destination pages to ensure the traffic we send actually converts.</p>
+
+        <!-- Step 3 -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">03</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Audience Building</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Constructing core audiences, lookalike audiences based on customer lists, and retargeting pools.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Budget Optimization</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">We continuously monitor and reallocate budget to the highest-performing campaigns for maximum ROAS.</p>
+
+        <!-- Step 4 -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">04</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Creative Development</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Producing multiple ad variations to test messaging angles and visual hooks.</p>
+          </div>
         </div>
+
+        <!-- Step 5 -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">05</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">The Launch Phase</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Executing the campaigns with strict budget controls and rapid testing frameworks.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">06</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Ongoing Optimization</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Killing underperforming ads, scaling winners, and constantly refreshing ad creatives.</p>
+          </div>
+        </div>
+
+        <!-- Step 7 (Full Width in 2-col grid via grid-column) -->
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left; display: flex; align-items: flex-start; gap: 20px; grid-column: 1 / -1;">
+          <div style="color: #B30E12; font-size: 1.2rem; font-weight: bold; width: 45px; height: 45px; border: 1px solid #3A3A3A; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">07</div>
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Scaling & Expansion</h3>
+            <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Once we hit your target ROAS consistently, we incrementally increase daily spend and expand into new demographics and ad networks to drive maximum volume.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section class="section-dark" style="padding: 6rem 0; background-color: #222222; color: white;">
+  <!-- 7. Section: Why Choose Digital Guider? (Soft Cream) - 7 Cards Uneven Grid -->
+  <section style="padding: 6rem 0; background-color: #F7F5F0;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <span class="premium-badge-green">Method</span>
-      <h2 style="color: white; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Our Ad Strategy Process</h2>
+      <div style="margin-bottom: 4rem; text-align: left;">
+        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Why Us</span>
+        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Why Choose Digital Guider?</h2>
+        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">We treat your ad spend exactly like it's our own.</p>
+      </div>
       
-      <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div class="process-card-premium-red">
-          <div class="num-bg">01</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 2;">Offer Analysis</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0; position: relative; z-index: 2;">We analyze your product or service to craft an irresistible offer that will actually convert cold traffic.</p>
+      <!-- Uneven Grid (3 columns top row, 2 columns middle row, 2 columns bottom row) -->
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
+        
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left; grid-column: span 2;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Expert Media Buyers</h3>
+          <p style="line-height: 1.6; font-size: 0.95rem;">Certified specialists who live and breathe paid social algorithms.</p>
         </div>
-        <div class="process-card-premium-dark">
-          <div class="num-bg">02</div>
-          <h3>Funnel Mapping</h3>
-          <p>We architect the entire journey, from the first ad click to the final landing page conversion.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 2;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Data-Driven Strategy</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Every decision is backed by hard numbers, not guesswork.</p>
         </div>
-        <div class="process-card-premium-dark">
-          <div class="num-bg">03</div>
-          <h3>Creative Development</h3>
-          <p>We script, design, and produce multiple variations of ad creatives to test against each other.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 2;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Proactive Management</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We adjust campaigns daily to prevent ad fatigue and spend waste.</p>
         </div>
-        <div class="process-card-premium-dark">
-          <div class="num-bg">04</div>
-          <h3>Campaign Build & Launch</h3>
-          <p>We meticulously build out the campaigns in the ad manager, ensuring tracking is firing perfectly before launch.</p>
+
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 3;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Creative Excellence</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Our in-house design team produces high-converting visuals and copy variations continuously.</p>
         </div>
-        <div class="process-card-premium-dark">
-          <div class="num-bg">05</div>
-          <h3>Data Harvesting</h3>
-          <p>We let the algorithms run to collect statistical data on which audiences and creatives are yielding the cheapest conversions.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 3;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Custom Reporting</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Live dashboards so you always know exactly where your budget is going.</p>
         </div>
-        <div class="process-card-premium-dark">
-          <div class="num-bg">06</div>
-          <h3>Scaling Winners</h3>
-          <p>We ruthlessly cut losing ads and reallocate budget into the winning combinations to scale your revenue vertically.</p>
+
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 3;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Focus on ROI</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We don't care about vanity metrics. We only optimize for sales and qualified leads.</p>
         </div>
-        <div class="process-card-premium-dark" style="grid-column: span 1;">
-          <div class="num-bg">07</div>
-          <h3>Reporting & Review</h3>
-          <p>We provide transparent weekly reports detailing ad spend, impressions, leads, sales, and ROAS.</p>
+        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01); grid-column: span 3;">
+          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Cross-Channel Expertise</h3>
+          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We ensure your paid social efforts synergize perfectly with your Google Ads and SEO.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us (7 cards) -->
-  <section class="section-light" style="padding: 6rem 0; background-color: #F5F2EB;">
+  <!-- 8. Primary CTA Banner (Bright Red) -->
+  <section id="cta-banner" style="background-color: #B30E12; padding: 5rem 0; text-align: center;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <span class="premium-badge-red">Why Us</span>
-      <h2 style="color: #222222; margin-bottom: 3rem; font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Why Choose Digital Guider?</h2>
-      
-      <div class="grid-3">
-        <div class="card-premium-red">
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Media Buying Experts</h3>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">Our team has managed tens of millions in profitable ad spend across all platforms.</p>
+      <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Ready to Scale Your Business with High-Converting Ads?</h2>
+      <a href="free-consultation.html" style="background-color: white; color: #B30E12; padding: 15px 40px; font-weight: bold; border-radius: 30px; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; display: inline-block;">Get A Free Proposal</a>
+    </div>
+  </section>
+
+  <!-- 9. Frequently Asked Questions (Soft Cream) - Floating Card Style -->
+  <section style="padding: 6rem 0; background-color: #F7F5F0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <div style="margin-bottom: 3rem; text-align: left;">
+        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">FAQ</span>
+        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list" style="display: flex; flex-direction: column; gap: 15px;">
+        <!-- FAQ Item 1 -->
+        <div style="background: white; border-radius: 8px; padding: 2.5rem; 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-circle-question" style="color: #B30E12; font-size: 1.3rem;"></i>
+              <span>How much should I spend on social media ads?</span>
+            </div>
+            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+          </button>
+          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem; padding-left: 35px;">We generally recommend a minimum ad spend of $1,000/month to generate enough data for algorithms to optimize effectively. We then scale spend aggressively only when the campaigns prove profitable.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3>In-House Creative Studio</h3>
-          <p>We don't outsource video editing or design. It's all done in-house for maximum quality control.</p>
+        <!-- FAQ Item 2 -->
+        <div style="background: white; border-radius: 8px; padding: 2.5rem; 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-circle-question" style="color: #B30E12; font-size: 1.3rem;"></i>
+              <span>Which platform is best for my business?</span>
+            </div>
+            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+          </button>
+          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem; padding-left: 35px;">It depends entirely on your product and audience. B2B services often thrive on LinkedIn, while D2C e-commerce brands see massive returns on Meta (Facebook/Instagram) and TikTok. We perform research to tell you exactly where to invest.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3>Proactive Testing</h3>
-          <p>We launch new creative variations weekly to combat ad fatigue and maintain performance.</p>
+        <!-- FAQ Item 3 -->
+        <div style="background: white; border-radius: 8px; padding: 2.5rem; 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-circle-question" style="color: #B30E12; font-size: 1.3rem;"></i>
+              <span>Do you create the ad graphics and videos?</span>
+            </div>
+            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+          </button>
+          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem; padding-left: 35px;">Yes! Creative production is included in our management services. We design banners, edit short-form videos, and write all the accompanying ad copy.</p>
+          </div>
         </div>
-        <div class="card-premium-white">
-          <h3>Landing Page Optimization</h3>
-          <p>We advise on and optimize your destination pages to ensure the traffic we send actually converts.</p>
-        </div>
-        <div class="card-premium-white">
-          <h3>Transparent ROI Tracking</h3>
-          <p>You see exactly how much you spend and exactly how much revenue the ads generate in real-time.</p>
-        </div>
-        <div class="card-premium-white">
-          <h3>Agile Adjustments</h3>
-          <p>If a campaign isn't hitting KPIs, we pivot fast to stop wasting spend and find a winning angle.</p>
-        </div>
-        <div class="card-premium-white" style="grid-column: span 1;">
-          <h3>100% Account Ownership</h3>
-          <p>You own all the ad accounts, assets, pixels, and data. We simply request agency access.</p>
+        <!-- FAQ Item 4 -->
+        <div style="background: white; border-radius: 8px; padding: 2.5rem; 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <i class="fa-solid fa-circle-question" style="color: #B30E12; font-size: 1.3rem;"></i>
+              <span>Are ad spend costs included in your fee?</span>
+            </div>
+            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+          </button>
+          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem; padding-left: 35px;">No, your ad spend is billed directly to your credit card by the advertising platforms (e.g., Meta, Google). Our fee only covers the strategy, creative production, and daily management of those funds.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- CTA Banner -->
-  <section class="cta-banner" id="cta-banner" style="background-color: var(--color-fire-engine-red); padding: 5rem 0; text-align: center;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-      <h2 style="color: white; margin-bottom: 1rem; font-size: 2.5rem; font-weight: 800;">Ready to Scale Your Business with High-Converting Ads?</h2>
-      <p style="color: #EAEAEA; margin-bottom: 2.5rem; font-size: 1.15rem; line-height: 1.6;">Stop wasting money on ineffective campaigns. Let our experts build a profitable acquisition funnel for your brand.</p>
-      <a href="free-consultation.html" class="btn btn-outline" style="background-color: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 18px 40px; font-size: 1.1rem; border-radius: 4px; text-transform: uppercase;">Get Started Now</a>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq" style="background-color: #ffffff; padding: 6rem 0;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 3.5rem;">
-        <span class="premium-badge-red">FAQ</span>
-        <h2 style="color: #222222; font-size: 2.5rem; font-weight: 800; margin-top: 0;">Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
-            How much should I spend on ads?
-            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">We recommend a minimum starting budget of $1,500 - $3,000 per month depending on your industry and goals. This provides enough data for the algorithms to learn and optimize. Once we hit a profitable ROI, we recommend scaling the budget.</p></div>
-        </div>
-        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
-            Which platform is best for my ads?
-            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">B2B companies typically see the highest quality leads on LinkedIn. E-commerce and B2C brands thrive on Meta (Facebook/Instagram) and TikTok. We will audit your offer and advise on the best starting platform.</p></div>
-        </div>
-        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
-            How long does it take to see a positive ROI?
-            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">The first 2-4 weeks are a "testing phase" where we gather data. While sales often occur during this phase, profitability generally stabilizes in months 2 and 3 as we cut losing ads and optimize the funnel.</p></div>
-        </div>
-        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
-            Do I own the ad accounts?
-            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">100% yes. You own the ad accounts, the pixels, and all the data. We simply request agency access to manage them on your behalf.</p></div>
-        </div>
-        <div class="faq-item" style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button class="faq-question-btn" style="color: #222222; background: none; border: none; width: 100%; text-align: left; font-size: 1.2rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 0;">
-            Do we get custom ad creatives?
-            <span class="faq-icon" style="color: var(--color-fire-engine-red); font-weight: bold; font-size: 1.5rem;">+</span>
-          </button>
-          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) var(--ease-standard);"><p style="color: #555555; margin-top: 1rem; line-height: 1.8; font-size: 1rem; margin-bottom: 0;">Yes, our creative studio designs custom images, videos, and copywriting tailored to your brand, which you approve before launch.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bottom CTA Strip -->
-  <!-- Bottom CTA Strip -->
-  <section class="bottom-cta-strip" style="background-color: var(--color-fire-engine-red); padding: 2.5rem 0; color: white;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: 0 auto;">
-      <div>
-        <h3 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.6rem; font-weight: 700;">Ready to Scale Your Business & Brand?</h3>
-        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1rem;">Connect with our social media experts today and start turning your followers into loyal customers.</p>
-      </div>
-      <a href="contact.html" class="btn btn-outline" style="background-color: white; color: var(--color-fire-engine-red); border: none; font-weight: bold; padding: 12px 30px; border-radius: 4px; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Contact Us Now</a>
-    </div>
-  </section>
-
 
 <footer>
     <div class="container">
@@ -927,17 +1041,17 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#">Organic Search</a></li>
-            <li><a href="#">Technical Schema</a></li>
-            <li><a href="#">GEO Optimization</a></li>
-            <li><a href="#">Link Authority</a></li>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#">Marketing Insights</a></li>
-            <li><a href="#">Case Studies</a></li>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
             <li><a href="#">SEO Checklist</a></li>
             <li><a href="#">Free Domain Checker</a></li>
           </ul>
@@ -945,18 +1059,18 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© 2026 GBO Inc. All Rights Reserved.</div>
         <div>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
         </div>
       </div>
     </div>
