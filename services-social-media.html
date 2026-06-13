@@ -3,14 +3,610 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Marketing - GBO</title>
-  <meta name="description" content="Build a loyal community and drive customer conversions across all major social networks with GBO's Social Media Marketing.">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
+  <title>Social Media Marketing Services - GBO</title>
+  <meta name="description" content="Build stronger brands online, increase visibility, and attract qualified leads with GBO's custom Social Media Marketing services.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+      --dark-charcoal: #222222;
+      --dark-gray: #333333;
+      --bright-red: #D91C24;
+      --off-white: #F5F5F5;
+      --dark-charcoal: #222222;
+      --dark-gray: #333333;
+      --bright-red: #D91C24;
+      --off-white: #F5F5F5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--dark-charcoal);
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    
+    /* Section padding: 80px top/bottom */
+    section { padding: 80px 0; }
+    
+    /* Global Styles */
+    .eyebrow-red {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bright-red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .eyebrow-white {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .section-title-light h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      margin-top: 0.5rem;
+      line-height: 1.2;
+    }
+    .section-title-dark h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 0.5rem;
+      line-height: 1.2;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    
+    /* Checkmark Lists */
+    .red-checkmark-list {
+      list-style: none;
+    }
+    .red-checkmark-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: inherit;
+      font-size: 1.05rem;
+    }
+    .red-checkmark-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--bright-red);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .card-red .red-checkmark-list li::before {
+      color: #FFFFFF;
+    }
+    
+    /* Bullet Lists */
+    .red-bullet-list {
+      list-style: none;
+    }
+    .red-bullet-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: inherit;
+      font-size: 1.05rem;
+    }
+    .red-bullet-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: -2px;
+      color: var(--bright-red);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    /* 1. Hero Section */
+    .hero-section {
+      background-color: var(--dark-charcoal);
+      padding: 120px 0 80px 0;
+    }
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      max-width: 950px;
+    }
+    .hero-desc {
+      font-size: 1.25rem;
+      color: #CCCCCC;
+      max-width: 900px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .hero-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 32px;
+      max-width: 800px;
+      margin-bottom: 3rem;
+    }
+    .hero-btn {
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 1.1rem 2.75rem;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hero-btn:hover {
+      background-color: #B2151B;
+      transform: translateY(-2px);
+    }
+
+    /* 2. What is Section */
+    .what-is-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .what-is-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .card-light {
+      background-color: #FFFFFF;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #EAEAEA;
+      color: var(--dark-charcoal);
+    }
+    .card-red {
+      background-color: var(--bright-red);
+      padding: 32px;
+      border-radius: 8px;
+      color: #FFFFFF;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.25rem;
+      line-height: 1.7;
+    }
+    .card-title-light {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    /* 3. How It Creates Growth Section */
+    .growth-section {
+      background-color: var(--dark-charcoal);
+    }
+    .growth-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .card-dark {
+      background-color: var(--dark-gray);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #444444;
+      color: #FFFFFF;
+    }
+    .growth-num {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .growth-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+    .growth-card-desc {
+      color: #CCCCCC;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* 4. Services We Offer Section */
+    .services-offer-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .services-offer-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .service-offer-card {
+      background-color: #FFFFFF;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #EAEAEA;
+      color: var(--dark-charcoal);
+      transition: transform 0.2s ease;
+    }
+    .service-offer-card.highlight {
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      border: none;
+    }
+    .service-offer-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .service-offer-card.highlight .service-offer-title {
+      color: #FFFFFF;
+    }
+    .service-offer-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555555;
+    }
+    .service-offer-card.highlight .service-offer-text {
+      color: #FFFFFF;
+    }
+    .explore-btn-wrapper {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+
+    /* 5. Why Invest Section */
+    .why-invest-section {
+      background-color: var(--dark-charcoal);
+    }
+    .why-invest-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    /* 6. Why Choose Us Section */
+    .why-choose-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .why-choose-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .why-choose-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .why-choose-card-desc {
+      font-size: 1rem;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    /* 7. Our Process Section */
+    .process-section {
+      background-color: var(--dark-charcoal);
+    }
+    .process-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .process-list-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .process-row {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      background-color: var(--dark-gray);
+      padding: 24px 32px;
+      border-radius: 8px;
+      border: 1px solid #444444;
+    }
+    .process-row-num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid var(--bright-red);
+      color: var(--bright-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .process-row-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .process-row-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+    .process-row-desc {
+      font-size: 1.05rem;
+      color: #CCCCCC;
+      line-height: 1.6;
+    }
+
+    /* 8. Industries We Serve Section */
+    .industries-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .industries-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 9. Success Stories Section */
+    .success-stories-section {
+      background-color: var(--dark-charcoal);
+    }
+    .success-stories-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .success-story-card {
+      background-color: var(--dark-gray);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #444444;
+      color: #FFFFFF;
+    }
+    .success-story-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--bright-red);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .success-story-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #FFFFFF;
+    }
+    .success-stories-btn-wrapper {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    .btn-outline-white {
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: 2px solid #FFFFFF;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-outline-white:hover {
+      background-color: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* 10. Pre-Footer Banner */
+    .prefooter-banner {
+      background-color: var(--bright-red);
+      padding: 100px 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .prefooter-container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .prefooter-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .prefooter-desc {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      color: #FFFFFF;
+    }
+    .prefooter-btn-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .prefooter-btn {
+      background-color: #FFFFFF;
+      color: var(--dark-charcoal);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .prefooter-btn:hover {
+      background-color: var(--off-white);
+      transform: translateY(-2px);
+    }
+    .prefooter-btn-outline {
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 1.1rem 2.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: 2px solid #FFFFFF;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .prefooter-btn-outline:hover {
+      background-color: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* 11. FAQ Section */
+    .faq-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .faq-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background-color: #FFFFFF;
+      border: 1px solid #EAEAEA;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-question-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 24px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--dark-charcoal);
+    }
+    .faq-circle-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .faq-arrow {
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+      margin-left: auto;
+      color: #888888;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      padding: 0 24px 0 72px;
+    }
+    .faq-answer p {
+      padding-bottom: 24px;
+      color: #555555;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Responsive grid styles */
+    @media (max-width: 991px) {
+      .hero-features-grid {
+        grid-template-columns: 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .why-choose-title h2, .services-offer-title h2, .process-title h2, .growth-title h2, .what-is-title h2, .why-invest-title h2, .success-stories-title h2 {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 2.25rem;
+      }
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .industries-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .prefooter-title {
+        font-size: 1.85rem;
+      }
+      .faq-question-btn {
+        font-size: 1.05rem;
+        padding: 16px;
+      }
+      .faq-answer {
+        padding: 0 16px 0 64px;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -25,7 +621,7 @@
             <div class="dropdown-item-nested">
               <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
               <div class="nested-dropdown-menu">
-                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
                 <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
                 <a href="services-dm-audit.html">Digital Marketing Audit</a>
                 <a href="services-dm-content.html">Content Marketing Services</a>
@@ -46,8 +642,8 @@
               <div class="nested-dropdown-menu">
                 <a href="services-social-media.html">Social Media Marketing</a>
                 <a href="services-smo.html">Social Media Optimization</a>
-                <a href="services-social-management.html">Social Media Management</a>
-                <a href="services-social-advertising.html">Social Media Advertising</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
               </div>
             </div>
 <div class="dropdown-item-nested">
@@ -58,13 +654,33 @@
                 <a href="services-link-building.html">LinkBuilding</a>
                 <a href="services-technical-seo.html">TechnicalSEO</a>
                 <a href="services-voice-search.html">VoiceSearchOptimization</a>
-                <a href="services-app-store.html">AppStoreOptimization</a>
-                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
               </div>
             </div>
-            <a href="services-video-seo.html">Video SEO</a>
-            <a href="services-digital-advertising.html">Digital Advertising</a>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -82,15 +698,11 @@
             <a href="pricing-ppc.html">PPC Packages</a>
           </div>
         </div>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About Us</a>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact Us</a>
       </nav>
-      <a href="tel:+13072093608" class="nav-phone-link" id="nav-phone-link" style="color: white; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-right: 15px;">
-        <i class="fa-solid fa-phone" style="color: var(--color-fire-engine-red);"></i>
-        <span>+1-307-209-3608</span>
-      </a>
       <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -99,15 +711,14 @@
         </svg>
         <span>Free Consultation</span>
       </a>
-          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
   </header>
-
-  <!-- Mobile Sidebar -->
+<!-- Mobile Sidebar -->
   <div class="mobile-sidebar" id="mobile-sidebar">
     <div class="sidebar-header">
       <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
@@ -120,7 +731,7 @@
           <div class="sidebar-dropdown">
             <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
             <div class="sidebar-dropdown-content sidebar-nested-content">
-              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
               <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
               <a href="services-dm-audit.html">Digital Marketing Audit</a>
               <a href="services-dm-content.html">Content Marketing Services</a>
@@ -141,8 +752,8 @@
             <div class="sidebar-dropdown-content sidebar-nested-content">
               <a href="services-social-media.html">Social Media Marketing</a>
               <a href="services-smo.html">Social Media Optimization</a>
-              <a href="services-social-management.html">Social Media Management</a>
-              <a href="services-social-advertising.html">Social Media Advertising</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
             </div>
           </div>
 <div class="sidebar-dropdown">
@@ -153,13 +764,33 @@
               <a href="services-link-building.html">LinkBuilding</a>
               <a href="services-technical-seo.html">TechnicalSEO</a>
               <a href="services-voice-search.html">VoiceSearchOptimization</a>
-              <a href="services-app-store.html">AppStoreOptimization</a>
-              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
             </div>
           </div>
-          <a href="services-video-seo.html">Video SEO</a>
-          <a href="services-digital-advertising.html">Digital Advertising</a>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -174,613 +805,483 @@
         </div>
       </div>
 
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About Us</a>
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
       <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
     </nav>
   </div>
 
-  <style>
-  :root {
-    --color-off-white: #FAF8F5;
-    --color-beige-bg: #F5F2EB;
-    --color-badge-green-bg: #EAF5EA;
-    --color-badge-green-text: #2E7D32;
-    --color-badge-green-border: #C8E6C9;
-    --color-badge-red-bg: #FFEBEE;
-    --color-badge-red-text: #C62828;
-    --color-badge-red-border: #FFCDD2;
-  }
+  <section class="hero-section" id="hero-section" style="background-color: var(--dark-charcoal); color: #FFFFFF; padding: 120px 0 80px 0;">
+    <div class="container">
+      <span class="eyebrow-red">Social Media Marketing Agency</span>
+      <h1 class="hero-title">Social Media Marketing Services That Build Stronger Brands Online</h1>
+      <p class="hero-desc">GBO helps businesses increase brand visibility, strengthen customer relationships, and establish a powerful presence across today's leading social media platforms. Our strategic social media marketing services combine engaging content, audience targeting, and platform expertise to help brands grow their online presence and stay connected with their audience.</p>
+      
+      <div class="hero-features-grid">
+        <ul class="red-checkmark-list">
+          <li>Optimize Social Profiles</li>
+          <li>Create Engaging Content</li>
+          <li>Run Targeted Social Ads</li>
+        </ul>
+        <ul class="red-checkmark-list">
+          <li>Increase Brand Awareness</li>
+          <li>Build Customer Loyalty</li>
+          <li>Improve Audience Engagement</li>
+        </ul>
+      </div>
+      
+      <a href="#cta-banner" class="hero-btn">GET MY FREE PROPOSAL</a>
+    </div>
+  </section>
 
-  .premium-badge-green {
-    background: var(--color-badge-green-bg);
-    color: var(--color-badge-green-text);
-    border: 1px solid var(--color-badge-green-border);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
 
-  .premium-badge-red {
-    background: var(--color-badge-red-bg);
-    color: var(--color-badge-red-text);
-    border: 1px solid var(--color-badge-red-border);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .grid-1-1.5 {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 50px;
-    align-items: start;
-  }
-
-  .card-premium-red {
-    background: var(--color-fire-engine-red);
-    color: white !important;
-    border-radius: 8px;
-    padding: 2.5rem;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid transparent;
-  }
-  .card-premium-red:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(192, 10, 10, 0.2);
-  }
-  .card-premium-red h3 {
-    color: white !important;
-  }
-  .card-premium-red p {
-    color: rgba(255, 255, 255, 0.9) !important;
-  }
-
-  .card-premium-white {
-    background: white;
-    color: #222222 !important;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    padding: 2.5rem;
-    text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-  }
-  .card-premium-white:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-fire-engine-red);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  }
-  .card-premium-white h3, .card-premium-white h4 {
-    color: #222222 !important;
-  }
-  .card-premium-white p {
-    color: #555555 !important;
-  }
-
-  .card-premium-dark {
-    background: #2D2D2D;
-    color: #A8A6A7 !important;
-    border: 1px solid #3A3A3A;
-    border-radius: 8px;
-    padding: 2.5rem;
-    text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card-premium-dark:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-fire-engine-red);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  }
-  .card-premium-dark h3, .card-premium-dark h4 {
-    color: white !important;
-  }
-  .card-premium-dark p {
-    color: #D3D3D3 !important;
-  }
-
-  .red-card-arrow-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .red-card-arrow-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 1rem;
-    color: white !important;
-  }
-  .red-card-arrow-list li i {
-    color: white !important;
-    margin-top: 4px;
-    font-size: 0.9rem;
-  }
-
-  .process-card-premium-red {
-    background: var(--color-fire-engine-red);
-    color: white !important;
-    border-radius: 8px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .process-card-premium-red:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(192, 10, 10, 0.2);
-  }
-  .process-card-premium-red h3 {
-    color: white !important;
-  }
-  .process-card-premium-red p {
-    color: rgba(255, 255, 255, 0.9) !important;
-  }
-  .process-card-premium-red .num-bg {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    font-size: 4.5rem;
-    font-weight: 900;
-    color: rgba(255,255,255,0.15);
-    line-height: 1;
-    user-select: none;
-  }
-
-  .process-card-premium-dark {
-    background: #2D2D2D;
-    color: #A8A6A7 !important;
-    border: 1px solid #3A3A3A;
-    border-radius: 8px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .process-card-premium-dark:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-fire-engine-red);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  }
-  .process-card-premium-dark h3 {
-    color: white !important;
-  }
-  .process-card-premium-dark p {
-    color: #D3D3D3 !important;
-  }
-  .process-card-premium-dark .num-bg {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    font-size: 4.5rem;
-    font-weight: 900;
-    color: rgba(255,255,255,0.05);
-    line-height: 1;
-    user-select: none;
-  }
-
-  .process-card-premium-white {
-    background: white;
-    color: #222222 !important;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-  }
-  .process-card-premium-white:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-fire-engine-red);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  }
-  .process-card-premium-white h3 {
-    color: #222222 !important;
-  }
-  .process-card-premium-white p {
-    color: #555555 !important;
-  }
-  .process-card-premium-white .num-bg {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    font-size: 4.5rem;
-    font-weight: 900;
-    color: rgba(0,0,0,0.04);
-    line-height: 1;
-    user-select: none;
-  }
-
-  @media (max-width: 991px) {
-    #nav-phone-link {
-      display: none !important;
-    }
-    .grid-3 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .grid-1-1.5 {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .grid-3, .grid-2 {
-      grid-template-columns: 1fr;
-    }
-    .services-hero-container {
-      padding: 4rem 1rem !important;
-    }
-    .stats-container {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 20px !important;
-    }
-  }
-</style>
-
-  <!-- Hero Section -->
-  <section class="services-hero" style="background: #1A1A1A; color: white; padding: 6rem 0;">
-    <div class="container services-hero-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: stretch;">
-      <!-- Left Column (Content) -->
-      <div class="hero-left-col" style="text-align: left; display: flex; flex-direction: column; justify-content: center;">
-        <div style="display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap;">
-          <span style="background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><div style="width: 6px; height: 6px; background-color: #00FF00; border-radius: 50%;"></div>Social Media Marketing</span>
-          <span style="background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><div style="width: 6px; height: 6px; background-color: #00FF00; border-radius: 50%;"></div>Brand Growth</span>
-          <span style="background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><div style="width: 6px; height: 6px; background-color: #00FF00; border-radius: 50%;"></div>Paid Social Ads</span>
+  <section class="what-is-section" style="background-color: var(--off-white); color: var(--dark-charcoal); padding: 80px 0;">
+    <div class="container">
+      <div class="what-is-title">
+        <span class="eyebrow-red">Why Social Media Marketing Matters</span>
+        <h2>What Are Social Media Marketing Services?</h2>
+      </div>
+      
+      <div class="grid-3">
+        <!-- Left Card (Solid Red background, White text) -->
+        <div class="card-red">
+          <p>Social Media Marketing (SMM) is the process of promoting your business across social media platforms such as Facebook, Instagram, LinkedIn, YouTube, TikTok, X, Pinterest, and Threads. A well-planned social media marketing strategy helps businesses increase visibility, build trust, engage audiences, and strengthen brand authority through organic and paid campaigns.</p>
         </div>
-        <h1 style="margin-bottom: 1rem; font-size: 3.5rem; font-weight: bold; color: white; line-height: 1.15;">Result-Driven Social Media<br>Marketing Services</h1>
-        <h2 style="color: white; font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">Grow Faster with Strategic Social Media Marketing</h2>
-        <p style="color: #888888; margin-bottom: 2.5rem; line-height: 1.6; font-size: 1.1rem; max-width: 95%;">Build a strong online presence, engage your audience, and turn followers into customers with DIGI GROW social media marketing services.</p>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 3.5rem;" class="grid-2-bullets">
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Optimize Social Profiles</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Create Engaging Content</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Run Targeted Social Ads</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Increase Brand Awareness</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Generate More Leads</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
-            <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
-            <span>Improve Audience Engagement</span>
-          </div>
+        <!-- Center Card (White background, Dark text) -->
+        <div class="card-light">
+          <h3 class="card-title-light">Benefits of Social Media Marketing</h3>
+          <ul class="red-checkmark-list">
+            <li>Increase Brand Awareness</li>
+            <li>Reach Your Ideal Audience</li>
+            <li>Drive Website Traffic</li>
+            <li>Improve Customer Engagement</li>
+            <li>Strengthen Brand Credibility</li>
+            <li>Build Community & Trust</li>
+          </ul>
         </div>
-
-        <div>
-          <a href="#cta-banner" style="background-color: #B30E12; color: white; border: none; padding: 18px 40px; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 1rem; text-decoration: none; display: inline-block;">GET STARTED</a>
+        
+        <!-- Right Card (White background, Dark text) -->
+        <div class="card-light">
+          <h3 class="card-title-light">How We Do It</h3>
+          <ul class="red-bullet-list">
+            <li>Social Profile Optimization</li>
+            <li>Content Creation & Publishing</li>
+            <li>Audience Engagement</li>
+            <li>Social Media Advertising</li>
+            <li>Influencer Collaborations</li>
+            <li>Performance Tracking & Optimization</li>
+          </ul>
         </div>
       </div>
       
-      <!-- Right Column (Visual) -->
-      <div class="hero-right-col" style="background-color: #E0E0E0; width: 100%; height: 100%; min-height: 550px; border-radius: 4px;">
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="#cta-banner" class="hero-btn" style="background-color: var(--bright-red); color: white;">Explore Our Social Media Marketing Solutions</a>
       </div>
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section class="stats-bar" style="background-color: #111111; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0;">
-    <div class="container stats-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
-      <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">5,000+</div>
-        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Global Brands Empowered</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">40+</div>
-        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Diverse Sectors Mastered</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">9+ Years</div>
-        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Average Client Partnership</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">99%</div>
-        <div class="stat-label" style="color: #888888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Client Retention Rate</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 3. Section: What is Social Media Marketing? (Soft Cream) -->
-  <section style="padding: 6rem 0; background-color: #F7F5F0;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <div style="margin-bottom: 3.5rem; display: flex; flex-direction: column; align-items: center;">
-        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">Introduction</span>
-        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">What is Social Media Marketing?</h2>
-        <p style="color: #888888; max-width: 800px; line-height: 1.7; font-size: 1.05rem;">Social Media Marketing (SMM) is the strategic use of social media platforms to connect with your audience, build your brand, increase sales, and drive website traffic organically and through targeted ads.</p>
+  <section class="growth-section" style="background-color: var(--dark-charcoal); padding: 80px 0; color: #FFFFFF;">
+    <div class="container">
+      <div class="growth-title">
+        <span class="eyebrow-red">Business Growth Benefits</span>
+        <h2>How Social Media Marketing Helps Businesses Build Stronger Customer Relationships</h2>
       </div>
-      <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; text-align: left;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem;">
-          <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Pillars of SMM</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Strategy & Planning</li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Content Creation</li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Brand Awareness</li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Audience Engagement</li>
-            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Analytics & Reporting</li>
-          </ul>
+      
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <div class="card-dark">
+          <div class="growth-num">1</div>
+          <h3 class="growth-card-title">Strengthen Your Online Presence</h3>
+          <p class="growth-card-desc">Maintain a consistent and professional brand presence across multiple social media platforms.</p>
         </div>
-        <div style="background: white; color: #1A1A1A; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Core Benefits</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; color: #888888;">
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Higher Brand Authority</li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Better Customer Loyalty</li>
-            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Increased Website Traffic</li>
-            <li style="display: flex; align-items: center; gap: 10px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div> Improved Lead Generation</li>
-          </ul>
+        <!-- Card 2 -->
+        <div class="card-dark">
+          <div class="growth-num">2</div>
+          <h3 class="growth-card-title">Reach Customers Where They Spend Time</h3>
+          <p class="growth-card-desc">Connect with audiences on Facebook, Instagram, LinkedIn, YouTube, TikTok, Pinterest, and emerging social channels.</p>
         </div>
-        <div style="background: white; color: #1A1A1A; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Start Your Journey</h3>
-            <p style="color: #888888; line-height: 1.6;">Ready to bring growth to your business today? Connect with our experts to craft a tailored strategy.</p>
-          </div>
-          <a href="free-consultation.html" style="background-color: #B30E12; color: white; padding: 12px 20px; font-weight: bold; width: 100%; text-align: center; border-radius: 4px; display: inline-block; text-decoration: none;">Contact Us</a>
+        <!-- Card 3 -->
+        <div class="card-dark">
+          <div class="growth-num">3</div>
+          <h3 class="growth-card-title">Build a Recognizable Brand Identity</h3>
+          <p class="growth-card-desc">Create a consistent brand voice, visual identity, and customer experience across every platform.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card-dark">
+          <div class="growth-num">4</div>
+          <h3 class="growth-card-title">Increase Audience Engagement</h3>
+          <p class="growth-card-desc">Encourage conversations, interactions, shares, and meaningful relationships with your customers.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="card-dark">
+          <div class="growth-num">5</div>
+          <h3 class="growth-card-title">Expand Brand Reach Cost-Effectively</h3>
+          <p class="growth-card-desc">Combine organic content and paid advertising to maximize visibility and audience growth.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="card-dark">
+          <div class="growth-num">6</div>
+          <h3 class="growth-card-title">Create Long-Term Brand Growth</h3>
+          <p class="growth-card-desc">Build a loyal community that continues to support and advocate for your brand.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Section: Why Social Media Marketing Matters (Dark) -->
-  <section style="padding: 6rem 0; background-color: #1A1A1A;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <div style="margin-bottom: 4rem; max-width: 800px; text-align: left;">
-        <span style="background: rgba(255, 255, 255, 0.1); color: #B30E12; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Key Benefits</span>
-        <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Why Social Media Marketing Matters</h2>
-        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">Social media is no longer just an option; it is a critical component of your overall digital marketing strategy.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Vast Audience Reach</h3>
-          <p style="line-height: 1.6; font-size: 0.95rem;">Billions of users are active on social media daily, giving you unparalleled access to your target demographic.</p>
-        </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Cost-Effective Marketing</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Organic posting is free, and targeted social ads offer exceptional ROI compared to traditional marketing.</p>
-        </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Direct Customer Insights</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Gain real-time feedback and data about your audience's preferences, behaviors, and pain points.</p>
-        </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Improved Search Rankings</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Active social profiles signal authority to search engines, boosting your overall SEO efforts indirectly.</p>
-        </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Humanize Your Brand</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Show the faces and personalities behind your business to foster genuine connections with your audience.</p>
-        </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Stay Ahead of Competitors</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">If you aren't engaging your audience on social media, your competitors certainly are.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 5. Section: Our Social Media Marketing Services (Soft Cream) -->
-  <section style="padding: 6rem 0; background-color: #F7F5F0;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Our Social Media Marketing Services</h2>
-        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem; max-width: 800px; margin: 0 auto;">Comprehensive solutions tailored to elevate your brand across all major social networks.</p>
+  <section class="services-offer-section" style="background-color: var(--off-white); color: var(--dark-charcoal); padding: 80px 0;">
+    <div class="container">
+      <div class="services-offer-title">
+        <span class="eyebrow-red">Social Media Marketing Solutions</span>
+        <h2>Complete Social Media Marketing Services for Business Growth</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 4rem;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Social Media Strategy</h3>
-          <p style="line-height: 1.6; font-size: 0.95rem;">We develop data-driven roadmaps aligned with your business objectives to maximize ROI.</p>
+      
+      <div class="grid-3">
+        <!-- Card 1: Solid Red -->
+        <div class="service-offer-card highlight" style="background-color: var(--bright-red); color: #FFFFFF; border: none;">
+          <h3 class="service-offer-title" style="color: #FFFFFF;">Social Media Optimization (SMO)</h3>
+          <p class="service-offer-text" style="color: #FFFFFF;">Optimize profiles, branding, bios, and content structures to improve discoverability and engagement.</p>
         </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Profile Setup & Optimization</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Ensuring your brand profiles are fully optimized for search visibility and user conversion.</p>
+        <!-- Card 2 -->
+        <div class="service-offer-card">
+          <h3 class="service-offer-title">Social Media Management</h3>
+          <p class="service-offer-text">Manage content calendars, posting schedules, audience interactions, and account performance.</p>
         </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Content Creation</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">High-quality graphics, videos, and copywriting designed to captivate your specific audience.</p>
+        <!-- Card 3 -->
+        <div class="service-offer-card">
+          <h3 class="service-offer-title">Social Media Advertising</h3>
+          <p class="service-offer-text">Launch targeted social media ad campaigns that improve reach, visibility, and campaign performance.</p>
         </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Community Management</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Active monitoring, responding to comments, and fostering a loyal community around your brand.</p>
+        <!-- Card 4 -->
+        <div class="service-offer-card">
+          <h3 class="service-offer-title">Brand Management</h3>
+          <p class="service-offer-text">Strengthen your brand identity through strategic messaging, creative content, and storytelling.</p>
         </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Paid Social Advertising</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Highly targeted ad campaigns designed to generate immediate leads and sales.</p>
+        <!-- Card 5 -->
+        <div class="service-offer-card">
+          <h3 class="service-offer-title">Online Reputation Management</h3>
+          <p class="service-offer-text">Monitor customer feedback and maintain a positive brand image across social platforms.</p>
         </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Analytics & Reporting</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Transparent monthly reporting detailing campaign performance, insights, and next steps.</p>
+        <!-- Card 6 -->
+        <div class="service-offer-card">
+          <h3 class="service-offer-title">Video Marketing</h3>
+          <p class="service-offer-text">Create engaging reels, short-form videos, stories, and visual content designed to increase audience interaction.</p>
         </div>
       </div>
       
-      <!-- Platform Tags Container -->
-      <div style="background: #1A1A1A; padding: 3rem; border-radius: 8px;">
-        <h3 style="color: white; font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">Platforms We Cover</h3>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">Facebook</div>
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">Instagram</div>
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">LinkedIn</div>
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">YouTube</div>
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">TikTok</div>
-          <div style="background: #2D2D2D; color: white; padding: 12px 20px; border-radius: 30px; text-align: center; font-weight: 600;">Pinterest</div>
+      <div class="explore-btn-wrapper" style="text-align: center; margin-top: 3.5rem;">
+        <a href="#cta-banner" class="hero-btn">Explore Our Social Media Solutions</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="growth-section" style="background-color: var(--dark-charcoal); padding: 80px 0; color: #FFFFFF;">
+    <div class="container">
+      <div class="growth-title" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow-red">Platforms We Manage</span>
+        <h2>Social Media Marketing Across Every Major Platform</h2>
+      </div>
+      
+      <div class="industries-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 64px; max-width: 900px; margin: 0 auto;">
+        <ul class="red-bullet-list" style="margin: 0; padding: 0; color: #FFFFFF;">
+          <li>Facebook Marketing</li>
+          <li>Instagram Marketing</li>
+          <li>LinkedIn Marketing</li>
+          <li>YouTube Marketing</li>
+          <li>TikTok Marketing</li>
+        </ul>
+        <ul class="red-bullet-list" style="margin: 0; padding: 0; color: #FFFFFF;">
+          <li>Pinterest Marketing</li>
+          <li>Snapchat Marketing</li>
+          <li>X (Twitter) Marketing</li>
+          <li>Threads Marketing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="process-section" style="background-color: var(--off-white); padding: 80px 0; color: var(--dark-charcoal);">
+    <div class="container">
+      <div class="process-title" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow-red">Our Proven Process</span>
+        <h2 style="color: var(--dark-charcoal);">How We Build Successful Social Media Marketing Campaigns</h2>
+      </div>
+      
+      <div class="process-list-vertical" style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto;">
+        <!-- Step 1 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">1</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Audit & Research</h3>
+            <p class="process-row-desc" style="color: #555555;">Analyze your social presence, competitors, audience behavior, and growth opportunities.</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">2</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Strategy Development</h3>
+            <p class="process-row-desc" style="color: #555555;">Build a customized social media marketing strategy aligned with your goals.</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">3</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Content Creation</h3>
+            <p class="process-row-desc" style="color: #555555;">Develop engaging graphics, videos, captions, stories, and campaigns.</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">4</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Campaign Management</h3>
+            <p class="process-row-desc" style="color: #555555;">Manage organic and paid social campaigns across multiple platforms.</p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">5</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Community Engagement</h3>
+            <p class="process-row-desc" style="color: #555555;">Build stronger customer relationships through active engagement and communication.</p>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="process-row" style="background-color: #FFFFFF; border: 1px solid #EAEAEA;">
+          <div class="process-row-num">6</div>
+          <div class="process-row-content">
+            <h3 class="process-row-title" style="color: var(--dark-charcoal);">Reporting & Optimization</h3>
+            <p class="process-row-desc" style="color: #555555;">Track performance metrics and continuously improve campaign effectiveness.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Section: Our Social Media Marketing Process (Dark) -->
-  <section style="padding: 6rem 0; background-color: #1A1A1A;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <div style="margin-bottom: 4rem; text-align: left;">
-        <span style="background: rgba(255, 255, 255, 0.1); color: #B30E12; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Our Process</span>
-        <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Our Social Media Marketing Process</h2>
-        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">A streamlined approach to executing winning social strategies.</p>
+
+  <section class="why-invest-section" style="background-color: var(--dark-charcoal); padding: 80px 0; color: #FFFFFF;">
+    <div class="container">
+      <div class="why-invest-title" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow-red">Why Businesses Choose GBO</span>
+        <h2>Your Trusted Social Media Marketing Partner</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.15); line-height: 1;">01</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 2;">Initial Audit & Strategy</h3>
-          <p style="line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">We analyze your current presence and build a comprehensive strategic plan.</p>
+      
+      <div class="grid-3" style="margin-bottom: 3.5rem;">
+        <!-- Card 1 -->
+        <div class="card-dark">
+          <div class="growth-num">1</div>
+          <h3 class="growth-card-title">Customized Marketing Strategies</h3>
+          <p class="growth-card-desc">Every campaign is tailored to your goals, audience, and industry.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1;">02</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem; position: relative; z-index: 2;">Profile Optimization</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">Enhancing your profiles with optimized bios, tracking links, and consistent branding.</p>
+        <!-- Card 2 -->
+        <div class="card-dark">
+          <div class="growth-num">2</div>
+          <h3 class="growth-card-title">Experienced Social Media Specialists</h3>
+          <p class="growth-card-desc">Our team stays ahead of social media trends, platform updates, and best practices.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1;">03</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem; position: relative; z-index: 2;">Content Creation</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">Developing a content calendar filled with engaging, high-quality posts.</p>
+        <!-- Card 3 -->
+        <div class="card-dark">
+          <div class="growth-num">3</div>
+          <h3 class="growth-card-title">Creative Content That Connects</h3>
+          <p class="growth-card-desc">We create engaging content that captures attention and strengthens brand identity.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1;">04</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem; position: relative; z-index: 2;">Publishing & Engagement</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">Scheduling posts at optimal times and actively engaging with your followers.</p>
+        <!-- Card 4 -->
+        <div class="card-dark">
+          <div class="growth-num">4</div>
+          <h3 class="growth-card-title">Multi-Platform Expertise</h3>
+          <p class="growth-card-desc">Grow your presence across Facebook, Instagram, LinkedIn, YouTube, TikTok, and more.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1;">05</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem; position: relative; z-index: 2;">Paid Campaign Management</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">Launching and optimizing targeted ads to amplify your reach.</p>
+        <!-- Card 5 -->
+        <div class="card-dark">
+          <div class="growth-num">5</div>
+          <h3 class="growth-card-title">Transparent Reporting</h3>
+          <p class="growth-card-desc">Track campaign performance through detailed reports and actionable insights.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
-          <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1;">06</div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem; position: relative; z-index: 2;">Analytics & Refinement</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">Reviewing performance data to continually refine and improve the strategy.</p>
+        <!-- Card 6 -->
+        <div class="card-dark">
+          <div class="growth-num">6</div>
+          <h3 class="growth-card-title">Growth-Focused Execution</h3>
+          <p class="growth-card-desc">Every strategy is designed to increase visibility, engagement, and brand authority.</p>
         </div>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="#cta-banner" class="hero-btn" style="background-color: var(--bright-red); color: white;">Book a Free Social Media Consultation</a>
       </div>
     </div>
   </section>
 
-  <!-- 7. Section: Why Choose DIGI GROW... (Soft Cream) -->
-  <section style="padding: 6rem 0; background-color: #F7F5F0;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: left; margin-bottom: 4rem;">
-        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">Why Us</span>
-        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Why Choose DIGI GROW for Social Media Marketing?</h2>
-        <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">Partner with a team that is dedicated to your digital success.</p>
+
+  <section class="industries-section" style="background-color: var(--off-white); color: var(--dark-charcoal); padding: 80px 0;">
+    <div class="container">
+      <div class="industries-title" style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow-red">Industries We Serve</span>
+        <h2>Social Media Marketing Solutions for Every Industry</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Proven Track Record</h3>
-          <p style="line-height: 1.6; font-size: 0.95rem;">We have successfully managed campaigns for hundreds of brands, delivering measurable growth.</p>
-        </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Customized Strategies</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">No cookie-cutter plans. We build bespoke strategies tailored to your unique market and goals.</p>
-        </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Creative Content Team</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Our in-house designers and copywriters produce scroll-stopping content that converts.</p>
-        </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Dedicated Specialists</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">You get a dedicated account manager who knows your business inside and out.</p>
-        </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Transparent Reporting</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">You will always know exactly how your campaigns are performing with our clear monthly reports.</p>
-        </div>
-        <div style="background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 2.5rem; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-          <h3 style="font-size: 1.3rem; font-weight: 700; color: #1A1A1A; margin-bottom: 1rem;">Data-Driven Decisions</h3>
-          <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We base our optimizations on hard data, ensuring every marketing dollar is spent effectively.</p>
-        </div>
+      
+      <div class="industries-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 64px; max-width: 900px; margin: 0 auto;">
+        <ul class="red-bullet-list" style="margin: 0; padding: 0;">
+          <li>Healthcare</li>
+          <li>Real Estate</li>
+          <li>Law Firms</li>
+          <li>Dental Clinics</li>
+          <li>Home Services</li>
+          <li>HVAC Companies</li>
+        </ul>
+        <ul class="red-bullet-list" style="margin: 0; padding: 0;">
+          <li>E-Commerce Brands</li>
+          <li>Hospitality</li>
+          <li>Restaurants</li>
+          <li>Technology Companies</li>
+          <li>Startups & Enterprises</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 8. Section CTA Banner (Bright Red) -->
-  <section style="background-color: #B30E12; padding: 5rem 0; text-align: center;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">Ready to Grow Your Brand on Social Media?</h2>
-      <a href="free-consultation.html" style="background-color: white; color: #B30E12; padding: 15px 40px; font-weight: bold; border-radius: 30px; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; display: inline-block;">GET YOUR FREE PROPOSAL</a>
+
+  <section class="success-stories-section" style="background-color: var(--dark-charcoal); padding: 80px 0; color: #FFFFFF;">
+    <div class="container">
+      <div class="success-stories-title">
+        <span class="eyebrow-red">Success Stories</span>
+        <h2>Real Results Through Strategic Social Media Marketing</h2>
+      </div>
+      
+      <div class="grid-3" style="margin-bottom: 3.5rem;">
+        <!-- Card 1 -->
+        <div class="success-story-card">
+          <h3 class="success-story-title">Case Study 1</h3>
+          <p class="success-story-text">Social Media Strategy Increased Brand Engagement by 300%</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="success-story-card">
+          <h3 class="success-story-title">Case Study 2</h3>
+          <p class="success-story-text">Multi-Platform Campaign Improved Audience Growth Across Key Channels</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="success-story-card">
+          <h3 class="success-story-title">Case Study 3</h3>
+          <p class="success-story-text">Content Marketing Strategy Strengthened Brand Visibility and Customer Engagement</p>
+        </div>
+      </div>
+      
+      <div class="success-stories-btn-wrapper">
+        <a href="portfolio-page.html" class="btn-outline-white">View Success Stories</a>
+      </div>
     </div>
   </section>
 
-  <!-- 9. FAQ Accordion (Soft Cream) -->
-  <section style="padding: 6rem 0; background-color: #F7F5F0;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-      <div style="margin-bottom: 3rem; text-align: left;">
-        <span style="background: #FFEBEE; color: #B30E12; border: 1px solid #FFCDD2; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: inline-block;">FAQ</span>
-        <h2 style="color: #1A1A1A; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">FAQ – Social Media Marketing Services</h2>
+
+  <section class="prefooter-banner" style="background-color: var(--bright-red); padding: 80px 0; text-align: center; color: #FFFFFF;">
+    <div class="prefooter-container">
+      <span class="eyebrow-white" style="color: #FFFFFF; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 0.95rem; display: inline-block; margin-bottom: 1rem;">Ready to Build a Stronger Brand Online?</span>
+      <h2 class="prefooter-title">Strengthen Your Social Presence & Connect With More Customers</h2>
+      <p class="prefooter-desc">Build a stronger online presence, engage your audience, and create meaningful customer relationships with GBO's social media marketing experts.</p>
+      <div class="prefooter-btn-group">
+        <a href="#cta-banner" class="prefooter-btn">GET YOUR FREE SOCIAL MEDIA CONSULTATION TODAY</a>
       </div>
+    </div>
+  </section>
+
+
+  <section class="faq-section" style="background-color: var(--off-white); color: var(--dark-charcoal); padding: 80px 0;">
+    <div class="container">
+      <div class="faq-title">
+        <span class="eyebrow-red">Frequently Asked Questions</span>
+        <h2>Social Media Marketing FAQs</h2>
+      </div>
+      
       <div class="faq-list">
-        <div style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
-            Which social media platforms should my business be on?
-            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="faq-circle-num">1</span>
+            <span>What is social media marketing?</span>
+            <span class="faq-arrow">&#9662;</span>
           </button>
-          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem;">It depends on your target audience and industry. We will help you identify the platforms where your ideal customers spend their time.</p>
+          <div class="faq-answer">
+            <p>Social media marketing is the process of promoting your business through platforms like Facebook, Instagram, LinkedIn, TikTok, and YouTube to improve visibility, engagement, and brand awareness.</p>
           </div>
         </div>
-        <div style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
-            How often should we post on social media?
-            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="faq-circle-num">2</span>
+            <span>Which social media platform is best for my business?</span>
+            <span class="faq-arrow">&#9662;</span>
           </button>
-          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem;">Consistency is key. We typically recommend posting 3-5 times a week, but the optimal frequency varies by platform and audience engagement.</p>
+          <div class="faq-answer">
+            <p>The ideal platform depends on your industry, audience, and business goals. We help identify the most effective channels for your brand.</p>
           </div>
         </div>
-        <div style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
-            Do you create the content for the posts?
-            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="faq-circle-num">3</span>
+            <span>Can social media marketing help businesses grow?</span>
+            <span class="faq-arrow">&#9662;</span>
           </button>
-          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem;">Yes! Our team of copywriters and graphic designers will create all the necessary content tailored to your brand voice.</p>
+          <div class="faq-answer">
+            <p>Yes. Strategic content, audience engagement, and advertising campaigns help strengthen brand visibility and customer relationships.</p>
           </div>
         </div>
-        <div style="border-bottom: 1px solid #EAEAEA; padding: 1.5rem 0;">
-          <button style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.15rem; font-weight: 600; text-align: left; cursor: pointer; color: #1A1A1A; padding: 0;" onclick="this.nextElementSibling.style.maxHeight = this.nextElementSibling.style.maxHeight ? null : this.nextElementSibling.scrollHeight + 'px'">
-            How do you measure success in social media marketing?
-            <span style="color: #B30E12; font-size: 1.5rem;">+</span>
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="faq-circle-num">4</span>
+            <span>How often should businesses post on social media?</span>
+            <span class="faq-arrow">&#9662;</span>
           </button>
-          <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-            <p style="color: #888888; line-height: 1.8; margin-top: 1rem; font-size: 1rem;">We track key performance indicators (KPIs) such as engagement rates, follower growth, website clicks, and conversion rates.</p>
+          <div class="faq-answer">
+            <p>Posting frequency varies by platform and audience, but consistency is essential for maintaining engagement and visibility.</p>
           </div>
         </div>
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="faq-circle-num">5</span>
+            <span>Do you provide social media advertising services?</span>
+            <span class="faq-arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We create and manage advertising campaigns across major social media platforms to improve reach, engagement, and overall campaign performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 12. Contact Us Form -->
+  <section class="cta-banner" id="cta-banner">
+    <div class="container">
+      <div class="cta-left">
+        <h2>Claim Your<br>Free Website Audit.</h2>
+      </div>
+      <div class="cta-right">
+        <form id="cta-audit-form">
+          <div class="cta-form-grid">
+            <input type="text" placeholder="Full Name" required id="cta-name">
+            <input type="email" placeholder="Email Address" required id="cta-email">
+            <input type="url" placeholder="Website URL" required id="cta-website">
+            <select required id="cta-budget">
+              <option value="" disabled selected>Monthly Marketing Budget</option>
+              <option value="under-1k">Under $1,000</option>
+              <option value="1k-5k">$1,000 - $5,000</option>
+              <option value="5k-10k">$5,000 - $10,000</option>
+              <option value="above-10k">Above $10,000</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
+        </form>
       </div>
     </div>
   </section>
@@ -804,17 +1305,17 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#">Organic Search</a></li>
-            <li><a href="#">Technical Schema</a></li>
-            <li><a href="#">GEO Optimization</a></li>
-            <li><a href="#">Link Authority</a></li>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#">Marketing Insights</a></li>
-            <li><a href="#">Case Studies</a></li>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
             <li><a href="#">SEO Checklist</a></li>
             <li><a href="#">Free Domain Checker</a></li>
           </ul>
@@ -822,53 +1323,53 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© 2026 GBO Inc. All Rights Reserved.</div>
         <div>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question-btn');
-    if (!btn) return;
-    
-    btn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Close all FAQs
-      faqItems.forEach(i => {
-        i.classList.remove('active');
-        const content = i.querySelector('.faq-answer');
-        if(content) content.style.maxHeight = null;
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        const answer = item.querySelector('.faq-answer');
+        const arrow = item.querySelector('.faq-arrow');
+        
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('active');
+          
+          // Close all FAQs
+          faqItems.forEach(i => {
+            i.classList.remove('active');
+            const ans = i.querySelector('.faq-answer');
+            if (ans) ans.style.maxHeight = null;
+            const arr = i.querySelector('.faq-arrow');
+            if (arr) arr.style.transform = 'rotate(0deg)';
+          });
+          
+          if (!isOpen) {
+            item.classList.add('active');
+            if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+          }
+        });
       });
-
-      // If it wasn't active, open it
-      if (!isActive) {
-        item.classList.add('active');
-        const content = item.querySelector('.faq-answer');
-        if(content) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
     });
-  });
-});
-</script>
-
+  </script>
 
 </body>
 </html>

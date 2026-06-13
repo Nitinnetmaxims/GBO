@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yelp Ads Management Services - GBO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+<style>
+  :root {
+    --dark-charcoal: #222222;
+    --dark-gray: #333333;
+    --bright-red: #D91C24;
+    --off-white: #F5F5F5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #fff; background-color: var(--dark-charcoal); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 80px 0; }
+  .btn-primary { background-color: var(--bright-red); color: white; padding: 0.85rem 2rem; border-radius: 50px; font-weight: bold; display: inline-block; transition: background-color 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background-color: #b5151e; }
+  .btn-outline { background-color: transparent; color: white; padding: 0.85rem 2rem; border-radius: 50px; font-weight: bold; border: 2px solid white; display: inline-block; transition: background-color 0.2s; cursor: pointer; }
+  .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+  .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 3rem; text-align: center; line-height: 1.2; }
+  
+  /* Layout components */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .grid-custom-7 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+  .grid-custom-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+
+  .card-dark { background-color: var(--dark-gray); padding: 32px; border-radius: 8px; border: 1px solid #444; color: white; }
+  .card-light { background-color: white; padding: 32px; border-radius: 8px; border: 1px solid #e0e0e0; color: var(--dark-charcoal); }
+  .card-red { background-color: var(--bright-red); padding: 32px; border-radius: 8px; color: white; border: none; }
+  
+  .card-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 1.1rem; font-weight: bold; margin-bottom: 1.5rem; }
+  .card-red .card-num { background: white; color: var(--bright-red); }
+
+  .process-timeline { display: flex; flex-direction: column; gap: 2rem; max-width: 900px; margin: 0 auto; }
+  .process-card { display: flex; gap: 2rem; padding: 32px; border-radius: 8px; }
+  .process-card.dark { background-color: var(--dark-gray); border: 1px solid #444; color: white; }
+  .process-card.red { background-color: var(--bright-red); color: white; }
+  .process-num { width: 50px; height: 50px; border-radius: 50%; background-color: var(--bright-red); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; }
+  .process-card.red .process-num { background-color: white; color: var(--bright-red); }
+  
+  .faq-item { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 1rem; color: var(--dark-charcoal); overflow: hidden; }
+  .faq-q { padding: 1.5rem; font-weight: bold; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+  .faq-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 0.9rem; font-weight: bold; margin-right: 1rem; flex-shrink: 0; }
+  .faq-arrow { font-size: 1.2rem; transition: transform 0.2s; }
+  .faq-a { padding: 0 1.5rem 1.5rem 3.5rem; color: #555; display: none; line-height: 1.7; }
+  .faq-item.active .faq-a { display: block; }
+  .faq-item.active .faq-arrow { transform: rotate(180deg); }
+  
+  .eyebrow-red { font-size: 0.9rem; font-weight: bold; color: var(--bright-red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; display: block; }
+  .eyebrow-white { font-size: 0.9rem; font-weight: bold; color: white; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; display: block; }
+  .section-h2 { font-size: 2.25rem; font-weight: bold; line-height: 1.2; margin-bottom: 2rem; }
+  .list-checkmark { list-style: none; margin-top: 1rem; }
+  .list-checkmark li { position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; }
+  .list-checkmark li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--bright-red); font-weight: bold; font-size: 1.1rem; }
+  .card-red .list-checkmark li::before { color: white; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+            <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+  
+    <section style="background-color: var(--dark-charcoal); padding: 6rem 0;">
+      <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+        <div>
+          <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+            <span style="border: 1px solid var(--bright-red); background-color: rgba(217, 28, 36, 0.1); color: var(--bright-red); padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 500;">Yelp Advertising Management</span>
+          </div>
+          <h1 style="font-size: 3.5rem; font-weight: bold; line-height: 1.1; margin-bottom: 1.5rem; color: white;">Yelp Ads Management Services</h1>
+          <p style="font-size: 1.25rem; color: #aaa; margin-bottom: 2rem; max-width: 650px;">Attract local customers actively searching for your services. Dominate local Yelp searches, optimize your profile, and drive more phone calls and bookings.</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; margin-bottom: 3rem; max-width: 600px;">
+            <ul style="list-style: none;">
+              <li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Yelp Advertising Management</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Local Audience Targeting</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Yelp Profile Optimization</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Lead Generation Campaigns</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Call & Conversion Tracking</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Competitor Profile Analysis</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Bid & Budget Optimization</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Performance Analytics & Reports</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Review Loop Configurations</li><li style='position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: #e0e0e0;'><span style='position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;'></span>Yelp Page Customization</li>
+            </ul>
+          </div>
+          <div>
+            <a href="free-consultation.html" class="btn-primary">GET YOUR FREE PROPOSAL</a>
+          </div>
+        </div>
+        <div>
+          <img src="images/video_player.png" alt="Yelp Ads Management Services Graphic" style="width: 100%; border-radius: 12px; opacity: 0.95; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Overview</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: var(--dark-charcoal);">What Are Yelp Ads Management Services?</h2>
+        </div>
+        <div class="grid-3">
+          
+      <div class="card-red">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: white;">Yelp Ads</h3>
+        <p style="color: white; line-height: 1.6;">Paid advertising placements that position your local business at the very top of Yelp search results and competitor business listings.</p>
+      </div>
+    
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Capture Local Searches</h3>
+            <p style="color: #555; line-height: 1.6;">Show your business to local users looking for services, contractors, restaurants, or salons nearby.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Drive Local Bookings</h3>
+            <p style="color: #555; line-height: 1.6;">Increase phone calls, click-to-map directions, and online quote requests from high-intent local buyers.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--dark-charcoal); color: white;">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <span style="font-size: 0.85rem; color: #aaa; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Key Advantages</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: white;">Why Businesses Invest in these Services</h2>
+        </div>
+        <div class="grid-3">
+          
+      <div class="card-red">
+        <div class="card-num">1</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Reach Local Buyers Ready to Act</h3>
+        <p style="color: white; font-size: 0.95rem; line-height: 1.6;">Target users with high commercial intent actively looking for local business services.</p>
+      </div>
+    
+          <div class="card-dark">
+            <div class="card-num">2</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Appear Above Competitors</h3>
+            <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Ensure your ad placement appears at the top of Yelp searches and on competitor business pages.</p>
+          </div>
+        
+          <div class="card-dark">
+            <div class="card-num">3</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Increase Call & Lead Volume</h3>
+            <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Drive direct phone calls, map directions, website visits, and online call-to-action quote forms.</p>
+          </div>
+        
+          <div class="card-dark">
+            <div class="card-num">4</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Build Trust and Credibility</h3>
+            <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Yelp's reputation-driven platform makes highly rated profiles stand out to local shoppers.</p>
+          </div>
+        
+          <div class="card-dark">
+            <div class="card-num">5</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Optimize Local Ad Spend</h3>
+            <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Set custom monthly budgets, control bids, and only pay for targeted local clicks.</p>
+          </div>
+        
+          <div class="card-dark">
+            <div class="card-num">6</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Detailed Lead Tracking</h3>
+            <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Measure call clicks, form conversions, page views, and ad campaign performance.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Core Offerings</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: var(--dark-charcoal);">Complete Deliverables & Capabilities</h2>
+        </div>
+        <div class="grid-3">
+          
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Yelp Campaign Management</h3>
+        <p style="color: white; font-size: 0.95rem; line-height: 1.6;">Configure, launch, and manage targeted Yelp keyword ads to drive local customer acquisitions.</p>
+      </div>
+    
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Yelp Profile Optimization</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Optimize business descriptions, photo portfolios, category tags, and list verified services.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Yelp Review Management</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Implement review loops and support guides to build positive customer feedback signaling.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Competitor Ad Block Exclusions</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Configure ads to block competitor placements on your own local business profile page.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Yelp Call Tracking Setup</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Set up phone tracking and form conversion goals to measure the exact ROI of your Yelp campaigns.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Call-To-Action Optimization</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Design high-converting custom Yelp CTA buttons like 'Request a Quote' or 'Book Online'.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--dark-charcoal); color: white;">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <span style="font-size: 0.85rem; color: #aaa; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Our Workflow</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: white;">Our Proven Success Process</h2>
+        </div>
+        <div class="process-timeline">
+          
+      <div class="process-card red">
+        <div class="process-num">1</div>
+        <div>
+          <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">Yelp Profile & Market Analysis</h3>
+          <p style="color: white; line-height: 1.6;">We audit your business profile setup, current review count, and analyze local competitor Yelp visibility.</p>
+        </div>
+      </div>
+    
+          <div class="process-card dark">
+            <div class="process-num">2</div>
+            <div>
+              <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">Profile Copy & Photo Overhaul</h3>
+              <p style="color: #aaa; line-height: 1.6;">Optimize business descriptions, upload high-quality portfolio images, and organize services.</p>
+            </div>
+          </div>
+        
+          <div class="process-card dark">
+            <div class="process-num">3</div>
+            <div>
+              <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">Yelp Ad Campaign Setup</h3>
+              <p style="color: #aaa; line-height: 1.6;">Build campaigns with target location radius, set budget limits, and configure keyword bids.</p>
+            </div>
+          </div>
+        
+          <div class="process-card dark">
+            <div class="process-num">4</div>
+            <div>
+              <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">CTA Button Configuration</h3>
+              <p style="color: #aaa; line-height: 1.6;">Add custom action buttons and forms to capture direct customer quotes and bookings.</p>
+            </div>
+          </div>
+        
+          <div class="process-card dark">
+            <div class="process-num">5</div>
+            <div>
+              <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">Review Signals Build</h3>
+              <p style="color: #aaa; line-height: 1.6;">Implement automated email/SMS loops to gather positive customer feedback on Yelp.</p>
+            </div>
+          </div>
+        
+          <div class="process-card dark">
+            <div class="process-num">6</div>
+            <div>
+              <h3 class="step-title" style="color: white; font-size: 1.35rem; margin-bottom: 0.5rem;">Monitoring & Optimization</h3>
+              <p style="color: #aaa; line-height: 1.6;">Manage ad placement, analyze cost-per-click, track incoming calls, and deliver monthly reports.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Why Partner With Us</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: var(--dark-charcoal);">Why Businesses Trust GBO</h2>
+        </div>
+        <div class="grid-3">
+          
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: white;">Local Search Marketing Experts</h3>
+        <p style="color: white; font-size: 0.95rem; line-height: 1.6;">We understand the Yelp algorithm, local user behaviors, and profile optimization strategies.</p>
+      </div>
+    
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Yelp Certified Setup Partners</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">We configure accounts correctly to maximize Yelp credit programs and minimize ad waste.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Call & Lead Focus</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">We track phone calls, map clicks, and quote forms to ensure you acquire real local customers.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Review Loop Automation</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">We build systematic workflows to help your business build positive social proof naturally.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Transparent Local Reporting</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Access clean monthly reports showing clicks, calls, page views, and client lead conversions.</p>
+          </div>
+        
+          <div class="card-light">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--dark-charcoal);">Flexible Local Scalability</h3>
+            <p style="color: #555; font-size: 0.95rem; line-height: 1.6;">Bespoke plans built for small local service shops and multi-location franchise brands.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  
+    <section style="background-color: var(--off-white); color: var(--dark-charcoal); border-top: 1px solid #e0e0e0;">
+      <div class="container" style="max-width: 850px;">
+        <div style="text-align: center; margin-bottom: 3.5rem;">
+          <span style="font-size: 0.85rem; color: #888; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Frequently Asked Questions</span>
+          <h2 class="section-title" style="margin-top: 0.5rem; color: var(--dark-charcoal); margin-bottom: 0;">Got Questions? We Have Answers.</h2>
+        </div>
+        <div class="faq-list">
+          
+        <div class="faq-item">
+          <div class="faq-q">
+            <div style="display: flex; align-items: center;">
+              <span class="faq-num">1</span>
+              <span>What are Yelp Ads?</span>
+            </div>
+            <span class="faq-arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>Yelp Ads are paid listing promotions that place your business at the top of Yelp search results and on related local competitor profile pages.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-q">
+            <div style="display: flex; align-items: center;">
+              <span class="faq-num">2</span>
+              <span>Are Yelp Ads effective for small businesses?</span>
+            </div>
+            <span class="faq-arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>Yes. For local service providers (contractors, plumbers, salons, dental clinics), Yelp is one of the most effective local customer acquisition channels.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-q">
+            <div style="display: flex; align-items: center;">
+              <span class="faq-num">3</span>
+              <span>How much does Yelp advertising cost?</span>
+            </div>
+            <span class="faq-arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>Yelp ads are PPC. You set a daily/monthly budget (e.g. $300-$1000/mo) and pay Yelp for each click on your ad listing.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-q">
+            <div style="display: flex; align-items: center;">
+              <span class="faq-num">4</span>
+              <span>Do you handle our Yelp review responses?</span>
+            </div>
+            <span class="faq-arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>We help you set up professional response templates and review guidelines, but we recommend you reply directly to keep communication authentic.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-q">
+            <div style="display: flex; align-items: center;">
+              <span class="faq-num">5</span>
+              <span>How do you measure Yelp campaign success?</span>
+            </div>
+            <span class="faq-arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>We track ad impressions, listing clicks, website visits, map directions, customer phone calls, and quote requests.</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+    
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -94,7 +94,7 @@
             <div class="dropdown-item-nested">
               <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
               <div class="nested-dropdown-menu">
-                <a href="index.html#digital-marketing">Digital Marketing Services</a>
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
                 <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
                 <a href="services-dm-audit.html">Digital Marketing Audit</a>
                 <a href="services-dm-content.html">Content Marketing Services</a>
@@ -115,8 +115,8 @@
               <div class="nested-dropdown-menu">
                 <a href="services-social-media.html">Social Media Marketing</a>
                 <a href="services-smo.html">Social Media Optimization</a>
-                <a href="services-social-management.html">Social Media Management</a>
-                <a href="services-social-advertising.html">Social Media Advertising</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
               </div>
             </div>
 <div class="dropdown-item-nested">
@@ -127,13 +127,33 @@
                 <a href="services-link-building.html">LinkBuilding</a>
                 <a href="services-technical-seo.html">TechnicalSEO</a>
                 <a href="services-voice-search.html">VoiceSearchOptimization</a>
-                <a href="services-app-store.html">AppStoreOptimization</a>
-                <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-                <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
               </div>
             </div>
-            <a href="services-video-seo.html">Video SEO</a>
-            <a href="services-digital-advertising.html">Digital Advertising</a>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -151,15 +171,11 @@
             <a href="pricing-ppc.html">PPC Packages</a>
           </div>
         </div>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About Us</a>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact Us</a>
       </nav>
-      <a href="tel:+13072093608" class="nav-phone-link" id="nav-phone-link" style="color: white; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-right: 15px;">
-        <i class="fa-solid fa-phone" style="color: var(--color-fire-engine-red);"></i>
-        <span>+1-307-209-3608</span>
-      </a>
       <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -168,7 +184,7 @@
         </svg>
         <span>Free Consultation</span>
       </a>
-          <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
         <span></span>
         <span></span>
         <span></span>
@@ -189,7 +205,7 @@
           <div class="sidebar-dropdown">
             <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
             <div class="sidebar-dropdown-content sidebar-nested-content">
-              <a href="index.html#digital-marketing" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
               <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
               <a href="services-dm-audit.html">Digital Marketing Audit</a>
               <a href="services-dm-content.html">Content Marketing Services</a>
@@ -210,8 +226,8 @@
             <div class="sidebar-dropdown-content sidebar-nested-content">
               <a href="services-social-media.html">Social Media Marketing</a>
               <a href="services-smo.html">Social Media Optimization</a>
-              <a href="services-social-management.html">Social Media Management</a>
-              <a href="services-social-advertising.html">Social Media Advertising</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
             </div>
           </div>
 <div class="sidebar-dropdown">
@@ -222,13 +238,33 @@
               <a href="services-link-building.html">LinkBuilding</a>
               <a href="services-technical-seo.html">TechnicalSEO</a>
               <a href="services-voice-search.html">VoiceSearchOptimization</a>
-              <a href="services-app-store.html">AppStoreOptimization</a>
-              <a href="services-generative-engine.html">GenerativeEngineOptimization</a>
-              <a href="services-answer-engine.html">AnswerEngineOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
             </div>
           </div>
-          <a href="services-video-seo.html">Video SEO</a>
-          <a href="services-digital-advertising.html">Digital Advertising</a>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -243,8 +279,8 @@
         </div>
       </div>
 
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About Us</a>
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
       <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
@@ -521,37 +557,37 @@
 </style>
 
   <!-- Hero Section -->
-  <section class="services-hero" style="background: #1A1A1A; color: white; padding: 6rem 0;">
+  <section class="services-hero" style="background-color: #1A1A1A; color: white; padding: 6rem 0;">
     <div class="container services-hero-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
       <div style="display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap;">
         <span style="background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;"><div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%;"></div>Social Media Optimization</span>
       </div>
       <h1 style="margin-bottom: 1rem; font-size: 4rem; font-weight: bold; color: white; line-height: 1.15; max-width: 900px;">Social Media Optimization Services</h1>
-      <h2 style="color: #B30E12; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Boost Your Brand Visibility Organically</h2>
-      <p style="color: #D3D3D3; margin-bottom: 2.5rem; line-height: 1.6; font-size: 1.1rem; max-width: 800px;">Enhance your social profiles, build authority, and connect with your audience on a deeper level. We optimize your social presence to drive traffic and increase brand loyalty.</p>
+      <h2 style="color: #B30E12; font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Boost Your Brand Visibility Organically</h2>
+      <p style="color: #888888; margin-bottom: 2.5rem; line-height: 1.6; font-size: 1.1rem; max-width: 800px;">Enhance your social profiles, build authority, and connect with your audience on a deeper level. We optimize your social presence to drive traffic and increase brand loyalty.</p>
       
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 3.5rem; max-width: 800px;">
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Profile Enhancement</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Content Strategy</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Audience Targeting</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Brand Consistency</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Hashtag Research</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px; color: #D3D3D3; font-size: 1.05rem;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #888888; font-size: 1.05rem;">
           <div style="width: 6px; height: 6px; background-color: #B30E12; border-radius: 50%; flex-shrink: 0;"></div>
           <span>Engagement Boost</span>
         </div>
@@ -562,7 +598,7 @@
   </section>
 
   <!-- Stats Bar -->
-  <section class="stats-bar" style="background-color: #111111; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0;">
+  <section class="stats-bar" style="background-color: #1A1A1A; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 6rem 0;">
     <div class="container stats-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; text-align: center;">
       <div class="stat-item">
         <div class="stat-val" style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">5,000+</div>
@@ -592,7 +628,7 @@
         <p style="color: #888888; max-width: 900px; line-height: 1.7; font-size: 1.05rem;">SMO is the process of fine-tuning your social media profiles and content to maximize organic reach and engagement. It ensures your brand is easily discoverable and perfectly aligned with user intent across networks.</p>
       </div>
       <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; text-align: left;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem;">
           <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Core Objectives</h3>
           <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-check"></i> Profile Consistency</li>
@@ -630,27 +666,27 @@
         <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">Properly structured profiles build the foundation for long-term growth and audience trust.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Increased Discoverability</h3>
           <p style="line-height: 1.6; font-size: 0.95rem;">Keyword-optimized profiles make you easier to find when users search natively on platforms like Instagram and LinkedIn.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Brand Consistency</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Ensures your messaging, imagery, and tone are uniform across all channels, building instant trust.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Higher Conversion Rates</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Clear CTAs and clean bio links drive users exactly where they need to go, resulting in more sales and leads.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Better Follower Retention</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Professional profiles convince visitors to hit the 'follow' button and stay engaged with your content.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Synergy with SEO</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Strong social signals and linked profiles help validate your business to major search engines.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Cost-Free Foundation</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">Once properly set up, an optimized profile works 24/7 to represent your brand without recurring ad spend.</p>
         </div>
@@ -667,7 +703,7 @@
         <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">Getting the technical and creative details right requires specialized knowledge.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Platform Expertise</h3>
           <p style="line-height: 1.6; font-size: 0.95rem;">Each platform has unique specs for image sizes, bio lengths, and keyword integration. We master them all.</p>
         </div>
@@ -704,27 +740,27 @@
         <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">We combine technical precision with creative flair.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Holistic Approach</h3>
           <p style="line-height: 1.6; font-size: 0.95rem;">We don't just look at one profile; we ensure your entire digital ecosystem is connected and aligned.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Detail-Oriented</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">From pixel-perfect image dimensions to meticulously crafted bios, we don't miss a thing.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Fast Turnaround</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We audit and overhaul your profiles swiftly so you can start seeing results sooner.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Industry Experience</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We've optimized accounts for brands across B2B and B2C sectors.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Dedicated Support</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">We provide ongoing recommendations and support as platforms update their layouts and rules.</p>
         </div>
-        <div style="background: #2D2D2D; color: #A8A6A7; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
+        <div style="background: #2D2D2D; color: #888888; border: 1px solid #3A3A3A; border-radius: 8px; padding: 2.5rem; text-align: left;">
           <h3 style="font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 1rem;">Affordable Packages</h3>
           <p style="color: #888888; line-height: 1.6; font-size: 0.95rem;">High-end agency quality without the inflated overhead costs.</p>
         </div>
@@ -741,7 +777,7 @@
         <p style="color: #888888; line-height: 1.7; font-size: 1.05rem;">A step-by-step framework to elevate your profiles.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-        <div style="background: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
+        <div style="background-color: #B30E12; color: white; border-radius: 8px; padding: 2.5rem; position: relative; overflow: hidden; text-align: left;">
           <div style="position: absolute; top: -10px; right: 20px; font-size: 4.5rem; font-weight: 900; color: rgba(255,255,255,0.15); line-height: 1;">01</div>
           <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 2;">Discovery & Audit</h3>
           <p style="line-height: 1.6; font-size: 0.95rem; position: relative; z-index: 2;">We review your existing profiles to identify inconsistencies and missed opportunities.</p>
@@ -783,7 +819,7 @@
   <!-- 8. Primary CTA Banner (Bright Red) -->
   <section id="cta-banner" style="background-color: #B30E12; padding: 5rem 0; text-align: center;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">Get Your Free SMO Consultation Today</h2>
+      <h2 style="color: white; font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Get Your Free SMO Consultation Today</h2>
       <a href="free-consultation.html" style="background-color: white; color: #B30E12; padding: 15px 40px; font-weight: bold; border-radius: 30px; text-transform: uppercase; font-size: 1.1rem; text-decoration: none; display: inline-block;">GET A FREE QUOTE</a>
     </div>
   </section>
@@ -855,17 +891,17 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="#">Organic Search</a></li>
-            <li><a href="#">Technical Schema</a></li>
-            <li><a href="#">GEO Optimization</a></li>
-            <li><a href="#">Link Authority</a></li>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#">Marketing Insights</a></li>
-            <li><a href="#">Case Studies</a></li>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
             <li><a href="#">SEO Checklist</a></li>
             <li><a href="#">Free Domain Checker</a></li>
           </ul>
@@ -873,18 +909,18 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© 2026 GBO Inc. All Rights Reserved.</div>
         <div>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
         </div>
       </div>
     </div>

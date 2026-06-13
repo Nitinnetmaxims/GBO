@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Management | DigiGrow</title>
+  
+<style>
+  :root {
+    --dark-charcoal: #222222;
+    --dark-gray: #333333;
+    --bright-red: #D91C24;
+    --off-white: #F5F5F5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #fff; background-color: var(--dark-charcoal); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 4rem 0; }
+  .btn-primary { background-color: var(--bright-red); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; display: inline-block; transition: background-color 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background-color: #b5151e; }
+  .btn-outline { background-color: transparent; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; border: 2px solid white; display: inline-block; transition: background-color 0.2s; cursor: pointer; }
+  .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+  .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; text-align: center; }
+  
+  .navbar { background-color: var(--dark-charcoal); padding: 1rem 0; border-bottom: 1px solid var(--dark-gray); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .nav-links { display: flex; gap: 2rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--bright-red); }
+  
+  .stats-bar { background-color: var(--dark-gray); padding: 2rem 0; border-bottom: 1px solid #444; }
+  .stats-bar .container { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 1rem; }
+  .stat-num { font-size: 2rem; font-weight: bold; color: white; }
+  .stat-label { font-size: 0.9rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+
+  .pre-footer { background-color: var(--bright-red); padding: 4rem 0; text-align: center; color: white; }
+  .pre-footer h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .pre-footer p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+  .pre-footer .btn-primary { background-color: white; color: var(--dark-charcoal); }
+  .pre-footer .btn-primary:hover { background-color: #f0f0f0; }
+
+  .footer { background-color: var(--dark-charcoal); padding: 4rem 0 2rem 0; font-size: 0.9rem; color: #aaa; border-top: 1px solid var(--dark-gray); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .footer-title { color: white; font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 0.5rem; }
+  .footer ul li a:hover { color: var(--bright-red); }
+
+  .faq-item { background: white; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 1rem; color: var(--dark-charcoal); overflow: hidden; }
+  .faq-q { padding: 1.5rem; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; }
+  .faq-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 0.9rem; font-weight: bold; flex-shrink: 0; }
+  .faq-a { padding: 0 1.5rem 1.5rem 1.5rem; color: #555; display: none; }
+  .faq-item.active .faq-a { display: block; }
+  
+  .list-red-dot { list-style: none; }
+  .list-red-dot li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+  .list-red-dot li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; background-color: var(--bright-red); border-radius: 50%; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .card-dark { background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444; }
+  .card-light { background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd; color: var(--dark-charcoal); }
+  .card-red { background-color: var(--bright-red); padding: 2rem; border-radius: 8px; color: white; }
+  
+  .card-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem; }
+  .card-red .card-num { background: white; color: var(--bright-red); }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+            <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+<!-- Hero Section (Dark) -->
+<section style="background-color: var(--dark-charcoal); padding: 6rem 0;">
+  <div class="container">
+    <span style="background-color: var(--bright-red); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Social Media</span>
+    <h1 style="font-size: 4rem; font-weight: bold; line-height: 1.1; margin: 1.5rem 0;">Social Media Management Services</h1>
+    <p style="font-size: 1.25rem; color: #ccc; max-width: 800px; margin-bottom: 2rem;">Build a loyal following, increase brand awareness, and drive targeted leads with our comprehensive, data-driven social media management strategies tailored to your unique audience.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin-bottom: 3rem;">
+      <ul class="list-red-dot">
+        <li>Audience Engagement</li>
+        <li>Content Creation</li>
+        <li>Community Management</li>
+      </ul>
+      <ul class="list-red-dot">
+        <li>Social Paid Advertising</li>
+        <li>Influencer Outreach</li>
+        <li>Performance Analytics</li>
+      </ul>
+    </div>
+    <div style="display: flex; gap: 1rem;">
+      <a href="#" class="btn-primary">Get Free Proposal</a>
+      <a href="#" class="btn-outline">View Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- Understanding SMM (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">Understanding SMM</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+      <div class="card-red">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Social Strategy</h3>
+        <ul style="list-style: none; line-height: 1.8;">
+          <li>✓ Platform Selection</li>
+          <li>✓ Brand Voice Development</li>
+          <li>✓ Competitor Benchmarking</li>
+        </ul>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Execution</h3>
+        <ul class="list-red-dot">
+          <li>Daily Posting Schedules</li>
+          <li>Asset Graphic Design</li>
+          <li>Video Production</li>
+        </ul>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Growth & Scale</h3>
+        <p style="color: #555; margin-bottom: 1.5rem;">Ready to take your social presence to the next level? Scale your reach with our proven organic and paid frameworks.</p>
+        <a href="#" class="btn-primary">Start Scaling</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Your Business Needs (Dark) -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Why Your Business Needs Social Media Management</h2>
+    <div class="card-grid">
+      <div class="card-red">
+        <div class="card-num">1</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Brand Awareness</h3>
+        <p>Introduce your brand to thousands of potential customers daily across massive networks.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">2</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Customer Loyalty</h3>
+        <p style="color: #aaa;">Build a community around your brand that engages deeply and advocates for your products.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">3</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Lead Generation</h3>
+        <p style="color: #aaa;">Utilize targeted campaigns to capture high-quality leads directly from social platforms.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">4</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Website Traffic</h3>
+        <p style="color: #aaa;">Drive consistent, highly relevant traffic from your social profiles to your landing pages.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">5</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Competitor Edge</h3>
+        <p style="color: #aaa;">Maintain an active, polished presence that outshines competitors who neglect social.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">6</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Direct Communication</h3>
+        <p style="color: #aaa;">Address customer service inquiries instantly and publicly resolve issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">Our Social Media Services</h2>
+    <div class="card-grid">
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Profile Optimization</h3>
+        <p>Ensuring your bios, links, and visual branding are fully optimized for conversion.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Content Creation</h3>
+        <p style="color: #555;">High-quality graphic design, copywriting, and short-form video production.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Community Management</h3>
+        <p style="color: #555;">Active monitoring, replying to comments, and fostering genuine relationships.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Paid Social Campaigns</h3>
+        <p style="color: #555;">Strategic ad placement and retargeting on Facebook, Instagram, and LinkedIn.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Influencer Marketing</h3>
+        <p style="color: #555;">Partnering with key figures to amplify your brand's reach and credibility.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Monthly Reporting</h3>
+        <p style="color: #555;">Transparent dashboards showing follower growth, engagement rates, and ROI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Process (Dark) -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Our Process</h2>
+    <div class="card-grid">
+      <div class="card-red">
+        <div class="card-num">1</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Discovery</h3>
+        <p>We analyze your brand, competitors, and target audience to build a custom strategy.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">2</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Strategy Development</h3>
+        <p style="color: #aaa;">Outlining content pillars, posting frequency, and specific KPI goals.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">3</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Content Calendar</h3>
+        <p style="color: #aaa;">Drafting a comprehensive monthly calendar for your approval before anything goes live.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">4</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Execution</h3>
+        <p style="color: #aaa;">Scheduling posts, deploying ads, and engaging with your audience daily.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">5</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Optimization</h3>
+        <p style="color: #aaa;">A/B testing ad creatives and adjusting organic posts based on performance data.</p>
+      </div>
+      <div class="card-dark">
+        <div class="card-num">6</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Reporting</h3>
+        <p style="color: #aaa;">Delivering a clear, actionable summary of the month's successes and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platforms We Manage (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">Platforms We Manage</h2>
+    <div class="card-grid">
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Facebook</h3>
+        <p>Community building and hyper-targeted advertising.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Instagram</h3>
+        <p style="color: #555;">Visual storytelling, Reels, and influencer collaborations.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">LinkedIn</h3>
+        <p style="color: #555;">B2B lead generation and corporate authority building.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">TikTok</h3>
+        <p style="color: #555;">Viral short-form content designed for maximum organic reach.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">X (Twitter)</h3>
+        <p style="color: #555;">Real-time engagement, news updates, and customer service.</p>
+      </div>
+      <div class="card-light">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Pinterest</h3>
+        <p style="color: #555;">E-commerce product discovery and long-term traffic generation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us (Dark) -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Why Choose Digital Guider?</h2>
+    <div class="card-grid">
+      <div class="card-red">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Dedicated Account Managers</h3>
+        <p>You work with one expert who truly understands your brand's voice.</p>
+      </div>
+      <div class="card-dark">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Custom Strategies</h3>
+        <p style="color: #aaa;">No cookie-cutter templates. Everything is tailored to your specific industry.</p>
+      </div>
+      <div class="card-dark">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">In-House Creatives</h3>
+        <p style="color: #aaa;">Our designers and videographers produce premium assets that stop the scroll.</p>
+      </div>
+      <div class="card-dark">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Data-Driven Decisions</h3>
+        <p style="color: #aaa;">We let analytics guide our strategy, not guesses.</p>
+      </div>
+      <div class="card-dark">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Full Transparency</h3>
+        <p style="color: #aaa;">You have 24/7 access to approval dashboards and real-time metric tracking.</p>
+      </div>
+      <div class="card-dark">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Proven ROI</h3>
+        <p style="color: #aaa;">We focus on metrics that matter: leads, sales, and revenue growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container" style="max-width: 800px;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">1</span> What platforms should my business be on?</div><div class="faq-a">It depends on your target audience. We'll recommend the best platforms during our initial discovery call.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">2</span> Do you reply to comments and messages?</div><div class="faq-a">Yes, full community management is included in our premium packages.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">3</span> How often do you post?</div><div class="faq-a">Posting frequency is customized to your strategy, usually ranging from 3 to 7 times per week per platform.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">4</span> Do I need to provide images?</div><div class="faq-a">No, our team can create custom graphics, source high-quality stock imagery, or utilize any assets you do have.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">5</span> Can I approve posts before they go live?</div><div class="faq-a">Absolutely. You will have full access to our content calendar for review and approval.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">6</span> How long does it take to see results?</div><div class="faq-a">Engagement and awareness usually increase within the first month, but significant lead generation typically takes 3 to 6 months of consistent effort.</div></div>
+  </div>
+</section>
+
+  
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
