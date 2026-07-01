@@ -2,17 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - GBO</title>
-  <meta name="description" content="Get in touch with GBO's digital marketing specialists to request an audit or discuss pricing packages.">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Store Optimization | DigiGrow</title>
   
+<style>
+  :root {
+    --dark-charcoal: #222222;
+    --dark-gray: #333333;
+    --bright-red: #D91C24;
+    --off-white: #F5F5F5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #fff; background-color: var(--dark-charcoal); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 4rem 0; }
+  .btn-primary { background-color: var(--bright-red); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; display: inline-block; transition: background-color 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background-color: #b5151e; }
+  .btn-outline { background-color: transparent; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; border: 2px solid white; display: inline-block; transition: background-color 0.2s; cursor: pointer; }
+  .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+  .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; text-align: center; }
   
+  .navbar { background-color: var(--dark-charcoal); padding: 1rem 0; border-bottom: 1px solid var(--dark-gray); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .nav-links { display: flex; gap: 2rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--bright-red); }
+  
+  .stats-bar { background-color: var(--dark-gray); padding: 2rem 0; border-bottom: 1px solid #444; }
+  .stats-bar .container { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 1rem; }
+  .stat-num { font-size: 2rem; font-weight: bold; color: white; }
+  .stat-label { font-size: 0.9rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+
+  .pre-footer { background-color: var(--bright-red); padding: 4rem 0; text-align: center; color: white; }
+  .pre-footer h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .pre-footer p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+  .pre-footer .btn-primary { background-color: white; color: var(--dark-charcoal); }
+  .pre-footer .btn-primary:hover { background-color: #f0f0f0; }
+
+  .footer { background-color: var(--dark-charcoal); padding: 4rem 0 2rem 0; font-size: 0.9rem; color: #aaa; border-top: 1px solid var(--dark-gray); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .footer-title { color: white; font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 0.5rem; }
+  .footer ul li a:hover { color: var(--bright-red); }
+
+  .faq-item { background: white; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 1rem; color: var(--dark-charcoal); overflow: hidden; }
+  .faq-q { padding: 1.5rem; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; }
+  .faq-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 0.9rem; font-weight: bold; flex-shrink: 0; }
+  .faq-a { padding: 0 1.5rem 1.5rem 1.5rem; color: #555; display: none; }
+  .faq-item.active .faq-a { display: block; }
+  
+  .list-red-dot { list-style: none; }
+  .list-red-dot li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+  .list-red-dot li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; background-color: var(--bright-red); border-radius: 50%; }
+
+  .step-card { display: flex; align-items: flex-start; gap: 1.5rem; padding: 2rem; background-color: var(--dark-gray); border-radius: 8px; margin-bottom: 1rem; border: 1px solid #444; }
+  .step-icon { width: 48px; height: 48px; background-color: var(--bright-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; }
+  .step-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: white; }
+  .step-desc { color: #aaa; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  
 <header>
     <div class="container">
       <a href="index.html" class="logo-wrapper" id="header-logo">
@@ -218,71 +282,142 @@
     </nav>
   </div>
 
-  <section class="hero" id="hero-section" style="padding-bottom: 4rem;">
-    <div class="container" style="display: flex; justify-content: center; text-align: center;">
-      <div class="hero-left" style="max-width: 800px; padding-right: 0;">
-        <span class="hero-badge">Get In Touch</span>
-        <h1 style="margin-bottom: 1.5rem;">Contact Our Team</h1>
-        <p class="hero-desc">Ready to dominate search engine results, optimize advertising spend, and lead your market? Contact us today.</p>
-        <div class="hero-form-wrapper" style="justify-content: center; display: flex;">
-          <a href="free-consultation.html" class="btn btn-primary">Get Started Now &rarr;</a>
-        </div>
+  
+<!-- Hero -->
+<section style="background-color: var(--dark-charcoal); padding: 6rem 0;">
+  <div class="container">
+    <span style="background-color: var(--bright-red); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">App Marketing</span>
+    <h1 style="font-size: 4rem; font-weight: bold; line-height: 1.1; margin: 1.5rem 0;">App Store Optimization Services</h1>
+    <p style="font-size: 1.25rem; color: #ccc; max-width: 800px; margin-bottom: 2rem;">Dominate the Apple App Store and Google Play Store with data-driven ASO strategies that increase visibility, boost app rankings, and drive high-quality organic downloads.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin-bottom: 3rem;">
+      <ul class="list-red-dot">
+        <li>Keyword Optimization</li>
+        <li>App Icon A/B Testing</li>
+        <li>Screenshot Design</li>
+        <li>Review Management</li>
+      </ul>
+      <ul class="list-red-dot">
+        <li>Competitor Analysis</li>
+        <li>Localization & Translations</li>
+        <li>Title & Subtitle Optimization</li>
+        <li>Conversion Rate Optimization</li>
+      </ul>
+    </div>
+    <div style="display: flex; gap: 1rem;">
+      <a href="#" class="btn-primary">Get App Store Audit</a>
+      <a href="#" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- What is ASO -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">What is App Store Optimization (ASO)?</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+      <div style="background-color: var(--bright-red); color: white; padding: 2rem; border-radius: 8px;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Effective ASO</h3>
+        <p>The process of optimizing mobile apps to rank higher in an app store's search results. The higher your app ranks, the more visible it is to potential users.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Smart ASO SEO</h3>
+        <ul class="list-red-dot">
+          <li>Increase App Visibility</li>
+          <li>Drive High-Quality Installs</li>
+          <li>Reduce Acquisition Costs</li>
+        </ul>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Start Scaling</h3>
+        <ul class="list-red-dot">
+          <li>Maximize User Retention</li>
+          <li>Expand Global Reach</li>
+          <li>Outrank Competitor Apps</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-  <section class="stats-bar" id="stats-section" style="padding: 3rem 0; background: #111; border-top: 1px solid #222; border-bottom: 1px solid #222;">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
-      
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);"> Sheridan, WY</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">30 N. Gould St, Suite 6573</div>
+<!-- Features Grid -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">How ASO Services Help Drive More Downloads</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Increase Visibility in Searches</h3>
+        <p style="color: #aaa;">Most app installs come from direct store searches. We optimize your metadata to ensure you appear for relevant keywords.</p>
       </div>
-        
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Support Line</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">+1-307-209-3608</div>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Higher App Rankings</h3>
+        <p style="color: #aaa;">By optimizing title tags, descriptions, and keyword fields, we push your app higher in search results.</p>
       </div>
-        
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Email Address</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">info@growbusinessonline.com</div>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Better User Acquisition</h3>
+        <p style="color: #aaa;">Increase your install rate with engaging app icons, screenshots, and promotional videos.</p>
       </div>
-        
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Hours</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Mon-Fri 9AM-6PM EST</div>
-      </div>
-        
-    </div>
-  </section>
-
-  <section class="cta-banner" id="cta-banner">
-    <div class="container">
-      <div class="cta-left">
-        <h2>Send Us A Message Now.</h2>
-      </div>
-      <div class="cta-right">
-        <form id="cta-audit-form" action="free-consultation.html">
-          <div class="cta-form-grid">
-            <input type="text" placeholder="Full Name" required id="cta-name">
-            <input type="email" placeholder="Email Address" required id="cta-email">
-            <input type="url" placeholder="Website URL" required id="cta-website">
-            <select required id="cta-budget">
-              <option value="" disabled selected>Monthly Budget</option>
-              <option value="under-1k">Under $1,000</option>
-              <option value="1k-5k">$1,000 - $5,000</option>
-              <option value="5k-10k">$5,000 - $10,000</option>
-              <option value="above-10k">Above $10,000</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-dark cta-form-btn" id="cta-submit-btn">Get My Free Website Audit</button>
-        </form>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Lower Cost-Per-Install</h3>
+        <p style="color: #aaa;">A strong organic presence naturally lowers your blended Cost-Per-Install (CPI) over time.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<!-- Why Choose Us -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">Why Choose DigiGrow for ASO Services?</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Data-Driven Strategy</h3>
+        <p style="color: #555;">We analyze market data and competitor metrics to build a roadmap for success.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Customized Solutions</h3>
+        <p style="color: #555;">We tailor our strategy to your specific app category, audience, and business goals.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Expert ASO Specialists</h3>
+        <p style="color: #555;">Work directly with specialists who understand the nuances of iOS and Google Play.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Transparent Reporting</h3>
+        <p style="color: #555;">Detailed performance reports that track your keyword rankings and conversion rates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASO Process -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Our ASO Process</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="step-card"><div class="step-icon">1</div><div><h3 class="step-title">App Audit & Market Research</h3><p class="step-desc">We analyze your app's current performance and research competitor strategies.</p></div></div>
+      <div class="step-card"><div class="step-icon">2</div><div><h3 class="step-title">Keyword Strategy</h3><p class="step-desc">Identifying high-volume, relevant keywords to target in your app's metadata.</p></div></div>
+      <div class="step-card"><div class="step-icon">3</div><div><h3 class="step-title">Title & Subtitle Optimization</h3><p class="step-desc">Crafting compelling titles that include primary keywords.</p></div></div>
+      <div class="step-card"><div class="step-icon">4</div><div><h3 class="step-title">App Description</h3><p class="step-desc">Writing optimized descriptions that highlight key features naturally.</p></div></div>
+      <div class="step-card"><div class="step-icon">5</div><div><h3 class="step-title">Creative Asset Optimization</h3><p class="step-desc">Designing engaging app icons, screenshots, and promo videos.</p></div></div>
+      <div class="step-card"><div class="step-icon">6</div><div><h3 class="step-title">Review Management</h3><p class="step-desc">Strategies to increase positive reviews and improve ratings.</p></div></div>
+      <div class="step-card"><div class="step-icon">7</div><div><h3 class="step-title">Continuous A/B Testing</h3><p class="step-desc">Testing variations of creative assets and metadata for conversions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container" style="max-width: 800px;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">1</span> How long does ASO take?</div><div class="faq-a">Initial improvements take a few weeks; significant growth usually takes 2-3 months.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">2</span> Do you optimize for iOS and Android?</div><div class="faq-a">Yes, we provide comprehensive ASO services for both major app stores.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">3</span> What is the difference between ASO and SEO?</div><div class="faq-a">SEO focuses on ranking websites on Google; ASO focuses on ranking apps in app stores.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">4</span> Do you help with creatives?</div><div class="faq-a">Absolutely. Our team designs high-converting icons and screenshots.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">5</span> How do you measure success?</div><div class="faq-a">We track keyword rankings, conversion rates, and organic download volume.</div></div>
+  </div>
+</section>
+
+  
 <footer>
     <div class="container">
       <div class="footer-top">
@@ -336,37 +471,6 @@
       </div>
     </div>
   </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question-btn');
-    if (!btn) return;
-    
-    btn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Close all FAQs
-      faqItems.forEach(i => {
-        i.classList.remove('active');
-        const content = i.querySelector('.faq-answer');
-        if(content) content.style.maxHeight = null;
-      });
-
-      // If it wasn't active, open it
-      if (!isActive) {
-        item.classList.add('active');
-        const content = item.querySelector('.faq-answer');
-        if(content) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
-    });
-  });
-});
-</script>
-
 
 </body>
 </html>
