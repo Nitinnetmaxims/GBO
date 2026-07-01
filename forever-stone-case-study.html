@@ -3,17 +3,300 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - GBO</title>
-  <meta name="description" content="Get in touch with GBO's digital marketing specialists to request an audit or discuss pricing packages.">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
+  <title>Forever in Stone – Securing Permanent Authority and Dominant Rank for Craft Monument Builders - GBO Case Study</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --dark-charcoal: #222222;
+      --dark-gray: #333333;
+      --bright-red: #D91C24;
+      --off-white: #F5F5F5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--dark-charcoal);
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    
+    /* Section padding: 80px top/bottom */
+    section { padding: 80px 0; }
+    
+    /* Hero Section */
+    .hero-section {
+      background-color: var(--dark-charcoal);
+      text-align: center;
+      padding: 100px 0 60px 0;
+    }
+    .eyebrow-red {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bright-red);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-desc {
+      font-size: 1.2rem;
+      color: #CCCCCC;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Stats Bar (Dark Gray background) */
+    .stats-section {
+      background-color: var(--dark-gray);
+      padding: 60px 0;
+      border-top: 1px solid #444444;
+      border-bottom: 1px solid #444444;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .stat-card {
+      text-align: center;
+    }
+    .stat-card-number {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .stat-card-label {
+      font-size: 0.9rem;
+      color: #A8A6A7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* The Challenge Section (Off-White background) */
+    .challenge-section {
+      background-color: var(--off-white);
+      color: var(--dark-charcoal);
+    }
+    .challenge-section-title {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3.5rem auto;
+    }
+    .challenge-section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      margin-top: 0.5rem;
+    }
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .challenge-card {
+      background-color: #FFFFFF;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #EAEAEA;
+    }
+    .challenge-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-charcoal);
+      margin-bottom: 1rem;
+    }
+    .challenge-card-text {
+      font-size: 1.05rem;
+      color: var(--dark-charcoal);
+      line-height: 1.7;
+    }
+
+    /* Process Section (Dark Charcoal background) */
+    .process-section {
+      background-color: var(--dark-charcoal);
+    }
+    .process-section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .process-section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .process-card {
+      display: flex;
+      gap: 24px;
+      padding: 32px;
+      border-radius: 8px;
+      align-items: flex-start;
+    }
+    .process-card.dark {
+      background-color: var(--dark-gray);
+      border: 1px solid #444444;
+      color: #FFFFFF;
+    }
+    .process-card.red {
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      border: none;
+    }
+    .process-num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .process-card.red .process-num {
+      background-color: #FFFFFF;
+      color: var(--bright-red);
+    }
+    .process-card-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .process-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+    .process-card-desc {
+      font-size: 1.05rem;
+      color: #CCCCCC;
+      line-height: 1.6;
+    }
+    .process-card.red .process-card-desc {
+      color: #FFFFFF;
+    }
+
+    /* Testimonial Section (Solid Bright Red background) */
+    .testimonial-section {
+      background-color: var(--bright-red);
+      padding: 100px 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .testimonial-container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .testimonial-quote {
+      font-size: 1.75rem;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    .testimonial-author {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Pre-Footer CTA Section (Dark Charcoal background) */
+    .cta-section {
+      background-color: var(--dark-charcoal);
+      padding: 100px 0;
+      text-align: center;
+      border-top: 1px solid #333333;
+    }
+    .cta-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+    .cta-btn {
+      background-color: var(--bright-red);
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cta-btn:hover {
+      background-color: #B2151B;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .challenge-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 2.25rem;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .process-card {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .testimonial-quote {
+        font-size: 1.35rem;
+      }
+      .cta-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
+  <header>
     <div class="container">
       <a href="index.html" class="logo-wrapper" id="header-logo">
         <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
@@ -122,7 +405,6 @@
       </div>
     </div>
   </header>
-
   <!-- Mobile Sidebar -->
   <div class="mobile-sidebar" id="mobile-sidebar">
     <div class="sidebar-header">
@@ -218,59 +500,133 @@
     </nav>
   </div>
 
-  <section class="hero" id="hero-section" style="padding-bottom: 4rem;">
-    <div class="container" style="display: flex; justify-content: center; text-align: center;">
-      <div class="hero-left" style="max-width: 800px; padding-right: 0;">
-        <span class="hero-badge">Get In Touch</span>
-        <h1 style="margin-bottom: 1.5rem;">Contact Our Team</h1>
-        <p class="hero-desc">Ready to dominate search engine results, optimize advertising spend, and lead your market? Contact us today.</p>
-        <div class="hero-form-wrapper" style="justify-content: center; display: flex;">
-          <a href="free-consultation.html" class="btn btn-primary">Get Started Now &rarr;</a>
+  <!-- 1. Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <span class="eyebrow-red">Custom Stone Memorials</span>
+      <h1 class="hero-title">Forever in Stone – Securing Permanent Authority and Dominant Rank for Craft Monument Builders</h1>
+      <p class="hero-desc">Scope of Work: Search Engine Optimization, On-Page Schema Structuring, Local Map Pack Campaigns, Audits & Site-Velocity Tuning</p>
+    </div>
+  </section>
+
+  <!-- 2. Hero Stats Bar -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        
+      <div class="stat-card">
+        <div class="stat-card-number">+185%</div>
+        <div class="stat-card-label">Organic Traffic Lift</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-number">100%</div>
+        <div class="stat-card-label">Top 3 Map Pack Rank</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-number">45+</div>
+        <div class="stat-card-label">First-Page Google Terms</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-number">+240%</div>
+        <div class="stat-card-label">Organic Lead Inquiries</div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. The Challenge Section -->
+  <section class="challenge-section">
+    <div class="container">
+      <div class="challenge-section-title">
+        <span class="eyebrow-red">The Challenge</span>
+        <h2>Project Hurdles & Constraints</h2>
+      </div>
+      <div class="challenge-grid">
+        <div class="challenge-card">
+          <h3 class="challenge-card-title">Business Challenges</h3>
+          <p class="challenge-card-text">Forever in Stone needed dominant search visibility to capture high-value custom monument inquiries. They struggled with low organic search rankings, poor Google Maps Local Pack coverage, and intense local competition.</p>
+        </div>
+        <div class="challenge-card">
+          <h3 class="challenge-card-title">Website & Technical Challenges</h3>
+          <p class="challenge-card-text">Extremely slow webpage loading speeds caused by large, uncompressed stone carving portfolio files. They had deficient on-page SEO metadata and missing local schema formats.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-  <section class="stats-bar" id="stats-section" style="padding: 3rem 0; background: #111; border-top: 1px solid #222; border-bottom: 1px solid #222;">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
-      
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);"> Sheridan, WY</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">30 N. Gould St, Suite 6573</div>
+  <!-- 4. Process Timeline -->
+  <section class="process-section">
+    <div class="container">
+      <div class="process-section-title">
+        <span class="eyebrow-red">Our Proven Process</span>
+        <h2>How We Reached Success</h2>
       </div>
+      <div class="process-list">
         
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Support Line</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">+1-307-209-3608</div>
+        <div class="process-card red">
+          <div class="process-num">01</div>
+          <div class="process-card-content">
+            <h3 class="process-card-title">Deep Search Audit</h3>
+            <p class="process-card-desc">We audit regional search patterns, analyze older local competitors, identify technical on-page deficiencies, and map custom keyword profiles.</p>
+          </div>
+        </div>
+        <div class="process-card dark">
+          <div class="process-num">02</div>
+          <div class="process-card-content">
+            <h3 class="process-card-title">On-Page Strategy</h3>
+            <p class="process-card-desc">We optimize target URL structures, refine header tag nesting, and configure detailed schema markups for stone memorials and geolocation pins.</p>
+          </div>
+        </div>
+        <div class="process-card dark">
+          <div class="process-num">03</div>
+          <div class="process-card-content">
+            <h3 class="process-card-title">Technical Fixes & Speed Overhaul</h3>
+            <p class="process-card-desc">We compress heavy stone gallery photos, eliminate render-blocking scripts, clean redirection loops, and standardize NAP details across directories.</p>
+          </div>
+        </div>
+        <div class="process-card dark">
+          <div class="process-num">04</div>
+          <div class="process-card-content">
+            <h3 class="process-card-title">Continuous Optimization</h3>
+            <p class="process-card-desc">We monitor keyword movements, refine search schemas, audit mobile performance stats, and report progress transparently.</p>
+          </div>
+        </div>
       </div>
-        
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Email Address</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">info@growbusinessonline.com</div>
-      </div>
-        
-      <div class="stat-item" style="text-align: center;">
-        <div class="stat-val" style="font-size: 3rem; font-weight: 700; color: var(--color-fire-engine-red);">Hours</div>
-        <div class="stat-label" style="font-size: 0.95rem; color: var(--color-cool-gray); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Mon-Fri 9AM-6PM EST</div>
-      </div>
-        
     </div>
   </section>
 
+  <!-- 5. Client Testimonial -->
+  <section class="testimonial-section">
+    <div class="testimonial-container">
+      <span class="eyebrow-white" style="font-size: 1rem; margin-bottom: 1.5rem; display: block;">Client Feedback</span>
+      <blockquote class="testimonial-quote">"Their SEO strategy completely transformed our physical showroom walk-ins. We went from being invisible on Google Maps to locking down the Top 3 map positions for our entire area. 100% organic, zero ad budget wasted!"</blockquote>
+      <div class="testimonial-author">— Robert Stone, <span style="font-weight: 500; text-transform: none; letter-spacing: 0;">Owner & General Manager</span></div>
+    </div>
+  </section>
+
+  <!-- 6. Pre-Footer CTA -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-title">Ready for similar results?</h2>
+      <a href="free-consultation.html" class="cta-btn">Get Your Free Proposal</a>
+    </div>
+  </section>
+
+  
+  <!-- Contact Us Form Section -->
   <section class="cta-banner" id="cta-banner">
     <div class="container">
       <div class="cta-left">
-        <h2>Send Us A Message Now.</h2>
+        <h2>Claim Your<br>Free Website Audit.</h2>
       </div>
       <div class="cta-right">
-        <form id="cta-audit-form" action="free-consultation.html">
+        <form id="cta-audit-form">
           <div class="cta-form-grid">
             <input type="text" placeholder="Full Name" required id="cta-name">
             <input type="email" placeholder="Email Address" required id="cta-email">
             <input type="url" placeholder="Website URL" required id="cta-website">
             <select required id="cta-budget">
-              <option value="" disabled selected>Monthly Budget</option>
+              <option value="" disabled selected>Monthly Marketing Budget</option>
               <option value="under-1k">Under $1,000</option>
               <option value="1k-5k">$1,000 - $5,000</option>
               <option value="5k-10k">$5,000 - $10,000</option>
@@ -283,7 +639,8 @@
     </div>
   </section>
 
-<footer>
+
+  <footer>
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -337,36 +694,6 @@
     </div>
   </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question-btn');
-    if (!btn) return;
-    
-    btn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Close all FAQs
-      faqItems.forEach(i => {
-        i.classList.remove('active');
-        const content = i.querySelector('.faq-answer');
-        if(content) content.style.maxHeight = null;
-      });
-
-      // If it wasn't active, open it
-      if (!isActive) {
-        item.classList.add('active');
-        const content = item.querySelector('.faq-answer');
-        if(content) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      }
-    });
-  });
-});
-</script>
-
-
+  <script src="app.js"></script>
 </body>
 </html>

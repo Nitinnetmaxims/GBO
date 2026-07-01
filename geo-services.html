@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generative Engine Optimization | DigiGrow</title>
+  
+<style>
+  :root {
+    --dark-charcoal: #222222;
+    --dark-gray: #333333;
+    --bright-red: #D91C24;
+    --off-white: #F5F5F5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; color: #fff; background-color: var(--dark-charcoal); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 4rem 0; }
+  .btn-primary { background-color: var(--bright-red); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; display: inline-block; transition: background-color 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { background-color: #b5151e; }
+  .btn-outline { background-color: transparent; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; border: 2px solid white; display: inline-block; transition: background-color 0.2s; cursor: pointer; }
+  .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+  .section-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; text-align: center; }
+  
+  .navbar { background-color: var(--dark-charcoal); padding: 1rem 0; border-bottom: 1px solid var(--dark-gray); }
+  .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .nav-links { display: flex; gap: 2rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--bright-red); }
+  
+  .stats-bar { background-color: var(--dark-gray); padding: 2rem 0; border-bottom: 1px solid #444; }
+  .stats-bar .container { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 1rem; }
+  .stat-num { font-size: 2rem; font-weight: bold; color: white; }
+  .stat-label { font-size: 0.9rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+
+  .pre-footer { background-color: var(--bright-red); padding: 4rem 0; text-align: center; color: white; }
+  .pre-footer h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .pre-footer p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+  .pre-footer .btn-primary { background-color: white; color: var(--dark-charcoal); }
+  .pre-footer .btn-primary:hover { background-color: #f0f0f0; }
+
+  .footer { background-color: var(--dark-charcoal); padding: 4rem 0 2rem 0; font-size: 0.9rem; color: #aaa; border-top: 1px solid var(--dark-gray); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .footer-title { color: white; font-weight: bold; margin-bottom: 1rem; font-size: 1.1rem; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 0.5rem; }
+  .footer ul li a:hover { color: var(--bright-red); }
+
+  .faq-item { background: white; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 1rem; color: var(--dark-charcoal); overflow: hidden; }
+  .faq-q { padding: 1.5rem; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; }
+  .faq-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--bright-red); color: white; border-radius: 50%; font-size: 0.9rem; font-weight: bold; flex-shrink: 0; }
+  .faq-a { padding: 0 1.5rem 1.5rem 1.5rem; color: #555; display: none; }
+  .faq-item.active .faq-a { display: block; }
+  
+  .list-red-dot { list-style: none; }
+  .list-red-dot li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+  .list-red-dot li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; background-color: var(--bright-red); border-radius: 50%; }
+
+  .step-card { display: flex; align-items: flex-start; gap: 1.5rem; padding: 2rem; background-color: var(--dark-gray); border-radius: 8px; margin-bottom: 1rem; border: 1px solid #444; }
+  .step-icon { width: 48px; height: 48px; background-color: var(--bright-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; }
+  .step-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: white; }
+  .step-desc { color: #aaa; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+<header>
+    <div class="container">
+      <a href="index.html" class="logo-wrapper" id="header-logo">
+        <img src="images/GBO white.svg" alt="GBO Logo" style="height: 40px; width: auto;">
+      </a>
+            <nav id="main-navigation">
+        <div class="nav-item">
+          <a href="#">Services</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Marketing</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-marketing.html">Digital Marketing Services</a>
+                <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+                <a href="services-dm-audit.html">Digital Marketing Audit</a>
+                <a href="services-dm-content.html">Content Marketing Services</a>
+                <a href="services-dm-email.html">Email Marketing Services</a>
+                <a href="services-dm-reputation.html">Online Reputation Management</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Local SEO Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-local-seo.html">Best Local seo services</a>
+                <a href="services-seo-small-business.html">Seo services small business</a>
+                <a href="services-google-business.html">google business profile</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Social Media Marketing Services</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-social-media.html">Social Media Marketing</a>
+                <a href="services-smo.html">Social Media Optimization</a>
+                <a href="smm-services.html">Social Media Management</a>
+                <a href="sma-services.html">Social Media Advertising</a>
+              </div>
+            </div>
+<div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-seo.html">SEOServices</a>
+                <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+                <a href="services-link-building.html">LinkBuilding</a>
+                <a href="services-technical-seo.html">TechnicalSEO</a>
+                <a href="services-voice-search.html">VoiceSearchOptimization</a>
+                <a href="aso-services.html">AppStoreOptimization</a>
+                <a href="geo-services.html">GenerativeEngineOptimization</a>
+                <a href="aeo-services.html">AnswerEngineOptimization</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Video SEO</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-video-seo.html">Video SEO Overview</a>
+                <a href="youtube-optimization.html">Youtube optimization</a>
+                <a href="vlog-video-production.html">vlog video production</a>
+                <a href="customer-testimonial-video.html">customer testimonial video services</a>
+              </div>
+            </div>
+            <div class="dropdown-item-nested">
+              <a href="#" style="cursor: default;" onclick="event.preventDefault();">Digital Advertising</a>
+              <div class="nested-dropdown-menu">
+                <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+                <a href="meta-ads.html">Meta Ads</a>
+                <a href="google-ads.html">Google Ads</a>
+                <a href="ecommerce-ppc.html">Ecom.PPC</a>
+                <a href="yelp-ads.html">Yelp Ads</a>
+                <a href="craigslist-ads.html">Craigslist Ads</a>
+                <a href="x-ads.html">X ads</a>
+                <a href="linkedin-ads.html">Linkedin Ads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#">Pricing</a>
+          <div class="dropdown-menu">
+            <a href="pricing-seo.html">SEO Packages</a>
+            <div class="dropdown-item-nested">
+              <a href="#">SMO Packages</a>
+              <div class="nested-dropdown-menu">
+                <a href="pricing-smo-setup.html">Structural Set-Up</a>
+                <a href="pricing-smo-maintenance.html">Maintenance Package</a>
+              </div>
+            </div>
+            <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+            <a href="pricing-ppc.html">PPC Packages</a>
+          </div>
+        </div>
+        <a href="portfolio-page.html">Portfolio</a>
+        <a href="about-us.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="free-consultation.html" class="btn btn-primary" id="nav-cta-btn" style="background-color: var(--color-fire-engine-red); border-color: var(--color-fire-engine-red); display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <line x1="15" y1="9" x2="22" y2="2"></line>
+          <polyline points="18 2 22 2 22 6"></polyline>
+        </svg>
+        <span>Free Consultation</span>
+      </a>
+      <div class="hamburger-menu" id="hamburger-menu" onclick="document.getElementById('mobile-sidebar').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+    <div class="sidebar-header">
+      <img src="images/GBO white.svg" alt="GBO Logo" style="height: 30px; width: auto;">
+      <button class="sidebar-close" id="sidebar-close" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">&times;</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Services <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Marketing <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-marketing.html" onclick="document.getElementById('mobile-sidebar').classList.remove('open'); document.getElementById('hamburger-menu').classList.remove('active');">Digital Marketing Services</a>
+              <a href="services-dm-strategy.html">Digital Marketing Strategy</a>
+              <a href="services-dm-audit.html">Digital Marketing Audit</a>
+              <a href="services-dm-content.html">Content Marketing Services</a>
+              <a href="services-dm-email.html">Email Marketing Services</a>
+              <a href="services-dm-reputation.html">Online Reputation Management</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Local SEO Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-local-seo.html">Best Local seo services</a>
+              <a href="services-seo-small-business.html">Seo services small business</a>
+              <a href="services-google-business.html">google business profile</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Social Media Marketing Services <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-social-media.html">Social Media Marketing</a>
+              <a href="services-smo.html">Social Media Optimization</a>
+              <a href="smm-services.html">Social Media Management</a>
+              <a href="sma-services.html">Social Media Advertising</a>
+            </div>
+          </div>
+<div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-seo.html">SEOServices</a>
+              <a href="services-ecommerce-seo.html">EcommerceSEO</a>
+              <a href="services-link-building.html">LinkBuilding</a>
+              <a href="services-technical-seo.html">TechnicalSEO</a>
+              <a href="services-voice-search.html">VoiceSearchOptimization</a>
+              <a href="aso-services.html">AppStoreOptimization</a>
+              <a href="geo-services.html">GenerativeEngineOptimization</a>
+              <a href="aeo-services.html">AnswerEngineOptimization</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Video SEO <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-video-seo.html">Video SEO Overview</a>
+              <a href="youtube-optimization.html">Youtube optimization</a>
+              <a href="vlog-video-production.html">vlog video production</a>
+              <a href="customer-testimonial-video.html">customer testimonial video services</a>
+            </div>
+          </div>
+          <div class="sidebar-dropdown">
+            <button class="sidebar-dropdown-btn sidebar-nested-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Digital Advertising <span>+</span></button>
+            <div class="sidebar-dropdown-content sidebar-nested-content">
+              <a href="services-digital-advertising.html">Digital Advertising Overview</a>
+              <a href="meta-ads.html">Meta Ads</a>
+              <a href="google-ads.html">Google Ads</a>
+              <a href="ecommerce-ppc.html">Ecom.PPC</a>
+              <a href="yelp-ads.html">Yelp Ads</a>
+              <a href="craigslist-ads.html">Craigslist Ads</a>
+              <a href="x-ads.html">X ads</a>
+              <a href="linkedin-ads.html">Linkedin Ads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-dropdown">
+        <button class="sidebar-dropdown-btn" onclick="this.nextElementSibling.classList.toggle('show'); this.querySelector('span').innerText = this.nextElementSibling.classList.contains('show') ? '-' : '+';">Pricing <span>+</span></button>
+        <div class="sidebar-dropdown-content">
+          <a href="pricing-seo.html">SEO Packages</a>
+          <a href="pricing-smo-setup.html">SMO Structural Set-Up</a>
+          <a href="pricing-smo-maintenance.html">SMO Maintenance Package</a>
+          <a href="pricing-ecommerce-ppc.html">E-Commerce PPC Plans</a>
+          <a href="pricing-ppc.html">PPC Packages</a>
+        </div>
+      </div>
+
+      <a href="portfolio-page.html">Portfolio</a>
+      <a href="about-us.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="free-consultation.html" class="sidebar-cta">Free Consultation</a>
+    </nav>
+  </div>
+
+  
+<!-- Hero -->
+<section style="background-color: var(--dark-charcoal); padding: 6rem 0;">
+  <div class="container">
+    <span style="background-color: var(--bright-red); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">AI Search</span>
+    <h1 style="font-size: 4rem; font-weight: bold; line-height: 1.1; margin: 1.5rem 0;">Generative Engine Optimization (GEO) Services</h1>
+    <p style="font-size: 1.25rem; color: #ccc; max-width: 800px; margin-bottom: 2rem;">Optimize your brand for AI-driven search engines like ChatGPT, Perplexity, and Google SGE. Ensure your content is synthesized and cited by generative models.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin-bottom: 3rem;">
+      <ul class="list-red-dot">
+        <li>LLM Training Data Alignment</li>
+        <li>Entity Authority Building</li>
+        <li>Contextual Optimization</li>
+      </ul>
+      <ul class="list-red-dot">
+        <li>Perplexity Search Optimization</li>
+        <li>Citation Engineering</li>
+        <li>Google SGE Formatting</li>
+      </ul>
+    </div>
+    <div style="display: flex; gap: 1rem;">
+      <a href="#" class="btn-primary">Get GEO Strategy</a>
+      <a href="#" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- What is GEO -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">What is Generative Engine Optimization?</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+      <div style="background-color: var(--bright-red); color: white; padding: 2rem; border-radius: 8px;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">The Future of Search</h3>
+        <p>GEO focuses on optimizing content so that AI engines (LLMs) source, synthesize, and cite your brand as the authoritative answer for user prompts.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">AI Citations</h3>
+        <ul class="list-red-dot">
+          <li>Rank in ChatGPT Answers</li>
+          <li>Dominate Perplexity Search</li>
+          <li>Feature in Google SGE</li>
+        </ul>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Entity Control</h3>
+        <ul class="list-red-dot">
+          <li>Control Brand Narrative</li>
+          <li>Establish Knowledge Graphs</li>
+          <li>Drive High-Intent AI Traffic</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid 1 (Dark) -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">Why Your Business Needs GEO Services</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background-color: var(--bright-red); padding: 2rem; border-radius: 8px;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">First-Mover Advantage</h3>
+        <p style="color: white;">As users shift from traditional search to AI chats, being the cited authority now builds an insurmountable lead.</p>
+      </div>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Capture Zero-Click Searches</h3>
+        <p style="color: #aaa;">AI models provide direct answers. If you aren't the source of that answer, you lose the customer entirely.</p>
+      </div>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">Defend Brand Reputation</h3>
+        <p style="color: #aaa;">Ensure AI models don't hallucinate false information about your products by feeding them structured facts.</p>
+      </div>
+      <div style="background-color: var(--dark-gray); padding: 2rem; border-radius: 8px; border: 1px solid #444;">
+        <h3 style="font-size: 1.5rem; color: white; margin-bottom: 1rem;">High-Intent Traffic</h3>
+        <p style="color: #aaa;">Users asking AI complex queries have high purchasing intent. GEO captures this bottom-of-funnel audience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid 2 (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">How Generative Engine Optimization Works</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background-color: var(--bright-red); color: white; padding: 2rem; border-radius: 8px;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Semantic Structuring</h3>
+        <p>We rebuild your content architecture using advanced semantic markup that LLMs easily parse and trust.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Information Density</h3>
+        <p style="color: #555;">AI engines prefer fact-dense, fluff-free content. We optimize for high information retrieval scores.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Sentiment Analysis</h3>
+        <p style="color: #555;">We analyze and optimize the surrounding sentiment of your brand mentions across the web.</p>
+      </div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Knowledge Graph Feeding</h3>
+        <p style="color: #555;">We inject your brand's data directly into the databases that power major AI models.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison (Dark) -->
+<section style="background-color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title" style="color: white;">How GEO Differs from Traditional SEO</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div style="background-color: var(--dark-gray); padding: 3rem; border-radius: 8px; border: 2px solid var(--bright-red);">
+        <h3 style="font-size: 2rem; color: var(--bright-red); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;"><span style="font-size: 2.5rem;">✦</span> GEO</h3>
+        <ul style="color: white; font-size: 1.1rem; line-height: 2; list-style: none;">
+          <li>✓ Optimizes for LLMs and AI chats</li>
+          <li>✓ Focuses on factual density & citations</li>
+          <li>✓ Aims to be the synthesized answer</li>
+          <li>✓ Entity relationship building</li>
+          <li>✓ Semantic proximity mapping</li>
+        </ul>
+      </div>
+      <div style="background-color: var(--dark-gray); padding: 3rem; border-radius: 8px; border: 2px solid #555;">
+        <h3 style="font-size: 2rem; color: white; margin-bottom: 1.5rem;">SEO</h3>
+        <ul style="color: #aaa; font-size: 1.1rem; line-height: 2; list-style: none;">
+          <li>• Optimizes for search engine crawlers</li>
+          <li>• Focuses on keyword density & links</li>
+          <li>• Aims to rank blue links</li>
+          <li>• Page authority building</li>
+          <li>• Traditional backlink mapping</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Grid (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container">
+    <h2 class="section-title">The Generative Engine Optimization Process</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">1</div><h3 style="margin-bottom: 0.5rem;">AI Audit</h3><p style="font-size: 0.9rem; color: #555;">Analyze how AI currently perceives your brand.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">2</div><h3 style="margin-bottom: 0.5rem;">Entity Setup</h3><p style="font-size: 0.9rem; color: #555;">Establish clear entities in knowledge bases.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">3</div><h3 style="margin-bottom: 0.5rem;">Fact Density</h3><p style="font-size: 0.9rem; color: #555;">Rewrite content with high factual density.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">4</div><h3 style="margin-bottom: 0.5rem;">Schema</h3><p style="font-size: 0.9rem; color: #555;">Deploy advanced semantic schema markup.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">5</div><h3 style="margin-bottom: 0.5rem;">Citation Sync</h3><p style="font-size: 0.9rem; color: #555;">Build third-party trust signals for LLMs.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">6</div><h3 style="margin-bottom: 0.5rem;">SGE Testing</h3><p style="font-size: 0.9rem; color: #555;">Test outputs in Google SGE interfaces.</p></div>
+      <div style="background: white; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px;"><div class="faq-num" style="margin-bottom: 1rem;">7</div><h3 style="margin-bottom: 0.5rem;">Monitoring</h3><p style="font-size: 0.9rem; color: #555;">Track brand mentions across AI platforms.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Grid (Light) -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal); border-top: 1px solid #ddd;">
+  <div class="container">
+    <h2 class="section-title">Industries We Help with GEO</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+      <div style="background-color: var(--bright-red); color: white; padding: 2rem; border-radius: 8px;"><h3 style="font-size: 1.25rem;">B2B SaaS</h3></div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;"><h3 style="font-size: 1.25rem;">Healthcare & Medical</h3></div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;"><h3 style="font-size: 1.25rem;">Legal Services</h3></div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;"><h3 style="font-size: 1.25rem;">Financial Technology</h3></div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;"><h3 style="font-size: 1.25rem;">Enterprise E-commerce</h3></div>
+      <div style="background-color: white; padding: 2rem; border-radius: 8px; border: 1px solid #ddd;"><h3 style="font-size: 1.25rem;">Higher Education</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background-color: var(--off-white); color: var(--dark-charcoal);">
+  <div class="container" style="max-width: 800px;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">1</span> What is GEO?</div><div class="faq-a">GEO optimizes your digital footprint for AI models like ChatGPT and Google SGE.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">2</span> Will GEO replace SEO?</div><div class="faq-a">No, it works alongside traditional SEO to capture AI-specific traffic.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">3</span> How long to see results?</div><div class="faq-a">Results vary, but typically entity recognition improves within 3-6 months.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">4</span> Do you optimize for ChatGPT?</div><div class="faq-a">Yes, we structure data specifically for OpenAI's retrieval mechanisms.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="faq-num">5</span> Is schema markup necessary?</div><div class="faq-a">Yes, semantic schema is a critical component of our GEO strategy.</div></div>
+  </div>
+</section>
+
+  
+<footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo-wrapper" style="margin-bottom: var(--space-4);">
+            <img src="images/GBO white.svg" alt="GBO Logo" style="height: 45px; width: auto;">
+          </a>
+          <p>We build sustainable, high-converting organic pipeline growth through intelligent, AI-powered search marketing and authority-driven content strategies.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-seo.html">Organic Search</a></li>
+            <li><a href="services-technical-seo.html">Technical Schema</a></li>
+            <li><a href="geo-services.html">GEO Optimization</a></li>
+            <li><a href="services-link-building.html">Link Authority</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Marketing Insights</a></li>
+            <li><a href="portfolio-page.html">Case Studies</a></li>
+            <li><a href="#">SEO Checklist</a></li>
+            <li><a href="#">Free Domain Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 GBO Inc. All Rights Reserved.</div>
+        <div>
+          <a href="privacy-terms.html">Privacy Policy</a>
+          <a href="privacy-terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
